@@ -1,0 +1,39 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 43e243ac8b72cc84aabfe05a6b43d23d, type: 3}
+  m_Name: Player Gathering Upgrade
+  m_EditorClassIdentifier: 
+  globalUpgradeType: 2
+  title: Player Harvesting
+  icon: {fileID: 21300000, guid: 40b0fd540fe47a645babf66f9630eb31, type: 3}
+  descriptionFormat: Increase from <color=#FF4233>{0}</color> to <color=#56D103>{1}
+  upgrades:
+  - price: 0
+    currencyType: 0
+    previewSprite: {fileID: 0}
+    damageMultiplier: 1
+  - price: 250
+    currencyType: 0
+    previewSprite: {fileID: 0}
+    damageMultiplier: 1.25
+  - price: 700
+    currencyType: 0
+    previewSprite: {fileID: 0}
+    damageMultiplier: 1.5
+  - price: 1000
+    currencyType: 0
+    previewSprite: {fileID: 0}
+    damageMultiplier: 1.75
+  - price: 2000
+    currencyType: 0
+    previewSprite: {fileID: 0}
+    damageMultiplier: 2

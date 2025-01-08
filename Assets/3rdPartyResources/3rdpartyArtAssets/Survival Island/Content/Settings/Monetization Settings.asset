@@ -1,0 +1,116 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 34b796d4f76ccb5488f711694f61a821, type: 3}
+  m_Name: Monetization Settings
+  m_EditorClassIdentifier: 
+  iapSettings: {fileID: 5912872678063958311}
+  adsSettings: {fileID: 8776500053356020737}
+  isModuleActive: 1
+  verboseLogging: 0
+  debugMode: 0
+--- !u!114 &5912872678063958311
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 0f28faf74e3de2b4bb5f8724582e5ceb, type: 3}
+  m_Name: IAP Settings
+  m_EditorClassIdentifier: 
+  messagesCanvasPrefab: {fileID: 4428939727153499309, guid: 9ccb3bd803809cc449b332921a7edf6f,
+    type: 3}
+  storeItems:
+  - androidID: '[replace with real id 1]'
+    iOSID: '[replace with real id 1]'
+    productKeyType: 1
+    productType: 1
+  - androidID: '[replace with real id 2]'
+    iOSID: '[replace with real id 2]'
+    productKeyType: 5
+    productType: 1
+  - androidID: '[replace with real id 3]'
+    iOSID: '[replace with real id 3]'
+    productKeyType: 0
+    productType: 1
+  - androidID: '[replace with real id 4]'
+    iOSID: '[replace with real id 4]'
+    productKeyType: 4
+    productType: 0
+  - androidID: '[replace with real id 5]'
+    iOSID: '[replace with real id 5]'
+    productKeyType: 3
+    productType: 0
+  - androidID: '[replace with real id 6]'
+    iOSID: '[replace with real id 6]'
+    productKeyType: 2
+    productType: 0
+--- !u!114 &8776500053356020737
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 15ddb41bf72d53a48a6bdc593d706f94, type: 3}
+  m_Name: Ads Settings
+  m_EditorClassIdentifier: 
+  bannerType: 0
+  interstitialType: 1
+  rewardedVideoType: 1
+  adMobContainer:
+    androidAppId: 
+    iosAppId: 
+    androidBannerID: ca-app-pub-3940256099942544/6300978111
+    iOSBannerID: ca-app-pub-3940256099942544/2934735716
+    androidInterstitialID: ca-app-pub-3940256099942544/1033173712
+    iOSInterstitialID: ca-app-pub-3940256099942544/4411468910
+    androidRewardedVideoID: ca-app-pub-3940256099942544/5224354917
+    iOSRewardedVideoID: ca-app-pub-3940256099942544/1712485313
+    bannerType: 0
+    bannerPosition: 0
+    testDevicesIDs: []
+  unityAdsContainer:
+    androidAppID: 1234567
+    iOSAppID: 1234567
+    androidBannerID: banner
+    iOSBannerID: banner
+    androidInterstitialID: video
+    iOSInterstitialID: video
+    androidRewardedVideoID: rewardedVideo
+    iOSRewardedVideoID: rewardedVideo
+    bannerPosition: 4
+  ironSourceContainer:
+    androidAppKey: 85460dcd
+    iOSAppKey: 8545d445
+    bannerPosition: 0
+    bannerType: 0
+  dummyContainer:
+    bannerPosition: 0
+    dummyCanvasPrefab: {fileID: 985655532585203946, guid: a7af08efc5cd16c4db955b7f65f00dfc,
+      type: 3}
+  loadAdsOnStart: 1
+  interstitialFirstStartDelay: 40
+  interstitialStartDelay: 40
+  interstitialShowingDelay: 30
+  autoShowInterstitial: 0
+  isGDPREnabled: 0
+  gdprPanelPrefab: {fileID: 2665059414450368139, guid: 25b05165b3e164d41a5e0f7d29a77b0a,
+    type: 3}
+  isIDFAEnabled: 0
+  trackingDescription: Your data will be used to deliver personalized ads to you.
+  privacyLink: https://mywebsite.com/privacy
+  termsOfUseLink: https://mywebsite.com/terms

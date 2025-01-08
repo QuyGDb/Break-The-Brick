@@ -1,0 +1,29 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 0fea3155b106cba40a14516b86374b18, type: 3}
+  m_Name: Palm Harvest Stage Data
+  m_EditorClassIdentifier: 
+  weightMultiplier: 1
+  drag: 10
+  angularDrag: 0.5
+  useBildInGravity: 1
+  customGravity: -40
+  explosionForce:
+    firstValue: 16
+    secondValue: 24
+  explosionRadius: 0
+  upwardForceModifier: 0.01
+  angularForce:
+    firstValue: {x: -10, y: -10, z: -10}
+    secondValue: {x: 10, y: 10, z: 10}
+  scaleDelay: 0.3
+  scaleDuration: 0.7

@@ -3,28 +3,29 @@
 --- !u!78 &1
 TagManager:
   serializedVersion: 2
-  tags: []
+  tags:
+  - Water
   layers:
   - Default
   - TransparentFX
   - Ignore Raycast
-  - 
+  - Ground
   - Water
   - UI
+  - Ragdoll
+  - Character
+  - ScreenshotShare
+  - Projectile
+  - Interactable Point
+  - Helper
+  - Hittable
+  - Hittable Trigger
   - 
-  - 
-  - 
-  - 
-  - 
-  - 
-  - 
-  - 
-  - 
-  - 
-  - 
-  - 
-  - 
-  - 
+  - Interactable Object
+  - Resource
+  - Resource Trigger
+  - Enemy
+  - EnemyTrigger
   - 
   - 
   - 

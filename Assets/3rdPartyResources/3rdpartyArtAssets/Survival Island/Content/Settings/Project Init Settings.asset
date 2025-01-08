@@ -1,0 +1,348 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &-5176586242524299228
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 606b82550493b85489cd5944b2f308f1, type: 3}
+  m_Name: Watermelon.MonetizationInitModule
+  m_EditorClassIdentifier: 
+  settings: {fileID: 11400000, guid: 529dbf8f89ab6f247ab843aef1ec6f59, type: 2}
+--- !u!114 &-4044611709077354654
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e27433fc73d0e094491cb89c195d0cf8, type: 3}
+  m_Name: Watermelon.AudioControllerInitModule
+  m_EditorClassIdentifier: 
+  audioSettings: {fileID: 11400000, guid: 503b1ff9b67b4c644b15ce25918d2d63, type: 2}
+  audioSourcesPoolSize: 4
+  maxDistance: 12
+  spread: 140
+  rolloffCurve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 3
+      time: 0
+      value: 1
+      inSlope: -1.9841269
+      outSlope: -1.9841269
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0
+      outWeight: 0.15
+    - serializedVersion: 3
+      time: 1
+      value: 0
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0
+      outWeight: 0
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
+--- !u!114 &-3977638223579513113
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f4b590aedda841e458e71b9f714bbe47, type: 3}
+  m_Name: Watermelon.PrefsInitModule
+  m_EditorClassIdentifier: 
+  moduleName: Prefs Settings
+  prefsSettings: {fileID: 0}
+--- !u!114 &-3676294334094533771
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 606b82550493b85489cd5944b2f308f1, type: 3}
+  m_Name: Watermelon.MonetizationInitModule
+  m_EditorClassIdentifier: 
+  settings: {fileID: 11400000, guid: 529dbf8f89ab6f247ab843aef1ec6f59, type: 2}
+--- !u!114 &-3404783323565570219
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 0ea328ba120396e45a8f7015022898c8, type: 3}
+  m_Name: Watermelon.ScreenSettings
+  m_EditorClassIdentifier: 
+  setFrameRateAutomatically: 0
+  defaultFrameRate: 60
+  batterySaveFrameRate: 30
+  sleepTimeout: -1
+--- !u!114 &-3215799406735479311
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 739328186e8220e4dbd35270e195d7cf, type: 3}
+  m_Name: Watermelon.HapticInitModule
+  m_EditorClassIdentifier: 
+  verboseLogging: 0
+--- !u!114 &-2216892594888297763
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 35eb353375c8bb340b11c6306b0786dd, type: 3}
+  m_Name: Watermelon.ControlInitModule
+  m_EditorClassIdentifier: 
+  selectAutomatically: 0
+  inputType: 1
+  gamepadData: {fileID: 11400000, guid: 40df2255268f33447afd3b30f0da377c, type: 2}
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: b5a0258cb7d17964493174ceaf8d2867, type: 3}
+  m_Name: Project Init Settings
+  m_EditorClassIdentifier: 
+  modules:
+  - {fileID: 8757082200508613138}
+  - {fileID: -3404783323565570219}
+  - {fileID: 4418045141143446416}
+  - {fileID: 1380406298548894520}
+  - {fileID: 3273264842331863845}
+  - {fileID: -2216892594888297763}
+  - {fileID: -4044611709077354654}
+  - {fileID: -3215799406735479311}
+  - {fileID: -3676294334094533771}
+--- !u!114 &1380406298548894520
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 6502da7177729af4fbe4808c93025ab3, type: 3}
+  m_Name: Watermelon.TweenInitModule
+  m_EditorClassIdentifier: 
+  customEasingFunctions:
+  - name: BackOutLight
+    easingCurve:
+      serializedVersion: 2
+      m_Curve:
+      - serializedVersion: 3
+        time: 0
+        value: 0
+        inSlope: 1.9380516
+        outSlope: 1.9380516
+        tangentMode: 34
+        weightedMode: 0
+        inWeight: 0
+        outWeight: 0.33333334
+      - serializedVersion: 3
+        time: 0.42945325
+        value: 0.8323026
+        inSlope: 0.9855343
+        outSlope: 0.9855343
+        tangentMode: 0
+        weightedMode: 0
+        inWeight: 0.33333334
+        outWeight: 0.120501034
+      - serializedVersion: 3
+        time: 1
+        value: 1
+        inSlope: -0.21093209
+        outSlope: -0.21093209
+        tangentMode: 0
+        weightedMode: 0
+        inWeight: 0.17656603
+        outWeight: 0
+      m_PreInfinity: 2
+      m_PostInfinity: 2
+      m_RotationOrder: 4
+  - name: BackInLight
+    easingCurve:
+      serializedVersion: 2
+      m_Curve:
+      - serializedVersion: 3
+        time: 0
+        value: 0
+        inSlope: -0.81944615
+        outSlope: -0.81944615
+        tangentMode: 0
+        weightedMode: 0
+        inWeight: 0
+        outWeight: 0.2923066
+      - serializedVersion: 3
+        time: 0.582632
+        value: 0.34065962
+        inSlope: 1.2861531
+        outSlope: 1.2861531
+        tangentMode: 0
+        weightedMode: 0
+        inWeight: 0.33333334
+        outWeight: 0.26432958
+      - serializedVersion: 3
+        time: 1
+        value: 1
+        inSlope: 1.7023525
+        outSlope: 1.7023525
+        tangentMode: 0
+        weightedMode: 0
+        inWeight: 0.18861458
+        outWeight: 0
+      m_PreInfinity: 2
+      m_PostInfinity: 2
+      m_RotationOrder: 4
+  - name: Steps
+    easingCurve:
+      serializedVersion: 2
+      m_Curve:
+      - serializedVersion: 3
+        time: 0
+        value: 0
+        inSlope: 2.0600502
+        outSlope: 2.0600502
+        tangentMode: 34
+        weightedMode: 0
+        inWeight: 0
+        outWeight: 0.33333334
+      - serializedVersion: 3
+        time: 0.2647614
+        value: 0.5454218
+        inSlope: -0.313277
+        outSlope: -0.313277
+        tangentMode: 34
+        weightedMode: 0
+        inWeight: 0.33333334
+        outWeight: 0.33333334
+      - serializedVersion: 3
+        time: 0.35977286
+        value: 0.29016355
+        inSlope: 1.2905105
+        outSlope: 1.2905105
+        tangentMode: 0
+        weightedMode: 0
+        inWeight: 0.33333334
+        outWeight: 0.10838936
+      - serializedVersion: 3
+        time: 0.75351125
+        value: 0.80807567
+        inSlope: 1.049587
+        outSlope: 1.049587
+        tangentMode: 0
+        weightedMode: 0
+        inWeight: 0.33333334
+        outWeight: 0.33333334
+      - serializedVersion: 3
+        time: 0.8211042
+        value: 0.5887468
+        inSlope: 0.84795094
+        outSlope: 0.84795094
+        tangentMode: 0
+        weightedMode: 0
+        inWeight: 0.33333334
+        outWeight: 0.33333334
+      - serializedVersion: 3
+        time: 1
+        value: 1
+        inSlope: 2.2988427
+        outSlope: 2.2988427
+        tangentMode: 34
+        weightedMode: 0
+        inWeight: 0.33333334
+        outWeight: 0
+      m_PreInfinity: 2
+      m_PostInfinity: 2
+      m_RotationOrder: 4
+  tweensUpdateCount: 400
+  tweensFixedUpdateCount: 30
+  tweensLateUpdateCount: 0
+  verboseLogging: 0
+--- !u!114 &3273264842331863845
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 34f27d59b0f7fd64bbdece140f4e0eae, type: 3}
+  m_Name: Watermelon.FloatingMessageInitModule
+  m_EditorClassIdentifier: 
+  canvas: {fileID: 8061296051001136106, guid: 70c84c05a93579246ac20f112340805d, type: 3}
+--- !u!114 &3342332593277324233
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 0}
+  m_Name: Watermelon.SaveInitModule
+  m_EditorClassIdentifier: Assembly-CSharp:Watermelon:SaveInitModule
+  useAutoSave: 0
+--- !u!114 &4418045141143446416
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d448ec3af5e46f04aa350a8a9ccbb3ef, type: 3}
+  m_Name: Watermelon.GameLoadingInitModule
+  m_EditorClassIdentifier: 
+  manualControlMode: 0
+  loadingCanvasObject: {fileID: 3395919838312422690, guid: 74d643b634085684e8429f7b41c490fe,
+    type: 3}
+--- !u!114 &8757082200508613138
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 28e5e1099f825a04db642913c56517c0, type: 3}
+  m_Name: Watermelon.SaveInitModule
+  m_EditorClassIdentifier: 
+  useAutoSave: 0

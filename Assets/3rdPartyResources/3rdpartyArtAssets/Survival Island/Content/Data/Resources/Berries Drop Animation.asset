@@ -1,0 +1,171 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e95f99cf1da301d41a49264b238222c6, type: 3}
+  m_Name: Berries Drop Animation
+  m_EditorClassIdentifier: 
+  positionType: 2
+  positionRange:
+    firstValue: 1
+    secondValue: 1.2
+  positionRandomAngle: 90
+  inverseDirection: 1
+  movementType: 2
+  movementDuration: 0.5
+  movementDelay: 0
+  movementEasing: 4
+  bezierUpOffset:
+    firstValue: 0
+    secondValue: 1
+  bezierRightOffset:
+    firstValue: 0
+    secondValue: 1
+  bezierForwardOffset:
+    firstValue: 0
+    secondValue: 1
+  movementCurveX:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 3
+      time: 0
+      value: 0
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 34
+      weightedMode: 0
+      inWeight: 0
+      outWeight: 0.33333334
+    - serializedVersion: 3
+      time: 1
+      value: 0
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 34
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
+  movementCurveY:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 3
+      time: 0
+      value: 0
+      inSlope: 3.718679
+      outSlope: 3.718679
+      tangentMode: 34
+      weightedMode: 0
+      inWeight: 0
+      outWeight: 0.33333334
+    - serializedVersion: 3
+      time: 0.08732447
+      value: 0.32473168
+      inSlope: 1.4573568
+      outSlope: 1.4573568
+      tangentMode: 34
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    - serializedVersion: 3
+      time: 0.4846058
+      value: 0.005331248
+      inSlope: -0.052625805
+      outSlope: -0.052625805
+      tangentMode: 34
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    - serializedVersion: 3
+      time: 0.664505
+      value: 0.13102931
+      inSlope: -0.14489049
+      outSlope: -0.14489049
+      tangentMode: 34
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    - serializedVersion: 3
+      time: 0.785929
+      value: 0.011002298
+      inSlope: -0.3082404
+      outSlope: -0.3082404
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.9396228
+      outWeight: 0.33333334
+    - serializedVersion: 3
+      time: 1.0044284
+      value: 0
+      inSlope: -1.4656788
+      outSlope: -1.4656788
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.4286427
+      outWeight: 0
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
+  movementCurveZ:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 3
+      time: 0
+      value: 0
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 34
+      weightedMode: 0
+      inWeight: 0
+      outWeight: 0.33333334
+    - serializedVersion: 3
+      time: 1
+      value: 0
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 34
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
+  useScale: 0
+  scaleDuration: 0.5
+  scaleCurve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 3
+      time: 0
+      value: 1
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0
+      outWeight: 0
+    - serializedVersion: 3
+      time: 1
+      value: 1
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0
+      outWeight: 0
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
+  useRotation: 0
+  rotationDuration: 0.5
+  rotationAngle: {x: 0, y: 0, z: 0}
+  rotationEasing: 0

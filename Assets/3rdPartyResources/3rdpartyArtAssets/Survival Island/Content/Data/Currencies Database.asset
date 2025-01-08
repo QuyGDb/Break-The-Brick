@@ -1,0 +1,431 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: b758152229a502245884353dd18ab76a, type: 3}
+  m_Name: Currencies Database
+  m_EditorClassIdentifier: 
+  currencies:
+  - currencyType: 0
+    defaultAmount: 0
+    icon: {fileID: 21300000, guid: 45bfdbffc1cb8b443a78f320a6a0b8f2, type: 3}
+    data:
+      displayAlways: 1
+      flyingResPrefab: {fileID: 3912945604614884336, guid: 2992d062eda544a4baebfeefda05bf40,
+        type: 3}
+      dropResPrefab: {fileID: 3912945604614884336, guid: 1740eacb0ecdbd14684f7e6858e95b7d,
+        type: 3}
+      pickUpSound: {fileID: 8300000, guid: 869d46aa257372746988c5a0560cb8aa, type: 3}
+      useInventory: 0
+      moneyConversionRate: 0
+    floatingCloud:
+      addToCloud: 1
+      radius: 200
+      specialPrefab: {fileID: 0}
+      appearAudioClip: {fileID: 0}
+      collectAudioClip: {fileID: 0}
+    displayAlways: 1
+    flyingResPrefab: {fileID: 3912945604614884336, guid: 2992d062eda544a4baebfeefda05bf40,
+      type: 3}
+    dropResPrefab: {fileID: 3912945604614884336, guid: 1740eacb0ecdbd14684f7e6858e95b7d,
+      type: 3}
+    pickUpSound: {fileID: 8300000, guid: 869d46aa257372746988c5a0560cb8aa, type: 3}
+    useInventory: 0
+    moneyConversionRate: 0
+  - currencyType: 1
+    defaultAmount: 0
+    icon: {fileID: 21300000, guid: 74f9924d7bd6a2e47b66006361926e2c, type: 3}
+    data:
+      displayAlways: 0
+      flyingResPrefab: {fileID: 3912945604614884336, guid: 04f5ea7435d64074a9163f03ac442d2e,
+        type: 3}
+      dropResPrefab: {fileID: 3912945604614884336, guid: 09b5eb82f42620e4d95c329d51a61d6a,
+        type: 3}
+      pickUpSound: {fileID: 0}
+      useInventory: 1
+      moneyConversionRate: 1
+    floatingCloud:
+      addToCloud: 1
+      radius: 200
+      specialPrefab: {fileID: 0}
+      appearAudioClip: {fileID: 0}
+      collectAudioClip: {fileID: 0}
+    displayAlways: 0
+    flyingResPrefab: {fileID: 3912945604614884336, guid: 04f5ea7435d64074a9163f03ac442d2e,
+      type: 3}
+    dropResPrefab: {fileID: 3912945604614884336, guid: 09b5eb82f42620e4d95c329d51a61d6a,
+      type: 3}
+    pickUpSound: {fileID: 0}
+    useInventory: 1
+    moneyConversionRate: 1
+  - currencyType: 2
+    defaultAmount: 0
+    icon: {fileID: 21300000, guid: c9ef73e56e7d48c48952a144dd70502f, type: 3}
+    data:
+      displayAlways: 0
+      flyingResPrefab: {fileID: 3912945604614884336, guid: 056b3b93eaace054b84653f50fb351a1,
+        type: 3}
+      dropResPrefab: {fileID: 3912945604614884336, guid: a70af7cf6308f3448be2995b49197a3b,
+        type: 3}
+      pickUpSound: {fileID: 0}
+      useInventory: 1
+      moneyConversionRate: 1
+    floatingCloud:
+      addToCloud: 1
+      radius: 200
+      specialPrefab: {fileID: 0}
+      appearAudioClip: {fileID: 0}
+      collectAudioClip: {fileID: 0}
+    displayAlways: 0
+    flyingResPrefab: {fileID: 3912945604614884336, guid: 056b3b93eaace054b84653f50fb351a1,
+      type: 3}
+    dropResPrefab: {fileID: 3912945604614884336, guid: a70af7cf6308f3448be2995b49197a3b,
+      type: 3}
+    pickUpSound: {fileID: 0}
+    useInventory: 1
+    moneyConversionRate: 1
+  - currencyType: 3
+    defaultAmount: 0
+    icon: {fileID: 21300000, guid: 80a50a0ae3abeab4db1ffbf2f95615e2, type: 3}
+    data:
+      displayAlways: 0
+      flyingResPrefab: {fileID: 3912945604614884336, guid: d02d63bba8647f647aa2c921995676f2,
+        type: 3}
+      dropResPrefab: {fileID: 3912945604614884336, guid: ec5a342d1da782341a8f825d1b8ffd7e,
+        type: 3}
+      pickUpSound: {fileID: 0}
+      useInventory: 1
+      moneyConversionRate: 1
+    floatingCloud:
+      addToCloud: 1
+      radius: 200
+      specialPrefab: {fileID: 0}
+      appearAudioClip: {fileID: 0}
+      collectAudioClip: {fileID: 0}
+    displayAlways: 0
+    flyingResPrefab: {fileID: 3912945604614884336, guid: d02d63bba8647f647aa2c921995676f2,
+      type: 3}
+    dropResPrefab: {fileID: 3912945604614884336, guid: ec5a342d1da782341a8f825d1b8ffd7e,
+      type: 3}
+    pickUpSound: {fileID: 0}
+    useInventory: 1
+    moneyConversionRate: 1
+  - currencyType: 50
+    defaultAmount: 0
+    icon: {fileID: 21300000, guid: 1567854a2fa8904409a056959540cdc7, type: 3}
+    data:
+      displayAlways: 0
+      flyingResPrefab: {fileID: 3912945604614884336, guid: 76ad07b153c6be34eb122ec3650b49d8,
+        type: 3}
+      dropResPrefab: {fileID: 3912945604614884336, guid: c5390aa219f1b044697c60144d7b6695,
+        type: 3}
+      pickUpSound: {fileID: 0}
+      useInventory: 1
+      moneyConversionRate: 8
+    floatingCloud:
+      addToCloud: 1
+      radius: 200
+      specialPrefab: {fileID: 0}
+      appearAudioClip: {fileID: 0}
+      collectAudioClip: {fileID: 0}
+    displayAlways: 0
+    flyingResPrefab: {fileID: 3912945604614884336, guid: 76ad07b153c6be34eb122ec3650b49d8,
+      type: 3}
+    dropResPrefab: {fileID: 3912945604614884336, guid: c5390aa219f1b044697c60144d7b6695,
+      type: 3}
+    pickUpSound: {fileID: 0}
+    useInventory: 1
+    moneyConversionRate: 8
+  - currencyType: 51
+    defaultAmount: 0
+    icon: {fileID: 21300000, guid: bc18ab019dfbe964eb1cbd8dec8515d2, type: 3}
+    data:
+      displayAlways: 0
+      flyingResPrefab: {fileID: 3912945604614884336, guid: bb9a16f0ad5b9d841bc4cf511d4fb7fb,
+        type: 3}
+      dropResPrefab: {fileID: 3912945604614884336, guid: 50a3416de25d0ca46bf9f87827655ec5,
+        type: 3}
+      pickUpSound: {fileID: 0}
+      useInventory: 1
+      moneyConversionRate: 15
+    floatingCloud:
+      addToCloud: 1
+      radius: 200
+      specialPrefab: {fileID: 0}
+      appearAudioClip: {fileID: 0}
+      collectAudioClip: {fileID: 0}
+    displayAlways: 0
+    flyingResPrefab: {fileID: 3912945604614884336, guid: bb9a16f0ad5b9d841bc4cf511d4fb7fb,
+      type: 3}
+    dropResPrefab: {fileID: 3912945604614884336, guid: 50a3416de25d0ca46bf9f87827655ec5,
+      type: 3}
+    pickUpSound: {fileID: 0}
+    useInventory: 1
+    moneyConversionRate: 15
+  - currencyType: 52
+    defaultAmount: 0
+    icon: {fileID: 21300000, guid: 0b8ac6c88d9678148a1a22b5215fa7f4, type: 3}
+    data:
+      displayAlways: 0
+      flyingResPrefab: {fileID: 3912945604614884336, guid: a281820f6dc6c854abec4f7a82d0db07,
+        type: 3}
+      dropResPrefab: {fileID: 3912945604614884336, guid: 76a183654d345ae41b34219fc1537841,
+        type: 3}
+      pickUpSound: {fileID: 0}
+      useInventory: 1
+      moneyConversionRate: 40
+    floatingCloud:
+      addToCloud: 1
+      radius: 200
+      specialPrefab: {fileID: 0}
+      appearAudioClip: {fileID: 0}
+      collectAudioClip: {fileID: 0}
+    displayAlways: 0
+    flyingResPrefab: {fileID: 3912945604614884336, guid: a281820f6dc6c854abec4f7a82d0db07,
+      type: 3}
+    dropResPrefab: {fileID: 3912945604614884336, guid: 76a183654d345ae41b34219fc1537841,
+      type: 3}
+    pickUpSound: {fileID: 0}
+    useInventory: 1
+    moneyConversionRate: 40
+  - currencyType: 100
+    defaultAmount: 0
+    icon: {fileID: 21300000, guid: 793b593802a4c104bb61ab2be1c3d564, type: 3}
+    data:
+      displayAlways: 0
+      flyingResPrefab: {fileID: 3912945604614884336, guid: c868b7acf1f20e947be50be01363990e,
+        type: 3}
+      dropResPrefab: {fileID: 3912945604614884336, guid: 83e91c2fa81253e40ac6eb2a7b9e59f1,
+        type: 3}
+      pickUpSound: {fileID: 0}
+      useInventory: 1
+      moneyConversionRate: 1
+    floatingCloud:
+      addToCloud: 1
+      radius: 200
+      specialPrefab: {fileID: 0}
+      appearAudioClip: {fileID: 0}
+      collectAudioClip: {fileID: 0}
+    displayAlways: 0
+    flyingResPrefab: {fileID: 3912945604614884336, guid: c868b7acf1f20e947be50be01363990e,
+      type: 3}
+    dropResPrefab: {fileID: 3912945604614884336, guid: 83e91c2fa81253e40ac6eb2a7b9e59f1,
+      type: 3}
+    pickUpSound: {fileID: 0}
+    useInventory: 1
+    moneyConversionRate: 1
+  - currencyType: 101
+    defaultAmount: 0
+    icon: {fileID: 21300000, guid: a5cb318d21c8d6a4eb19a74285e8456d, type: 3}
+    data:
+      displayAlways: 0
+      flyingResPrefab: {fileID: 3912945604614884336, guid: 97b44a66a10d8924db6cd1ab5cb1ff83,
+        type: 3}
+      dropResPrefab: {fileID: 3912945604614884336, guid: 1ddfd665cfa8ee745be53b757efdecc6,
+        type: 3}
+      pickUpSound: {fileID: 0}
+      useInventory: 1
+      moneyConversionRate: 2
+    floatingCloud:
+      addToCloud: 1
+      radius: 200
+      specialPrefab: {fileID: 0}
+      appearAudioClip: {fileID: 0}
+      collectAudioClip: {fileID: 0}
+    displayAlways: 0
+    flyingResPrefab: {fileID: 3912945604614884336, guid: 97b44a66a10d8924db6cd1ab5cb1ff83,
+      type: 3}
+    dropResPrefab: {fileID: 3912945604614884336, guid: 1ddfd665cfa8ee745be53b757efdecc6,
+      type: 3}
+    pickUpSound: {fileID: 0}
+    useInventory: 1
+    moneyConversionRate: 2
+  - currencyType: 102
+    defaultAmount: 0
+    icon: {fileID: 21300000, guid: 99870ed501b785a4bab8c4152ee16983, type: 3}
+    data:
+      displayAlways: 0
+      flyingResPrefab: {fileID: 3912945604614884336, guid: b93d835678d16554ebf6f8d3bbfa81ff,
+        type: 3}
+      dropResPrefab: {fileID: 3912945604614884336, guid: 354c67d0ac374b840b511dae8f45d61b,
+        type: 3}
+      pickUpSound: {fileID: 0}
+      useInventory: 1
+      moneyConversionRate: 5
+    floatingCloud:
+      addToCloud: 1
+      radius: 200
+      specialPrefab: {fileID: 0}
+      appearAudioClip: {fileID: 0}
+      collectAudioClip: {fileID: 0}
+    displayAlways: 0
+    flyingResPrefab: {fileID: 3912945604614884336, guid: b93d835678d16554ebf6f8d3bbfa81ff,
+      type: 3}
+    dropResPrefab: {fileID: 3912945604614884336, guid: 354c67d0ac374b840b511dae8f45d61b,
+      type: 3}
+    pickUpSound: {fileID: 0}
+    useInventory: 1
+    moneyConversionRate: 5
+  - currencyType: 103
+    defaultAmount: 0
+    icon: {fileID: 21300000, guid: 33f3e112861ce2a448f74c057dcca9c7, type: 3}
+    data:
+      displayAlways: 0
+      flyingResPrefab: {fileID: 3912945604614884336, guid: 50d3034fa0afd214cac625066c95ed1b,
+        type: 3}
+      dropResPrefab: {fileID: 3912945604614884336, guid: b1dedb7dca25f2447817034bd5b18971,
+        type: 3}
+      pickUpSound: {fileID: 0}
+      useInventory: 1
+      moneyConversionRate: 10
+    floatingCloud:
+      addToCloud: 1
+      radius: 200
+      specialPrefab: {fileID: 0}
+      appearAudioClip: {fileID: 0}
+      collectAudioClip: {fileID: 0}
+    displayAlways: 0
+    flyingResPrefab: {fileID: 3912945604614884336, guid: 50d3034fa0afd214cac625066c95ed1b,
+      type: 3}
+    dropResPrefab: {fileID: 3912945604614884336, guid: b1dedb7dca25f2447817034bd5b18971,
+      type: 3}
+    pickUpSound: {fileID: 0}
+    useInventory: 1
+    moneyConversionRate: 10
+  - currencyType: 150
+    defaultAmount: 0
+    icon: {fileID: 21300000, guid: 5aa4bd98bbdf3b748a42e62dda4a807a, type: 3}
+    data:
+      displayAlways: 0
+      flyingResPrefab: {fileID: 3912945604614884336, guid: 4094ce1a0127c9140884779bf8b818a6,
+        type: 3}
+      dropResPrefab: {fileID: 3912945604614884336, guid: 35c22ccd9672d0f469808841dbc1ff35,
+        type: 3}
+      pickUpSound: {fileID: 0}
+      useInventory: 0
+      moneyConversionRate: 1
+    floatingCloud:
+      addToCloud: 1
+      radius: 200
+      specialPrefab: {fileID: 0}
+      appearAudioClip: {fileID: 0}
+      collectAudioClip: {fileID: 0}
+    displayAlways: 0
+    flyingResPrefab: {fileID: 3912945604614884336, guid: 4094ce1a0127c9140884779bf8b818a6,
+      type: 3}
+    dropResPrefab: {fileID: 3912945604614884336, guid: 35c22ccd9672d0f469808841dbc1ff35,
+      type: 3}
+    pickUpSound: {fileID: 0}
+    useInventory: 0
+    moneyConversionRate: 1
+  - currencyType: 151
+    defaultAmount: 0
+    icon: {fileID: 21300000, guid: 4acbc9aae2dfa5144a8ab5bd189e6f2a, type: 3}
+    data:
+      displayAlways: 0
+      flyingResPrefab: {fileID: 3912945604614884336, guid: 8d0870c36177ec84987651201b9cce79,
+        type: 3}
+      dropResPrefab: {fileID: 3912945604614884336, guid: 1b6221878497bab479b5be84c65808e7,
+        type: 3}
+      pickUpSound: {fileID: 0}
+      useInventory: 0
+      moneyConversionRate: 1
+    floatingCloud:
+      addToCloud: 1
+      radius: 200
+      specialPrefab: {fileID: 0}
+      appearAudioClip: {fileID: 0}
+      collectAudioClip: {fileID: 0}
+    displayAlways: 0
+    flyingResPrefab: {fileID: 3912945604614884336, guid: 8d0870c36177ec84987651201b9cce79,
+      type: 3}
+    dropResPrefab: {fileID: 3912945604614884336, guid: 1b6221878497bab479b5be84c65808e7,
+      type: 3}
+    pickUpSound: {fileID: 0}
+    useInventory: 0
+    moneyConversionRate: 1
+  - currencyType: 152
+    defaultAmount: 0
+    icon: {fileID: 21300000, guid: a3cb11f23f6128644ac6489893f8d747, type: 3}
+    data:
+      displayAlways: 0
+      flyingResPrefab: {fileID: 3912945604614884336, guid: f8f141f9a157e0f428f43efea540d6b5,
+        type: 3}
+      dropResPrefab: {fileID: 3912945604614884336, guid: 2356788f217ce7147b29557de46a9a4e,
+        type: 3}
+      pickUpSound: {fileID: 0}
+      useInventory: 0
+      moneyConversionRate: 1
+    floatingCloud:
+      addToCloud: 1
+      radius: 200
+      specialPrefab: {fileID: 0}
+      appearAudioClip: {fileID: 0}
+      collectAudioClip: {fileID: 0}
+    displayAlways: 0
+    flyingResPrefab: {fileID: 3912945604614884336, guid: f8f141f9a157e0f428f43efea540d6b5,
+      type: 3}
+    dropResPrefab: {fileID: 3912945604614884336, guid: 2356788f217ce7147b29557de46a9a4e,
+      type: 3}
+    pickUpSound: {fileID: 0}
+    useInventory: 0
+    moneyConversionRate: 1
+  - currencyType: 153
+    defaultAmount: 0
+    icon: {fileID: 21300000, guid: 537b604079da97243aa36be97b2062b6, type: 3}
+    data:
+      displayAlways: 0
+      flyingResPrefab: {fileID: 3912945604614884336, guid: 5980fefbbf47234478cf8778671b7991,
+        type: 3}
+      dropResPrefab: {fileID: 3912945604614884336, guid: e850786c596471a44be5d2b11b3af3ce,
+        type: 3}
+      pickUpSound: {fileID: 0}
+      useInventory: 0
+      moneyConversionRate: 1
+    floatingCloud:
+      addToCloud: 1
+      radius: 200
+      specialPrefab: {fileID: 0}
+      appearAudioClip: {fileID: 0}
+      collectAudioClip: {fileID: 0}
+    displayAlways: 0
+    flyingResPrefab: {fileID: 3912945604614884336, guid: 5980fefbbf47234478cf8778671b7991,
+      type: 3}
+    dropResPrefab: {fileID: 3912945604614884336, guid: e850786c596471a44be5d2b11b3af3ce,
+      type: 3}
+    pickUpSound: {fileID: 0}
+    useInventory: 0
+    moneyConversionRate: 1
+  - currencyType: 500
+    defaultAmount: 0
+    icon: {fileID: 21300000, guid: 21dc7a05d087aef4b96828af160d8ecf, type: 3}
+    data:
+      displayAlways: 0
+      flyingResPrefab: {fileID: 3912945604614884336, guid: e668ac20fe468244daba455359ba3923,
+        type: 3}
+      dropResPrefab: {fileID: 3912945604614884336, guid: e9c35b81da71c244c8ea1afaea9164da,
+        type: 3}
+      pickUpSound: {fileID: 0}
+      useInventory: 0
+      moneyConversionRate: 0
+    floatingCloud:
+      addToCloud: 1
+      radius: 200
+      specialPrefab: {fileID: 0}
+      appearAudioClip: {fileID: 0}
+      collectAudioClip: {fileID: 0}
+    displayAlways: 0
+    flyingResPrefab: {fileID: 3912945604614884336, guid: e668ac20fe468244daba455359ba3923,
+      type: 3}
+    dropResPrefab: {fileID: 3912945604614884336, guid: e9c35b81da71c244c8ea1afaea9164da,
+      type: 3}
+    pickUpSound: {fileID: 0}
+    useInventory: 0
+    moneyConversionRate: 0

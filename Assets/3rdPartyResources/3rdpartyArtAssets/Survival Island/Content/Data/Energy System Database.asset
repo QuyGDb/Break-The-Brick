@@ -1,0 +1,28 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 2088c7ed5ba6f3e4191d7f65ffc2b26d, type: 3}
+  m_Name: Energy System Database
+  m_EditorClassIdentifier: 
+  maxEnergyPoints: 500
+  energyCostForHarvesting: 2
+  energyCostForBuilding: 7
+  lowEnergySpeedMult: 0.7
+  lowEnergyHarvestSpeedMult: 0.7
+  foodItems:
+  - type: 150
+    energyPointsRestoring: 35
+  - type: 151
+    energyPointsRestoring: 100
+  - type: 152
+    energyPointsRestoring: 65
+  - type: 153
+    energyPointsRestoring: 120

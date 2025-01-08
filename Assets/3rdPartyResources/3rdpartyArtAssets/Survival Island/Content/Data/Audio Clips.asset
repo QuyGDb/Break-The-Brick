@@ -1,0 +1,31 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 8634c5cf5896bb84ca6474552cf85648, type: 3}
+  m_Name: Audio Clips
+  m_EditorClassIdentifier: 
+  buttonSound: {fileID: 8300000, guid: 43778771ca132fe44baa768ab4be8bc2, type: 3}
+  reward: {fileID: 8300000, guid: 19e03e784c6d40b42a06905c4df45d4c, type: 3}
+  resourcesDropInStorageSound: {fileID: 8300000, guid: 6af939db648aefe4dae3791feb644bb0,
+    type: 3}
+  resourcesPickUpFromStorageSound: {fileID: 8300000, guid: 3dbd24b5d7b3fbd4bb3ea636183fe178,
+    type: 3}
+  waterSound: {fileID: 8300000, guid: 17aaaf7bf1703df469fc1b5c67398000, type: 3}
+  stepSounds:
+  - {fileID: 8300000, guid: 48b30a36d23a16542a1dade4892dc151, type: 3}
+  - {fileID: 8300000, guid: 08e10d46732032e4fab10ab6d8582bd6, type: 3}
+  - {fileID: 8300000, guid: b9a8b09b03721a845b15581142388093, type: 3}
+  appear: {fileID: 8300000, guid: d3985b0189041494da3163bc98b899c9, type: 3}
+  boost: {fileID: 8300000, guid: adc34020c97c30b438014961972612f2, type: 3}
+  hummer: {fileID: 8300000, guid: 83a1ff5d6572dba42b9eaaf25d90a096, type: 3}
+  punch: {fileID: 8300000, guid: 5ec892ad6cd89da4e8fd8a8f0e4de84f, type: 3}
+  playerDeathSound: {fileID: 8300000, guid: 6ab25689347fa5a4ea22664ca8fb46b3, type: 3}
+  playerDrowningSound: {fileID: 8300000, guid: 6ab25689347fa5a4ea22664ca8fb46b3, type: 3}

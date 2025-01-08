@@ -1,0 +1,82 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 026fa7a8c2a468d42855abb412ed6f5a, type: 3}
+  m_Name: Character Interaction Data
+  m_EditorClassIdentifier: 
+  defaultAnimationData:
+    animationType: 0
+    animationClip: {fileID: 8360830000535282803, guid: d8a1a93f8a76af043a12b11f30d91b7f,
+      type: 3}
+    toolBehaviorPrefab: {fileID: 0}
+    interactionIcon: {fileID: 21300000, guid: 8e27e725a601ef24b906dcbd3bf89728, type: 3}
+    audioClip: {fileID: 0}
+  animationsData:
+  - animationType: 1
+    animationClip: {fileID: 3399048364903739867, guid: 357f53532867bc84c8b76d5d9d296867,
+      type: 3}
+    toolBehaviorPrefab: {fileID: 4434665423986997734, guid: 52265e301aa584a46ab3417adfb4fdc1,
+      type: 3}
+    interactionIcon: {fileID: 0}
+    audioClip: {fileID: 8300000, guid: 677f8549a28e531448c211a790090aba, type: 3}
+  - animationType: 2
+    animationClip: {fileID: 3399048364903739867, guid: 357f53532867bc84c8b76d5d9d296867,
+      type: 3}
+    toolBehaviorPrefab: {fileID: 253860727473416993, guid: bf2f76f18e44f1d41a1ff129dd9d9b56,
+      type: 3}
+    interactionIcon: {fileID: 0}
+    audioClip: {fileID: 8300000, guid: 85ff7cd622f53bc438b5f2edaca56e5a, type: 3}
+  - animationType: 3
+    animationClip: {fileID: 3390744155364577054, guid: 26a27504fe9460b48af98136c2b9072e,
+      type: 3}
+    toolBehaviorPrefab: {fileID: 0}
+    interactionIcon: {fileID: 0}
+    audioClip: {fileID: 8300000, guid: 9a44be22e0cface47bb1d42d5b770fa6, type: 3}
+  - animationType: 4
+    animationClip: {fileID: -4583110885125057493, guid: 5496e02a621ef60429d7b198fb9f230e,
+      type: 3}
+    toolBehaviorPrefab: {fileID: 0}
+    interactionIcon: {fileID: 0}
+    audioClip: {fileID: 8300000, guid: fe3494b152ea5574282d24fdd561b115, type: 3}
+  - animationType: 6
+    animationClip: {fileID: 3399048364903739867, guid: 357f53532867bc84c8b76d5d9d296867,
+      type: 3}
+    toolBehaviorPrefab: {fileID: 3983599116061671533, guid: 50c9c25380ada0b4f8dfe26bf8855073,
+      type: 3}
+    interactionIcon: {fileID: 21300000, guid: fed8351ef529f2144b26f0b9d1fea0cb, type: 3}
+    audioClip: {fileID: 8300000, guid: 141dbad8b550f4f4492d9aac7cc63e2f, type: 3}
+  - animationType: 7
+    animationClip: {fileID: -3612763372161510525, guid: 3cf62550b8cd44d408451077bdd63ee3,
+      type: 3}
+    toolBehaviorPrefab: {fileID: 7158612335367144383, guid: 1f7dbaf5af6ad5c458a3835e890ae4ef,
+      type: 3}
+    interactionIcon: {fileID: 21300000, guid: a3c20660e13562545b6191175f4a5faa, type: 3}
+    audioClip: {fileID: 8300000, guid: 83a1ff5d6572dba42b9eaaf25d90a096, type: 3}
+  - animationType: 8
+    animationClip: {fileID: 356212766624856220, guid: 162e90b7cc379a74387771e96dd11396,
+      type: 3}
+    toolBehaviorPrefab: {fileID: 1882671084160697295, guid: cefee1de391fca245848c8aba98d14ab,
+      type: 3}
+    interactionIcon: {fileID: 21300000, guid: 7c98baae0b5d3d14c9622fe0153afcdc, type: 3}
+    audioClip: {fileID: 8300000, guid: b6a7b7918206e0541a29e3ca529b2c05, type: 3}
+  - animationType: 9
+    animationClip: {fileID: 7054950212271197214, guid: aadc59c395374324f8e8aacc197e5271,
+      type: 3}
+    toolBehaviorPrefab: {fileID: 0}
+    interactionIcon: {fileID: 21300000, guid: 8e27e725a601ef24b906dcbd3bf89728, type: 3}
+    audioClip: {fileID: 8300000, guid: 141dbad8b550f4f4492d9aac7cc63e2f, type: 3}
+  - animationType: 10
+    animationClip: {fileID: -203655887218126122, guid: 41244e90616918742bd47b4577e4e1d6,
+      type: 3}
+    toolBehaviorPrefab: {fileID: 3782860010489455632, guid: 2c57d232ab8194844b9fa09605d16c42,
+      type: 3}
+    interactionIcon: {fileID: 0}
+    audioClip: {fileID: 8300000, guid: 1008ae36777e6954fb50092d3f34b498, type: 3}

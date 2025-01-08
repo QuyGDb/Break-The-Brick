@@ -1,0 +1,31 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e6c018d8e81ea3d4fab8628d1e58d13a, type: 3}
+  m_Name: Setup Guide Info
+  m_EditorClassIdentifier: 
+  gameName: Survival Island
+  documentationURL: https://www.notion.so/wmelongames/Survival-Island-0aa042c2ef23432f9f14992769c41e2f
+  windowButtons:
+  - title: Define Manager
+    textureName: icon_modules
+    menuPath: Tools/Editor/Define Manager
+  folderButtons:
+  - title: Environment
+    textureName: icon_folder
+    folderPath: Assets/Project Data/Content/Data/Environment
+  fileButtons:
+  - title: Worlds Database
+    textureName: icon_documentation
+    filePath: Assets/Project Data/Content/Data/Worlds Database.asset
+  - title: Currencies Database
+    textureName: icon_documentation
+    filePath: Assets/Project Data/Content/Data/Currencies Database.asset

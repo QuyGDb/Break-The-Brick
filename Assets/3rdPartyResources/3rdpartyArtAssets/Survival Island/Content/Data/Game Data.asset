@@ -1,0 +1,34 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: bdfe15605739d3844adf6c12ca0e15dc, type: 3}
+  m_Name: Game Data
+  m_EditorClassIdentifier: 
+  useMainMenu: 0
+  transactionUIPrefab: {fileID: 0}
+  enemiesDatabase: {fileID: 11400000, guid: 8be57db0ee0cc564296dedfbc8d47043, type: 2}
+  storageSoundStartTime: 0
+  storageSoundHandler:
+    audioType: 1
+    clipVolume: 1
+    advancedSettings: 1
+    minDelay: 0.01
+    dynamicPitch: 1
+    pitchRange:
+      firstValue: 1
+      secondValue: 2
+    pitchSteps: 10
+    pitchResetTime: 0.5
+    customAudioSource: {fileID: 0}
+  stepsVolumeRange:
+    firstValue: 0.4
+    secondValue: 0.7
+  minSpeedToTriggerSteps: 0.2

@@ -1,0 +1,196 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 14c0aa715689d93439983ef48ad35a3c, type: 3}
+  m_Name: World 1
+  m_EditorClassIdentifier: 
+  type: 0
+  enabledPartsOfDay: -1
+  dayPartTransitionDuration: 5
+  weather:
+  - preset: {fileID: 11400000, guid: 4101f900b22d11047bd1a760f3e5b7f7, type: 2}
+    duration:
+      firstValue: 30
+      secondValue: 40
+    chance: 20
+  - preset: {fileID: 11400000, guid: af6474ec94e2417439684333e9e10d69, type: 2}
+    duration:
+      firstValue: 20
+      secondValue: 35
+    chance: 10
+  - preset: {fileID: 11400000, guid: e86e23dedde33e64eada8a3421f4b8ce, type: 2}
+    duration:
+      firstValue: 30
+      secondValue: 50
+    chance: 10
+  - preset: {fileID: 11400000, guid: be4ae9c9ece7583479bf4e98d2fc04c8, type: 2}
+    duration:
+      firstValue: 40
+      secondValue: 60
+    chance: 80
+  - preset: {fileID: 11400000, guid: 2aeb8925a96739448bc3ddb8cbb4bb87, type: 2}
+    duration:
+      firstValue: 20
+      secondValue: 35
+    chance: 10
+  weatherTransitionDuration: 5
+  dayPreset:
+    partOfDayDuration: 70
+    lightColor: {r: 1, g: 1, b: 1, a: 1}
+    shadowsIntensity: 1
+    rimIntensity: 1
+    skyGradient:
+      serializedVersion: 2
+      key0: {r: 0.4838274, g: 0.7361785, b: 1, a: 1}
+      key1: {r: 0.77493256, g: 0.92423475, b: 1, a: 1}
+      key2: {r: 0.79607844, g: 0.8352941, b: 1, a: 0}
+      key3: {r: 0, g: 0, b: 0, a: 0}
+      key4: {r: 0, g: 0, b: 0, a: 0}
+      key5: {r: 0, g: 0, b: 0, a: 0}
+      key6: {r: 0, g: 0, b: 0, a: 0}
+      key7: {r: 0, g: 0, b: 0, a: 0}
+      ctime0: 0
+      ctime1: 2809
+      ctime2: 64819
+      ctime3: 0
+      ctime4: 0
+      ctime5: 0
+      ctime6: 0
+      ctime7: 0
+      atime0: 0
+      atime1: 65535
+      atime2: 0
+      atime3: 0
+      atime4: 0
+      atime5: 0
+      atime6: 0
+      atime7: 0
+      m_Mode: 2
+      m_ColorSpace: 0
+      m_NumColorKeys: 2
+      m_NumAlphaKeys: 2
+    windMultiplier: 1
+    cloudsInfluence1: 1
+    cloudsInfluence2: 1
+  nightPreset:
+    partOfDayDuration: 40
+    lightColor: {r: 0.80188674, g: 0.8461902, b: 1, a: 1}
+    shadowsIntensity: 0.25
+    rimIntensity: 1
+    skyGradient:
+      serializedVersion: 2
+      key0: {r: 0.091669604, g: 0.23496626, b: 0.6603774, a: 1}
+      key1: {r: 0.35685217, g: 0.616367, b: 0.89757407, a: 1}
+      key2: {r: 0.34514052, g: 0.358985, b: 0.74663067, a: 0}
+      key3: {r: 0, g: 0, b: 0, a: 0}
+      key4: {r: 0, g: 0, b: 0, a: 0}
+      key5: {r: 0, g: 0, b: 0, a: 0}
+      key6: {r: 0, g: 0, b: 0, a: 0}
+      key7: {r: 0, g: 0, b: 0, a: 0}
+      ctime0: 0
+      ctime1: 3359
+      ctime2: 11730
+      ctime3: 0
+      ctime4: 0
+      ctime5: 0
+      ctime6: 0
+      ctime7: 0
+      atime0: 0
+      atime1: 65535
+      atime2: 0
+      atime3: 0
+      atime4: 0
+      atime5: 0
+      atime6: 0
+      atime7: 0
+      m_Mode: 0
+      m_ColorSpace: 0
+      m_NumColorKeys: 2
+      m_NumAlphaKeys: 2
+    windMultiplier: 1
+    cloudsInfluence1: 0
+    cloudsInfluence2: 0
+  morningPreset:
+    partOfDayDuration: 20
+    lightColor: {r: 0.9892183, g: 0.9539631, b: 0.83057, a: 1}
+    shadowsIntensity: 0.35
+    rimIntensity: 1
+    skyGradient:
+      serializedVersion: 2
+      key0: {r: 0.5406128, g: 0.6746325, b: 0.9137466, a: 1}
+      key1: {r: 1, g: 0.78329575, b: 0.5808624, a: 1}
+      key2: {r: 1, g: 1, b: 1, a: 0}
+      key3: {r: 0, g: 0, b: 0, a: 0}
+      key4: {r: 0, g: 0, b: 0, a: 0}
+      key5: {r: 0, g: 0, b: 0, a: 0}
+      key6: {r: 0, g: 0, b: 0, a: 0}
+      key7: {r: 0, g: 0, b: 0, a: 0}
+      ctime0: 0
+      ctime1: 4351
+      ctime2: 65535
+      ctime3: 0
+      ctime4: 0
+      ctime5: 0
+      ctime6: 0
+      ctime7: 0
+      atime0: 0
+      atime1: 65535
+      atime2: 0
+      atime3: 0
+      atime4: 0
+      atime5: 0
+      atime6: 0
+      atime7: 0
+      m_Mode: 0
+      m_ColorSpace: 0
+      m_NumColorKeys: 3
+      m_NumAlphaKeys: 2
+    windMultiplier: 0.5
+    cloudsInfluence1: 0.5
+    cloudsInfluence2: 0.5
+  eveningPreset:
+    partOfDayDuration: 20
+    lightColor: {r: 1, g: 0.9252185, b: 0.87735844, a: 1}
+    shadowsIntensity: 0.7
+    rimIntensity: 0.7
+    skyGradient:
+      serializedVersion: 2
+      key0: {r: 0.53964657, g: 0.5951893, b: 0.9838275, a: 1}
+      key1: {r: 1, g: 0.52732885, b: 0.4078431, a: 1}
+      key2: {r: 1, g: 1, b: 1, a: 0}
+      key3: {r: 0, g: 0, b: 0, a: 0}
+      key4: {r: 0, g: 0, b: 0, a: 0}
+      key5: {r: 0, g: 0, b: 0, a: 0}
+      key6: {r: 0, g: 0, b: 0, a: 0}
+      key7: {r: 0, g: 0, b: 0, a: 0}
+      ctime0: 0
+      ctime1: 3580
+      ctime2: 65150
+      ctime3: 0
+      ctime4: 0
+      ctime5: 0
+      ctime6: 0
+      ctime7: 0
+      atime0: 0
+      atime1: 65535
+      atime2: 0
+      atime3: 0
+      atime4: 0
+      atime5: 0
+      atime6: 0
+      atime7: 0
+      m_Mode: 2
+      m_ColorSpace: 0
+      m_NumColorKeys: 2
+      m_NumAlphaKeys: 2
+    windMultiplier: 2
+    cloudsInfluence1: 0.5
+    cloudsInfluence2: 0.5

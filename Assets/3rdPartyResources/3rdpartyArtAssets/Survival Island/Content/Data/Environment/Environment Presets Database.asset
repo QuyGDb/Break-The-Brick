@@ -1,0 +1,19 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 39a69dc8e4d669845bcd8672ced1b899, type: 3}
+  m_Name: Environment Presets Database
+  m_EditorClassIdentifier: 
+  presets:
+  - {fileID: 11400000, guid: f0cc743e73c7b5c4085b9b3ec40e16d8, type: 2}
+  - {fileID: 11400000, guid: 08b80ee6f7af99c4f948afd1270b29dd, type: 2}
+  - {fileID: 11400000, guid: 44888186e1a61d8459081440818d4d9a, type: 2}
+  - {fileID: 11400000, guid: 8be7c43bb69a4e8478a524b02ddcf6f3, type: 2}
