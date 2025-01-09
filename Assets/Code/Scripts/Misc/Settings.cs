@@ -1,21 +1,10 @@
-using System.Collections;
-using System.Collections.Generic;
+
 using UnityEngine;
-
-namespace Watermelon
+public static class Settings
 {
-    public class Settings : MonoBehaviour
-    {
-        // Start is called before the first frame update
-        void Start()
-        {
-        
-        }
+    #region ANIMATOR PARAMETERS
+    // Animator parameters - Player
+    public static int isChop = Animator.StringToHash("isChop");
 
-        // Update is called once per frame
-        void Update()
-        {
-        
-        }
-    }
+    #endregion
 }
