@@ -1,8 +1,0 @@
-v1.0.2
-A bit of polish
-
-v1.0.1
-WebGL startup error fix
-
-v1.0.0
-Release

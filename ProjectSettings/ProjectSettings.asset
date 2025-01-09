@@ -159,7 +159,7 @@ PlayerSettings:
   androidMaxAspectRatio: 2.1
   applicationIdentifier:
     Android: com.DefaultCompany.SurvivalIsland
-    Standalone: com.DefaultCompany.Survival-Island
+    Standalone: com.DefaultCompany.Break-The-Brick
   buildNumber:
     Standalone: 0
     VisionOS: 0
@@ -849,13 +849,13 @@ PlayerSettings:
     m_VersionCode: 1
     m_VersionName: 
   apiCompatibilityLevel: 6
-  activeInputHandler: 1
+  activeInputHandler: 2
   windowsGamepadBackendHint: 0
-  cloudProjectId: 
+  cloudProjectId: 39132ad1-c4ce-4f4d-a481-60ec83128848
   framebufferDepthMemorylessMode: 0
   qualitySettingsNames: []
-  projectName: 
-  organizationId: 
+  projectName: Break The Brick 2025-01-09_13-51-46
+  organizationId: tsuhamit
   cloudEnabled: 0
   legacyClampBlendShapeWeights: 0
   playerDataPath: 

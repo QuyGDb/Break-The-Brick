@@ -4,27 +4,5 @@
 EditorBuildSettings:
   m_ObjectHideFlags: 0
   serializedVersion: 2
-  m_Scenes:
-  - enabled: 1
-    path: Assets/3rdPartyResources/3rdpartyArtAssets/Survival Island/Game/Scenes/Init.unity
-    guid: cc0b80ce7479f924fa29c695693d8ae8
-  - enabled: 1
-    path: Assets/3rdPartyResources/3rdpartyArtAssets/Survival Island/Game/Scenes/Game.unity
-    guid: 361eea68332b709408fe8391773229a1
-  - enabled: 1
-    path: Assets/3rdPartyResources/3rdpartyArtAssets/Survival Island/Game/Scenes/Worlds/World
-      1 [Full Demo].unity
-    guid: 099600eb61093244fbc0ea52b433e03d
-  - enabled: 1
-    path: Assets/3rdPartyResources/3rdpartyArtAssets/Survival Island/Game/Scenes/Worlds/World
-      2 [Alt Demo].unity
-    guid: b987323407a93a541963884fe5cb7501
-  - enabled: 0
-    path: Assets/3rdPartyResources/3rdpartyArtAssets/Survival Island/Watermelon Core/Extra
-      Components/Monetization/Advertisement/Example/AdsManagerExample.unity
-    guid: 4723a3e64b3234444b1393548554ce46
-  - enabled: 0
-    path: Assets/3rdPartyResources/3rdpartyArtAssets/Survival Island/Watermelon Core/Extra
-      Components/Haptic/Examples/Scenes/Haptic Test.unity
-    guid: e730434b98fac584ba6dc410b97c41f5
+  m_Scenes: []
   m_configObjects: {}
