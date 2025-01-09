@@ -2,30 +2,44 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-namespace Watermelon
-{
-    public class PlayerControls : MonoBehaviour
-    {
-        private PlayerAnimation playerAnimation;
 
-        private void Awake()
+public class PlayerControls : MonoBehaviour
+{
+    private PlayerAnimation playerAnimation;
+    private PlayerAtributes playerAtributes;
+    [SerializeField] private float countdownTime = 0.5f;
+    private float currentCountdown = 0f;
+    private void Awake()
+    {
+        playerAnimation = GetComponent<PlayerAnimation>();
+    }
+    void Update()
+    {
+        if (currentCountdown > 0f)
         {
-            playerAnimation = GetComponent<PlayerAnimation>();
+            currentCountdown -= Time.deltaTime;
         }
-        void Update()
-        {
+
+#if UNITY_ANDROID || UNITY_IOS
             if (Input.touchCount > 0)
             {
-                // Check if the first touch has begun
-                if (Input.GetTouch(0).phase == TouchPhase.Began)
+                if (Input.GetTouch(0).phase == TouchPhase.Began && currentCountdown <= 0f)
                 {
                     playerAnimation.TriggerChopAnim();
+                    currentCountdown = countdownTime;
+                    playerAtributes.TrackChopCount();
                 }
             }
-            if (Input.GetMouseButtonDown(0))
-            {
-                playerAnimation.TriggerChopAnim();
-            }
+#endif
+
+#if UNITY_STANDALONE_WIN
+        if (Input.GetMouseButtonDown(0) && currentCountdown <= 0f)
+        {
+            playerAnimation.TriggerChopAnim();
+            currentCountdown = countdownTime;
+            playerAtributes.TrackChopCount();
         }
+#endif
     }
 }
+

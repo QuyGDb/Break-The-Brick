@@ -9,7 +9,7 @@ public class BrickSpawner : MonoBehaviour
 
     void Start()
     {
-        // SpawnBrickInPlatform();
+        SpawnBrickInPlatform();
     }
     private void Update()
     {
