@@ -38,7 +38,7 @@ public class PlayerControls : MonoBehaviour
         {
             playerAnimation.TriggerChopAnim();
             currentCountdown = countdownTime;
-            playerAtributes.TrackChopCount();
+            //  playerAtributes.TrackChopCount();
         }
 #endif
     }

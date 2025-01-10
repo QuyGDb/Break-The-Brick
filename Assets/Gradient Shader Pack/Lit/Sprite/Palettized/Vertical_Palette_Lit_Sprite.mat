@@ -1,0 +1,69 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!21 &2100000
+Material:
+  serializedVersion: 6
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_Name: Vertical_Palette_Lit_Sprite
+  m_Shader: {fileID: -6465566751694194690, guid: 52b226e3626ab4473983088d0baf1023,
+    type: 3}
+  m_ShaderKeywords: 
+  m_LightmapFlags: 4
+  m_EnableInstancingVariants: 0
+  m_DoubleSidedGI: 0
+  m_CustomRenderQueue: -1
+  stringTagMap: {}
+  disabledShaderPasses: []
+  m_SavedProperties:
+    serializedVersion: 3
+    m_TexEnvs:
+    - Texture2D_14DCF785:
+        m_Texture: {fileID: 2800000, guid: c7fd4021a78db42b1aca32a1e64c8793, type: 3}
+        m_Scale: {x: 1, y: 1}
+        m_Offset: {x: 0, y: 0}
+    - Texture2D_CB065E6C:
+        m_Texture: {fileID: 2800000, guid: 8ff2112d9faaf4e87b1dfd872dcd807d, type: 3}
+        m_Scale: {x: 1, y: 1}
+        m_Offset: {x: 0, y: 0}
+    - Texture2D_DB918B68:
+        m_Texture: {fileID: 2800000, guid: 7018550c17b86411d8f180ea87f4897f, type: 3}
+        m_Scale: {x: 1, y: 1}
+        m_Offset: {x: 0, y: 0}
+    - _MainTex:
+        m_Texture: {fileID: 2800000, guid: 8329a3e9ecdea468583bdf47c94d2bdb, type: 3}
+        m_Scale: {x: 1, y: 1}
+        m_Offset: {x: 0, y: 0}
+    - _MaskTex:
+        m_Texture: {fileID: 0}
+        m_Scale: {x: 1, y: 1}
+        m_Offset: {x: 0, y: 0}
+    - _NormalMap:
+        m_Texture: {fileID: 2800000, guid: 95e424c7dbc454dadafe3bcc4e0aab26, type: 3}
+        m_Scale: {x: 1, y: 1}
+        m_Offset: {x: 0, y: 0}
+    - _Palette1:
+        m_Texture: {fileID: 2800000, guid: c7fd4021a78db42b1aca32a1e64c8793, type: 3}
+        m_Scale: {x: 1, y: 1}
+        m_Offset: {x: 0, y: 0}
+    - _Palette2:
+        m_Texture: {fileID: 2800000, guid: 8c0f3df8c081341c8832c72c7a15e007, type: 3}
+        m_Scale: {x: 1, y: 1}
+        m_Offset: {x: 0, y: 0}
+    m_Floats:
+    - Boolean_D45860B3: 0
+    - Vector1_1F8665AA: 0
+    - Vector1_2CDBD2C0: 1
+    - Vector1_3E512A80: 0
+    - Vector1_4B09A0EE: 0
+    - Vector1_4DB56BE8: 0
+    - Vector1_58180B6D: 0
+    - Vector1_8370CAA6: 1
+    - Vector1_8D0C51A0: 0
+    - Vector1_999EDCA7: 1
+    - Vector1_D66C695: 0
+    m_Colors:
+    - Color_88D8BEFF: {r: 0.5019608, g: 0, b: 1, a: 0.5019608}
+    - Color_895F80EB: {r: 1, g: 0, b: 0, a: 1}

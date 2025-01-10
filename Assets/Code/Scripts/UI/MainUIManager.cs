@@ -32,7 +32,8 @@ public class MainUIManager : MonoBehaviour
 
     public void StartMainScene()
     {
-        SceneManager.UnloadSceneAsync("MainMenu");
+
         SceneManager.LoadScene("MainScene");
+        SceneManager.UnloadSceneAsync(0);
     }
 }

@@ -33,6 +33,12 @@ public class GameManager : SingletonMonobehaviour<GameManager>
             case GameState.ThirdPerson:
                 cameraManager.StartThirdPersonMode();
                 break;
+            case GameState.Win:
+                Settings.brickCount = 0;
+
+                break;
+            case GameState.Lose:
+                break;
             default:
                 break;
         }

@@ -1,6 +1,7 @@
-using System.Collections;
+﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.InputSystem;
 
 public static class HelperUtilities
 {
@@ -65,5 +66,30 @@ public static class HelperUtilities
         }
 
         return error;
+    }
+    public static Vector3 GetMousePositionInUI(RectTransform rectTransform, Camera uiCamera = null)
+    {
+
+        Vector3 mouseScreenPosition = Mouse.current.position.ReadValue();
+
+        // Clamp mouse position to screen size
+        mouseScreenPosition.x = Mathf.Clamp(mouseScreenPosition.x, 0f, Screen.width);
+        mouseScreenPosition.y = Mathf.Clamp(mouseScreenPosition.y, 0f, Screen.height);
+        RectTransformUtility.ScreenPointToLocalPointInRectangle(
+                rectTransform,
+                mouseScreenPosition,
+                uiCamera,
+                out Vector2 localPoint
+            );
+        Vector3 mousePosition = rectTransform.TransformPoint(localPoint);
+
+        return mousePosition;
+    }
+
+    public static Vector3 GetMouseWorldPosition3D(float distanceFromCamera)
+    {
+        Vector3 mousePosition = Input.mousePosition;
+        mousePosition.z = distanceFromCamera; // Đặt z là khoảng cách từ camera
+        return Camera.main.ScreenToWorldPoint(mousePosition);
     }
 }

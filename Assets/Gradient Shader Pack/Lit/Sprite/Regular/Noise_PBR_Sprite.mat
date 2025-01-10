@@ -1,0 +1,50 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!21 &2100000
+Material:
+  serializedVersion: 6
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_Name: Noise_PBR_Sprite
+  m_Shader: {fileID: -6465566751694194690, guid: 2e5cf09c8a2b44bcc8027ea2eb12b046,
+    type: 3}
+  m_ShaderKeywords: 
+  m_LightmapFlags: 4
+  m_EnableInstancingVariants: 0
+  m_DoubleSidedGI: 0
+  m_CustomRenderQueue: -1
+  stringTagMap: {}
+  disabledShaderPasses: []
+  m_SavedProperties:
+    serializedVersion: 3
+    m_TexEnvs:
+    - Texture2D_43C4B623:
+        m_Texture: {fileID: 2800000, guid: 8ff2112d9faaf4e87b1dfd872dcd807d, type: 3}
+        m_Scale: {x: 1, y: 1}
+        m_Offset: {x: 0, y: 0}
+    - _MainTex:
+        m_Texture: {fileID: 2800000, guid: 8329a3e9ecdea468583bdf47c94d2bdb, type: 3}
+        m_Scale: {x: 1, y: 1}
+        m_Offset: {x: 0, y: 0}
+    - _MaskTex:
+        m_Texture: {fileID: 0}
+        m_Scale: {x: 1, y: 1}
+        m_Offset: {x: 0, y: 0}
+    - _NormalMap:
+        m_Texture: {fileID: 2800000, guid: 95e424c7dbc454dadafe3bcc4e0aab26, type: 3}
+        m_Scale: {x: 1, y: 1}
+        m_Offset: {x: 0, y: 0}
+    m_Floats:
+    - Boolean_E35C3FF5: 0
+    - Vector1_5F2943D: 0
+    - Vector1_77C5368A: 0
+    - Vector1_998A61AC: 1
+    - Vector1_B333E3F8: 4
+    - Vector1_CD9A3478: 0
+    - Vector1_CE2BD3E: 1
+    - Vector1_FAEF3CD8: 4
+    m_Colors:
+    - Color_988EA964: {r: 0.5019608, g: 0, b: 1, a: 1}
+    - Color_D6E989AE: {r: 0, g: 0.6006255, b: 1, a: 0.5019608}

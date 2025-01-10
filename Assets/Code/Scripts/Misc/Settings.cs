@@ -10,4 +10,8 @@ public static class Settings
     #region Play Mode
     public static PlayMode playMode;
     #endregion
+
+
+    public static int brickCount = 0;
+
 }
