@@ -5,7 +5,7 @@ public class BrickSpawner : MonoBehaviour
     public GameObject brickToSpawn;
     public int numberOfbricks = 6;
     public float radius = 5f;
-    public float yPostionOfbrick = 1f;
+    public float yPostionOfBrick = 1f;
 
     void Start()
     {
@@ -28,7 +28,7 @@ public class BrickSpawner : MonoBehaviour
             float x = Mathf.Cos(angle) * radius;
             float z = Mathf.Sin(angle) * radius;
 
-            Vector3 position = new Vector3(x, yPostionOfbrick, z) + transform.position;
+            Vector3 position = new Vector3(x, yPostionOfBrick, z) + transform.position;
             Instantiate(brickToSpawn, position, Quaternion.identity, transform);
         }
     }

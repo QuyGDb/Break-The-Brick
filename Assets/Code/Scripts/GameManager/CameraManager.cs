@@ -6,7 +6,6 @@ public class CameraManager : MonoBehaviour
 {
     public Camera firstPersonCamera;
     public Camera thirdPersonCamera;
-    public PlayerManager playerManager;
     public void StartFirstPersonMode()
     {
         firstPersonCamera.enabled = true;

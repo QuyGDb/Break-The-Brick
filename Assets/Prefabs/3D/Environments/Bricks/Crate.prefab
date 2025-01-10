@@ -12,10 +12,11 @@ GameObject:
   - component: {fileID: 1870848429896558887}
   - component: {fileID: 4472745088963059181}
   - component: {fileID: 3044990519819892753}
-  - component: {fileID: -1565318573738856829}
+  - component: {fileID: 6594750509399065437}
   - component: {fileID: 3801353560921623152}
-  - component: {fileID: 5574767581490920148}
-  - component: {fileID: 1494834249097512829}
+  - component: {fileID: -1361615701760886174}
+  - component: {fileID: -7900055111860262647}
+  - component: {fileID: -965211530099644893}
   m_Layer: 6
   m_Name: Crate
   m_TagString: Untagged
@@ -100,8 +101,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 2617fc251f6cae14881c6a0c2ef89e3d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
---- !u!64 &-1565318573738856829
-MeshCollider:
+--- !u!65 &6594750509399065437
+BoxCollider:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
@@ -110,10 +111,9 @@ MeshCollider:
   m_Material: {fileID: 0}
   m_IsTrigger: 0
   m_Enabled: 1
-  serializedVersion: 4
-  m_Convex: 0
-  m_CookingOptions: 30
-  m_Mesh: {fileID: 1490014688594724021, guid: 5539ff9eef25ff7488011856f4a37203, type: 3}
+  serializedVersion: 2
+  m_Size: {x: 0.012999998, y: 0.013000002, z: 0.013000002}
+  m_Center: {x: 0, y: 0, z: 0}
 --- !u!54 &3801353560921623152
 Rigidbody:
   m_ObjectHideFlags: 0
@@ -125,12 +125,12 @@ Rigidbody:
   m_Mass: 1
   m_Drag: 0
   m_AngularDrag: 0.05
-  m_UseGravity: 0
-  m_IsKinematic: 1
+  m_UseGravity: 1
+  m_IsKinematic: 0
   m_Interpolate: 0
   m_Constraints: 0
-  m_CollisionDetection: 0
---- !u!114 &5574767581490920148
+  m_CollisionDetection: 2
+--- !u!114 &-1361615701760886174
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -139,186 +139,64 @@ MonoBehaviour:
   m_GameObject: {fileID: 2671370726764428344}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: eb6e52f37bca2404fac00b69fd8d21f8, type: 3}
+  m_Script: {fileID: 11500000, guid: 8f5e79b13bbb1d74e8a4fe76b5c902d6, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  initialization: 1
-  simulationType: 0
-  objectType: 0
-  demolitionType: 1
-  physics:
-    mt: 4
-    material: {fileID: 0}
-    massBy: 0
-    mass: 1
-    ct: 0
-    pc: 1
-    ine: 0
-    gr: 1
-    si: 6
-    st: 0.005
-    dm: 0.7
-    rigidBody: {fileID: 0}
-    meshCollider: {fileID: 0}
-    clusterColliders: []
-    ignoreList: 
-    exclude: 0
-    solidity: 1
-    destructible: 0
-  activation:
-    loc: 0
-    off: 0
-    vel: 0
-    dmg: 0
-    act: 0
-    imp: 1
-    con: 0
-    uny: 0
-    atb: 0
-    l: 0
-    lay: 0
-    cnt: {fileID: 0}
+  onDemolition: 1
+  onActivation: 1
+  onImpact: 1
+  opacity: 0.341
+  dustMaterial: {fileID: 2100000, guid: 4e968ed639b0f194fa6e1e19e721b4a7, type: 2}
+  dustMaterials:
+  - {fileID: 2100000, guid: 4e968ed639b0f194fa6e1e19e721b4a7, type: 2}
+  - {fileID: 2100000, guid: 766f926b1c8bc954d88b7428f6d4a280, type: 2}
+  - {fileID: 2100000, guid: 4a40f952e235d5d44b5f644bc9301567, type: 2}
+  emissionMaterial: {fileID: 0}
+  emission:
+    burstType: 2
+    burstAmount: 5
+    distanceRate: 1
+    duration: 4
+    lifeMin: 2
+    lifeMax: 13
+    sizeMin: 1.5
+    sizeMax: 4
+  dynamic:
+    speedMin: 0.18
+    speedMax: 0.4
+    rotation: 0.5
+    gravityMin: 0.03
+    gravityMax: 0.23
+  noise:
+    enabled: 0
+    quality: 2
+    strengthMin: 0.3
+    strengthMax: 0.6
+    frequency: 0.3
+    scrollSpeed: 0.7
+    damping: 1
+  collision:
+    collidesWith:
+      serializedVersion: 2
+      m_Bits: 4294967295
+    quality: 0
+    radiusScale: 1
   limitations:
-    col: 1
-    sol: 0.1
-    tag: Untagged
-    depth: 1
-    time: 0.2
-    size: 0.1
-    vis: 0
-    bld: 0
-    bound:
-      m_Center: {x: 0, y: 0, z: 0}
-      m_Extent: {x: 0, y: 0, z: 0}
-  meshDemolition:
-    am: 27
-    var: 0
-    dpf: 0.5
-    bias: 0
-    sd: 1
-    use: 0
-    cld: 1
-    cls: 0
-    sim: 4
-    inp: 9
-    prp:
-      col: 0
-      szF: 0
-      dec: 0
-      rem: 0
-      l: 1
-      lay: 0
-      t: 1
-      tag: 
-    ch:
-      tp: 0
-      frm: 3
-      frg: 4
-      skp: 0
-    sht: {fileID: 0}
-    rotStart: {x: 0, y: 0, z: 0, w: 1}
-  clusterDemolition:
-    connectivity: 0
-    minimumArea: 0
-    minimumSize: 0
-    percentage: 0
-    seed: 0
-    type: 0
-    ratio: 15
-    units: 1
-    shardArea: 100
-    shardDemolition: 0
-    minAmount: 3
-    maxAmount: 6
-    demolishable: 1
-    collapse:
-      type: 1
-      start: 0
-      end: 75
-      steps: 10
-      duration: 15
-      var: 0
-      seed: 0
-    clsCount: 1
-    cluster:
-      id: -1
-      tm: {fileID: 0}
-      depth: 0
-      pos: {x: 0, y: 0, z: 0}
-      rot: {x: 0, y: 0, z: 0, w: 0}
-      scl: {x: 0, y: 0, z: 0}
-      bound:
-        m_Center: {x: 0, y: 0, z: 0}
-        m_Extent: {x: 0, y: 0, z: 0}
-      demolishable: 1
-      rigid: {fileID: 0}
-      shards: []
-      cachedHost: 0
-      areaCollapse: 0
-      minimumArea: 0
-      maximumArea: 0
-      sizeCollapse: 0
-      minimumSize: 0
-      maximumSize: 0
-      randomCollapse: 0
-    minorClusters: []
-    cn: 0
-    nd: 0
-    am: 0
-  referenceDemolition:
-    reference: {fileID: 0}
-    randomList: []
-    action: 0
-    addRigid: 1
-    inheritScale: 1
-    inheritMaterials: 0
-  materials:
-    iMat: {fileID: 0}
-    oMat: {fileID: 0}
-    mScl: 0.1
-    uvE: 0
-    uvC: {x: 0, y: 0}
-    cE: 0
-    cC: {r: 0, g: 0, b: 0, a: 0}
-  damage:
-    en: 0
-    max: 100
-    cur: 0
-    col: 0
-    mlt: 1
-    shr: 0
-  fading:
-    onDemolition: 1
-    onActivation: 0
-    byOffset: 0
-    lifeType: 4
-    lifeTime: 7
-    lifeVariation: 3
-    fadeType: 0
-    fadeTime: 5
-    sizeFilter: 0
-    shardAmount: 5
-  reset:
-    transform: 1
-    damage: 1
-    connectivity: 0
-    action: 0
-    destroyDelay: 1
-    mesh: 4
-    fragments: 0
-  initialized: 0
-  rfMeshes: []
-  fragments: []
-  cacheRotation: {x: 0, y: 0, z: 0, w: 0}
-  transForm: {fileID: 0}
-  rootChild: {fileID: 0}
-  rootParent: {fileID: 0}
-  meshFilter: {fileID: 0}
-  meshRenderer: {fileID: 0}
-  skr: {fileID: 0}
-  rest: {fileID: 0}
-  sound: {fileID: 0}
---- !u!114 &1494834249097512829
+    minParticles: 3
+    maxParticles: 20
+    visible: 0
+    percentage: 100
+    sizeThreshold: 0.21
+  rendering:
+    castShadows: 1
+    receiveShadows: 1
+    motionVectors: 1
+    lightProbes: 0
+    l: 0
+    layer: 0
+    t: 0
+    tag: 
+--- !u!114 &-7900055111860262647
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -327,93 +205,88 @@ MonoBehaviour:
   m_GameObject: {fileID: 2671370726764428344}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 0e08a7e57face1c4bb8be3e98d7d61fc, type: 3}
+  m_Script: {fileID: 11500000, guid: 33750d88507d69040b28ccc857c648d5, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  type: 0
-  expand: 0
-  minimumArea: 0
-  minimumSize: 0
-  percentage: 0
-  seed: 0
-  clusterize: 1
-  demolishable: 0
-  startCollapse: 3
-  collapseByIntegrity: 50
-  collapse:
-    type: 1
-    start: 0
-    end: 75
-    steps: 10
-    duration: 15
-    var: 0
-    seed: 0
-  startStress: 3
-  stressByIntegrity: 70
-  stress:
-    enable: 0
-    threshold: 100
-    erosion: 1
-    interval: 1
-    support: 45
-    exposed: 0
-    bySize: 0
-    strShards: []
-    supShards: []
-    rotCache: {x: 0, y: 0, z: 0}
-    grvCache: {x: 0, y: 0, z: 0}
-    supCache: 0
-    sizeCache: 0
-    initialized: 0
-  showConnections: 0
-  showNodes: 1
-  showGizmo: 0
-  showStress: 0
-  checkConnectivity: 0
+  onDemolition: 1
+  onActivation: 1
+  onImpact: 1
+  debrisReference: {fileID: 1443819839238964, guid: 6a6c940155772b84980d334830bbff55,
+    type: 3}
+  debrisMaterial: {fileID: 2100000, guid: 1c83bd41b0e6d5e42b90263a2ec96293, type: 2}
+  emissionMaterial: {fileID: 0}
+  emission:
+    burstType: 2
+    burstAmount: 29
+    distanceRate: 1
+    duration: 2.5
+    lifeMin: 2
+    lifeMax: 13
+    sizeMin: 0.56
+    sizeMax: 2.03
+  dynamic:
+    speedMin: 1
+    speedMax: 4
+    velocityMin: 0.5
+    velocityMax: 1.5
+    gravityMin: 0.8
+    gravityMax: 1.1
+    rotationSpeed: 0.5
+  noise:
+    enabled: 0
+    quality: 2
+    strengthMin: 0.3
+    strengthMax: 0.6
+    frequency: 0.3
+    scrollSpeed: 0.7
+    damping: 1
+  collision:
+    collidesWith:
+      serializedVersion: 2
+      m_Bits: 4294967295
+    quality: 0
+    radiusScale: 0.1
+    dampenType: 1
+    dampenMin: 0.1
+    dampenMax: 0.4
+    bounceType: 1
+    bounceMin: 0.2
+    bounceMax: 0.4
+    propertiesSet: 0
+  limitations:
+    minParticles: 3
+    maxParticles: 20
+    visible: 0
+    percentage: 30
+    sizeThreshold: 0.3
+  rendering:
+    castShadows: 1
+    receiveShadows: 1
+    motionVectors: 1
+    lightProbes: 0
+    l: 0
+    layer: 0
+    t: 0
+    tag: 
+--- !u!114 &-965211530099644893
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2671370726764428344}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 2dae403a59cd85344ab1c214fcc3ccef, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  unyielding: 1
+  activatable: 0
+  simulationType: 1
+  centerPosition: {x: 0, y: 0, z: 0}
+  size: {x: 8.1453, y: 1, z: 9.183994}
+  rigidHost: {fileID: 0}
   rigidList: []
-  cluster:
-    id: -1
-    tm: {fileID: 0}
-    depth: 0
-    pos: {x: 0, y: 0, z: 0}
-    rot: {x: 0, y: 0, z: 0, w: 0}
-    scl: {x: 0, y: 0, z: 0}
-    bound:
-      m_Center: {x: 0, y: 0, z: 0}
-      m_Extent: {x: 0, y: 0, z: 0}
-    demolishable: 1
-    rigid: {fileID: 0}
-    shards: []
-    cachedHost: 0
-    areaCollapse: 0
-    minimumArea: 0
-    maximumArea: 0
-    sizeCollapse: 0
-    minimumSize: 0
-    maximumSize: 0
-    randomCollapse: 0
-  initShardAmount: 0
-  clsCount: 0
-  rigidRootHost: {fileID: 0}
-  meshRootHost: {fileID: 0}
-  triggerCollider: {fileID: 0}
-  triggerDebris: 19
-  joints:
-    enable: 0
-    breakType: 0
-    breakForce: 100
-    breakForceVar: 10
-    forceByMass: 0
-    varInAwake: 0
-    angleLimit: 10
-    angleLimitVar: 10
-    damper: 1000
-    deformEnable: 0
-    deformCount: 20
-    stiffFrc: 0.75
-    stiffAbs: 50
-    bend: 0
-    percentage: 100
-    weakening: 0.8
-    initAmount: 0
-    jointList: []
+  shardList: []
+  showGizmo: 1
+  showCenter: 0

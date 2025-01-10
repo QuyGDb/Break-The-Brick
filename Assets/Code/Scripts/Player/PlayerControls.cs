@@ -12,6 +12,7 @@ public class PlayerControls : MonoBehaviour
     private void Awake()
     {
         playerAnimation = GetComponent<PlayerAnimation>();
+        playerAtributes = GetComponent<PlayerAtributes>();
     }
     void Update()
     {
