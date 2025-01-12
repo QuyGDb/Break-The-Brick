@@ -11,13 +11,11 @@ public class InGameUI : MonoBehaviour
     [SerializeField] private GameObject endGamePanel;
     private void OnEnable()
     {
-        StaticEventHandler.OnBrickDestroy += UpdateBrickCount;
         GameManager.Instance.OnGameStateChange += HandleGameState;
     }
 
     private void OnDisable()
     {
-        StaticEventHandler.OnBrickDestroy -= UpdateBrickCount;
         GameManager.Instance.OnGameStateChange -= HandleGameState;
     }
 

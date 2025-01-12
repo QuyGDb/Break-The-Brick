@@ -14,9 +14,7 @@ GameObject:
   - component: {fileID: 3044990519819892753}
   - component: {fileID: 6594750509399065437}
   - component: {fileID: 3801353560921623152}
-  - component: {fileID: -1361615701760886174}
-  - component: {fileID: -7900055111860262647}
-  - component: {fileID: -965211530099644893}
+  - component: {fileID: 7363123622409256165}
   m_Layer: 6
   m_Name: Crate
   m_TagString: Untagged
@@ -130,7 +128,7 @@ Rigidbody:
   m_Interpolate: 0
   m_Constraints: 0
   m_CollisionDetection: 2
---- !u!114 &-1361615701760886174
+--- !u!114 &7363123622409256165
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -139,154 +137,316 @@ MonoBehaviour:
   m_GameObject: {fileID: 2671370726764428344}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 8f5e79b13bbb1d74e8a4fe76b5c902d6, type: 3}
+  m_Script: {fileID: 11500000, guid: 7b55d9bb3ec909340848c72a5bfc0ad0, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  onDemolition: 1
-  onActivation: 1
-  onImpact: 1
-  opacity: 0.341
-  dustMaterial: {fileID: 2100000, guid: 4e968ed639b0f194fa6e1e19e721b4a7, type: 2}
-  dustMaterials:
-  - {fileID: 2100000, guid: 4e968ed639b0f194fa6e1e19e721b4a7, type: 2}
-  - {fileID: 2100000, guid: 766f926b1c8bc954d88b7428f6d4a280, type: 2}
-  - {fileID: 2100000, guid: 4a40f952e235d5d44b5f644bc9301567, type: 2}
-  emissionMaterial: {fileID: 0}
-  emission:
-    burstType: 2
-    burstAmount: 5
-    distanceRate: 1
-    duration: 4
-    lifeMin: 2
-    lifeMax: 13
-    sizeMin: 1.5
-    sizeMax: 4
-  dynamic:
-    speedMin: 0.18
-    speedMax: 0.4
-    rotation: 0.5
-    gravityMin: 0.03
-    gravityMax: 0.23
-  noise:
-    enabled: 0
-    quality: 2
-    strengthMin: 0.3
-    strengthMax: 0.6
-    frequency: 0.3
-    scrollSpeed: 0.7
-    damping: 1
-  collision:
-    collidesWith:
-      serializedVersion: 2
-      m_Bits: 4294967295
-    quality: 0
-    radiusScale: 1
-  limitations:
-    minParticles: 3
-    maxParticles: 20
-    visible: 0
-    percentage: 100
-    sizeThreshold: 0.21
-  rendering:
-    castShadows: 1
-    receiveShadows: 1
-    motionVectors: 1
-    lightProbes: 0
-    l: 0
-    layer: 0
-    t: 0
-    tag: 
---- !u!114 &-7900055111860262647
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 2671370726764428344}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 33750d88507d69040b28ccc857c648d5, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  onDemolition: 1
-  onActivation: 1
-  onImpact: 1
-  debrisReference: {fileID: 1443819839238964, guid: 6a6c940155772b84980d334830bbff55,
-    type: 3}
-  debrisMaterial: {fileID: 2100000, guid: 1c83bd41b0e6d5e42b90263a2ec96293, type: 2}
-  emissionMaterial: {fileID: 0}
-  emission:
-    burstType: 2
-    burstAmount: 29
-    distanceRate: 1
-    duration: 2.5
-    lifeMin: 2
-    lifeMax: 13
-    sizeMin: 0.56
-    sizeMax: 2.03
-  dynamic:
-    speedMin: 1
-    speedMax: 4
-    velocityMin: 0.5
-    velocityMax: 1.5
-    gravityMin: 0.8
-    gravityMax: 1.1
-    rotationSpeed: 0.5
-  noise:
-    enabled: 0
-    quality: 2
-    strengthMin: 0.3
-    strengthMax: 0.6
-    frequency: 0.3
-    scrollSpeed: 0.7
-    damping: 1
-  collision:
-    collidesWith:
-      serializedVersion: 2
-      m_Bits: 4294967295
-    quality: 0
-    radiusScale: 0.1
-    dampenType: 1
-    dampenMin: 0.1
-    dampenMax: 0.4
-    bounceType: 1
-    bounceMin: 0.2
-    bounceMax: 0.4
-    propertiesSet: 0
-  limitations:
-    minParticles: 3
-    maxParticles: 20
-    visible: 0
-    percentage: 30
-    sizeThreshold: 0.3
-  rendering:
-    castShadows: 1
-    receiveShadows: 1
-    motionVectors: 1
-    lightProbes: 0
-    l: 0
-    layer: 0
-    t: 0
-    tag: 
---- !u!114 &-965211530099644893
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 2671370726764428344}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 2dae403a59cd85344ab1c214fcc3ccef, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  unyielding: 1
-  activatable: 0
-  simulationType: 1
-  centerPosition: {x: 0, y: 0, z: 0}
-  size: {x: 8.1453, y: 1, z: 9.183994}
-  rigidHost: {fileID: 0}
-  rigidList: []
-  shardList: []
-  showGizmo: 1
+  type: 0
+  voronoi:
+    amount: 60
+    centerBias: 0
+  splinters:
+    axis: 1
+    amount: 30
+    strength: 0.7
+    centerBias: 0
+  slabs:
+    axis: 1
+    amount: 30
+    strength: 0.7
+    centerBias: 0
+  radial:
+    centerAxis: 1
+    radius: 1
+    divergence: 1
+    restrictToPlane: 1
+    rings: 10
+    focus: 0
+    focusStr: 50
+    randomRings: 50
+    rays: 10
+    randomRays: 0
+    twist: 0
+  hexagon:
+    plane: 1
+    row: 10
+    col: 10
+    size: 0.5
+    div: 0
+    rest: 1
+    enable: 1
+    noPc: 0
+    pc: []
+    pcBndIn: []
+    pcBndOut: []
+  custom:
+    source: 4
+    useAs: 12
+    amount: 100
+    radius: 1
+    enable: 1
+    size: 0.05
+    transforms: []
+    vector3: []
+    noPoints: 0
+    outputPoints: []
+    inBoundPoints: []
+    outBoundPoints: []
+  mirrored:
+    amount: 50
+    planeType: 0
+    noPoints: 0
+  slice:
+    plane: 1
+    sliceList: []
+  bricks:
+    amountType: 0
+    mult: 1
+    amount_X: 3
+    amount_Y: 6
+    amount_Z: 0
+    size_Lock: 0
+    size_X: 1
+    size_Y: 1
+    size_Z: 1
+    sizeVar_X: 0
+    sizeVar_Y: 0
+    sizeVar_Z: 0
+    offset_X: 0.5
+    offset_Y: 0.5
+    offset_Z: 0
+    split_X: 0
+    split_Y: 0
+    split_Z: 0
+    split_probability: 0
+    split_offset: 0.5
+    split_rotation: 30
+  voxels:
+    size: 1
+  tets:
+    lattice: 0
+    density: 7
+    noise: 100
+  mode: 1
+  material:
+    iMat: {fileID: 0}
+    oMat: {fileID: 0}
+    mScl: 0.1
+    uvE: 0
+    uvC: {x: 0, y: 0}
+    cE: 0
+    cC: {r: 0, g: 0, b: 0, a: 0}
+  clusters:
+    enable: 0
+    count: 10
+    seed: 1
+    relax: 0.5
+    amount: 0
+    layers: 0
+    scale: 1
+    min: 1
+    max: 3
+  advanced:
+    seed: 0
+    decompose: 1
+    removeCollinear: 0
+    copyComponents: 0
+    inputPrecap: 1
+    outputPrecap: 0
+    removeDoubleFaces: 1
+    elementSizeThreshold: 5
+    combineChildren: 0
+    smooth: 0
+    postWeld: 0
+    inner: 0
+    planar: 0
+    relativeSize: 4
+    absoluteSize: 0.1
+    sizeLimitation: 0
+    sizeAmount: 5
+    vertexLimitation: 0
+    vertexAmount: 300
+    triangleLimitation: 0
+    triangleAmount: 300
+  export:
+    source: 0
+    suffix: _frags
   showCenter: 0
+  centerPosition: {x: 0, y: 0, z: 0}
+  centerDirection: {x: 0, y: 0, z: 0, w: 1.0000671}
+  transForm: {fileID: 3339785438681097858}
+  meshFilter: {fileID: 1870848429896558887}
+  meshRenderer: {fileID: 4472745088963059181}
+  skinnedMeshRend: {fileID: 0}
+  meshFilters: []
+  rootChildList:
+  - {fileID: 0}
+  - {fileID: 0}
+  fragmentsAll:
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  fragmentsLast:
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  materials:
+  - {fileID: 2100000, guid: 2cc876cc39af4174dab00df28353ab76, type: 2}
+  shatterMode: 1
+  colorPreview: 0
+  scalePreview: 1
+  previewScale: 0
+  size: 3.3774993
+  rescaleFix: 1
+  originalScale: {x: 150, y: 150, z: 150}
+  bound:
+    m_Center: {x: 0, y: 0, z: 0}
+    m_Extent: {x: 0.97499996, y: 0.97500014, z: 0.97500014}
+  resetState: 0
+  interactive: 0
+  intGo: {fileID: 0}
+  intMf: {fileID: 0}
+  intMr: {fileID: 0}

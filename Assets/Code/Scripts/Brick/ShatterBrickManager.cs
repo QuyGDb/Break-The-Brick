@@ -1,13 +1,18 @@
 
+using RayFire;
 using UnityEngine;
 
 public class ShatterBrickManager : MonoBehaviour
 {
     private BrickHealth brickHealth;
     private LayerMask layerMask;
+    [SerializeField] private RayfireActivator rayfireActivator;
+    [SerializeField] private BrickSO brickSO;
+    public float TestDamage = 1f;
     private void Awake()
     {
         brickHealth = GetComponent<BrickHealth>();
+        rayfireActivator = GetComponentInChildren<RayfireActivator>();
     }
     private void Start()
     {
@@ -17,20 +22,20 @@ public class ShatterBrickManager : MonoBehaviour
     {
         if ((layerMask.value & 1 << other.gameObject.layer) > 0)
         {
-            gameObject.SetActive(false);
-            BrickCount();
-            StaticEventHandler.CallOnBrickDestroy();
-            // brickHealth.TakeDamage(GameManager.Instance.playerManager.playerAtributes.atk);
+            Debug.Log("OnTriggerEnter");
+            brickHealth.TakeDamage(TestDamage);
+
         }
     }
-
-    private void BrickCount()
+    public void ActiveBrickSection()
     {
-        Settings.brickCount++;
-
-        if (Settings.brickCount == 6)
-        {
-            GameManager.Instance.HandleGameState(GameState.Win);
-        }
+        Debug.Log("ActiveBrickSection");
+        float distanceToMove = brickHealth.percentage * (brickSO.topPosition - brickSO.bottomPosition);
+        float newPosition = brickSO.topPosition - distanceToMove;
+        rayfireActivator.transform.localPosition = new Vector3(rayfireActivator.transform.position.x, newPosition, rayfireActivator.transform.position.z);
+        StaticEventHandler.CallOnBrickDestroy();
     }
+
+
+
 }
