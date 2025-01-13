@@ -4,7 +4,7 @@
 PlayerSettings:
   m_ObjectHideFlags: 0
   serializedVersion: 24
-  productGUID: 00000000000000000000000000000000
+  productGUID: d0015728ab3191547a49a7187cb0e43a
   AndroidProfiler: 0
   AndroidFilterTouchesWhenObscured: 0
   AndroidEnableSustainedPerformanceMode: 0
@@ -159,7 +159,7 @@ PlayerSettings:
   androidMaxAspectRatio: 2.1
   applicationIdentifier:
     Android: com.DefaultCompany.SurvivalIsland
-    Standalone: com.DefaultCompany.Survival-Island
+    Standalone: com.DefaultCompany.Break-The-Brick
   buildNumber:
     Standalone: 0
     VisionOS: 0
@@ -748,6 +748,7 @@ PlayerSettings:
     Android: UNITY_POST_PROCESSING_STACK_V2;MODULE_INPUT_SYSTEM;MODULE_HAPTIC
     EmbeddedLinux: UNITY_POST_PROCESSING_STACK_V2
     GameCoreXboxOne: UNITY_POST_PROCESSING_STACK_V2
+    Lumin: UNITY_POST_PROCESSING_STACK_V2
     Nintendo Switch: UNITY_POST_PROCESSING_STACK_V2
     PS4: UNITY_POST_PROCESSING_STACK_V2
     PS5: UNITY_POST_PROCESSING_STACK_V2
@@ -756,6 +757,7 @@ PlayerSettings:
     Standalone: UNITY_POST_PROCESSING_STACK_V2;MODULE_INPUT_SYSTEM;MODULE_HAPTIC;MODULE_CURVE;MODULE_MONETIZATION
     VisionOS: UNITY_POST_PROCESSING_STACK_V2
     WebGL: UNITY_POST_PROCESSING_STACK_V2;MODULE_INPUT_SYSTEM;MODULE_HAPTIC
+    Windows Store Apps: UNITY_POST_PROCESSING_STACK_V2
     XboxOne: UNITY_POST_PROCESSING_STACK_V2
     tvOS: UNITY_POST_PROCESSING_STACK_V2
   additionalCompilerArguments: {}
@@ -847,7 +849,7 @@ PlayerSettings:
     m_VersionCode: 1
     m_VersionName: 
   apiCompatibilityLevel: 6
-  activeInputHandler: 1
+  activeInputHandler: 2
   windowsGamepadBackendHint: 0
   cloudProjectId: 39132ad1-c4ce-4f4d-a481-60ec83128848
   framebufferDepthMemorylessMode: 0

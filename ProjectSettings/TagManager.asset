@@ -9,23 +9,23 @@ TagManager:
   - Default
   - TransparentFX
   - Ignore Raycast
-  - Ground
+  - Hand
   - Water
   - UI
-  - Ragdoll
-  - Character
-  - ScreenshotShare
-  - Projectile
-  - Interactable Point
-  - Helper
-  - Hittable
-  - Hittable Trigger
+  - Brick
+  - Bomb
+  - Activator
+  - Body
   - 
-  - Interactable Object
-  - Resource
-  - Resource Trigger
-  - Enemy
-  - EnemyTrigger
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
   - 
   - 
   - 

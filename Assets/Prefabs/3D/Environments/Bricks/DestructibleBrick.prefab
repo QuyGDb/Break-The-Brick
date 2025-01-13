@@ -2168,7 +2168,7 @@ GameObject:
   m_Component:
   - component: {fileID: 2056406817012112448}
   - component: {fileID: 2056406817012112451}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: Activator
   m_TagString: Untagged
   m_Icon: {fileID: 0}
