@@ -33,6 +33,10 @@ public class PlatformRotationController : MonoBehaviour
 
     private void Update()
     {
+        if (GameManager.Instance.gameState == GameState.Lose || GameManager.Instance.gameState == GameState.Win)
+        {
+            return;
+        }
         transform.Rotate(Vector3.up, rotationSpeed * Time.deltaTime);
     }
 }

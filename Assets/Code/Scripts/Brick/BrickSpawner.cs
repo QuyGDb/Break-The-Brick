@@ -22,11 +22,12 @@ public class BrickSpawner : MonoBehaviour
     private void BrickCount()
     {
         brickCount++;
+
+        StaticEventHandler.CallOnBrickCount(brickCount, numberOfbricks);
         if (brickCount == numberOfbricks)
         {
             GameManager.Instance.HandleGameState(GameState.Win);
         }
-        StaticEventHandler.CallOnBrickCount(brickCount, numberOfbricks);
     }
 
     void Start()

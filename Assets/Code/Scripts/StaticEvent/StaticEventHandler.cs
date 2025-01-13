@@ -24,5 +24,9 @@ public static class StaticEventHandler
     {
         OnBrickCount?.Invoke(count, maxBrick);
     }
-
+    public static Action<int, int> OnChopCount;
+    public static void CallOnChopCount(int count, int maxChop)
+    {
+        OnChopCount?.Invoke(count, maxChop);
+    }
 }

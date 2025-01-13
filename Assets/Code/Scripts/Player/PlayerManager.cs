@@ -52,6 +52,7 @@ public class PlayerManager : MonoBehaviour
     public void TrackChopCount()
     {
         chopCount++;
+        StaticEventHandler.CallOnChopCount(chopCount, maxChopCount);
         if (chopCount == maxChopCount)
         {
             if (brickCount > 3)

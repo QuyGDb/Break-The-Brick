@@ -4,6 +4,7 @@ using System.Collections;
 using System.Collections.Generic;
 using TMPro;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 using UnityEngine.UI;
 
 public class InGameUI : MonoBehaviour
@@ -12,23 +13,39 @@ public class InGameUI : MonoBehaviour
     [SerializeField] private GameObject endGamePanel;
     [SerializeField] private TextMeshProUGUI statusEndgame;
     [SerializeField] private TextMeshProUGUI brickCount;
+    [SerializeField] private TextMeshProUGUI chopCountText;
     [SerializeField] private List<Image> levelImage;
+    [SerializeField] private Button backToMenu;
     private int numberOfBrick;
     private int brickCountValue;
     private void OnEnable()
     {
         GameManager.Instance.OnGameStateChange += HandleGameState;
         StaticEventHandler.OnBrickCount += UpdateBrickCount;
+        StaticEventHandler.OnChopCount += UpdateChopCount;
     }
 
     private void OnDisable()
     {
         GameManager.Instance.OnGameStateChange -= HandleGameState;
         StaticEventHandler.OnBrickCount -= UpdateBrickCount;
+        StaticEventHandler.OnChopCount -= UpdateChopCount;
+    }
+    private void Awake()
+    {
+        backToMenu.onClick.AddListener(() =>
+        {
+            SceneManager.LoadScene(0);
+        });
+    }
+    private void UpdateChopCount(int chopCount, int maxChop)
+    {
+        chopCountText.text = $"Chop Count: {chopCount}/{maxChop}";
     }
 
     private void HandleGameState(GameState state)
     {
+        Debug.Log("HandleGameState: " + state);
         if (state == GameState.Win)
         {
             ShowEndgamePanel();
@@ -49,10 +66,11 @@ public class InGameUI : MonoBehaviour
         brickSlider.DOValue(0, 1f);
         endGamePanel.SetActive(true);
         brickSlider.gameObject.SetActive(false);
-        endGamePanel.transform.DOScale(new Vector3(0.6f, 0.6f, 0.6f), 1f).SetEase(Ease.OutSine);
+        endGamePanel.transform.DOScale(new Vector3(0.6f, 0.6f, 0.6f), 1f).SetEase(Ease.OutBounce);
     }
     private void UpdateBrickCount(int count, int maxBrick)
     {
+        Debug.Log("UpdateBrickCount: " + count);
         brickCountValue = count;
         numberOfBrick = maxBrick;
         brickSlider.DOValue(count, 1f);
