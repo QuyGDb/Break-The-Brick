@@ -15,8 +15,13 @@ MonoBehaviour:
   baseAttack: 1
   baseSpeed: 1
   baseIncome: 1
-  atkGrowthRate: 1.1
-  speedGrowthRate: 1
-  moneyGrowthRate: 1.1
-  incomeGrowthRate: 1.1
   baseMoneyForAtributes: 1
+  startRatio: 1
+  progressionRateForUpgradeCost: 0.25
+  progressionRateForIncome: 0.1
+  progressionRateForSpeed: 0.01
+  progressionRateForAttack: 0.01
+  levelThresholdForUpgradeCost: 10
+  levelThresholdForIncome: 10
+  levelThresholdForSpeed: 10
+  levelThresholdForAttack: 10
