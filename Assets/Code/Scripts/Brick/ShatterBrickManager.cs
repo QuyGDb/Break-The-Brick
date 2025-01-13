@@ -6,7 +6,7 @@ public class ShatterBrickManager : MonoBehaviour
 {
     private BrickHealth brickHealth;
     private LayerMask layerMask;
-    [SerializeField] private RayfireActivator rayfireActivator;
+    private RayfireActivator rayfireActivator;
     [SerializeField] private BrickSO brickSO;
     public float TestDamage = 1f;
     private void Awake()

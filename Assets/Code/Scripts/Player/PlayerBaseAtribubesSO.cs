@@ -14,5 +14,6 @@ public class PlayerBaseAtribubesSO : ScriptableObject
     public float moneyGrowthRate;
     public float incomeGrowthRate;
     public float baseMoneyForAtributes;
+    public float startRatio;
 
 }

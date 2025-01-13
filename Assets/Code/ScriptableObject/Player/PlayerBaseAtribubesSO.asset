@@ -15,8 +15,8 @@ MonoBehaviour:
   baseAttack: 1
   baseSpeed: 1
   baseIncome: 1
-  atkGrowthRate: 0.1
-  speedGrowthRate: 0.05
-  moneyGrowthRate: 0.5
-  incomeGrowthRate: 0.5
+  atkGrowthRate: 1.1
+  speedGrowthRate: 1
+  moneyGrowthRate: 1.1
+  incomeGrowthRate: 1.1
   baseMoneyForAtributes: 1
