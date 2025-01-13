@@ -8,7 +8,6 @@ public class ShatterBrickManager : MonoBehaviour
     private LayerMask layerMask;
     private RayfireActivator rayfireActivator;
     [SerializeField] private BrickSO brickSO;
-    public float TestDamage = 1f;
     private void Awake()
     {
         brickHealth = GetComponent<BrickHealth>();
@@ -33,12 +32,15 @@ public class ShatterBrickManager : MonoBehaviour
         {
             distanceToMove = brickSO.topPosition - brickSO.bottomPosition;
         }
+        else if (brickHealth.percentage >= 1)
+        {
+            distanceToMove = 0;
+        }
         else
         {
-            distanceToMove = brickHealth.percentage * (brickSO.topPosition - brickSO.bottomPosition);
+            distanceToMove = (1 - brickHealth.percentage) * (brickSO.topPosition - brickSO.bottomPosition);
         }
 
-        Debug.Log("newPosition: " + (brickSO.topPosition - distanceToMove) + Time.frameCount);
         float newPosition = brickSO.topPosition - distanceToMove;
         rayfireActivator.transform.localPosition = new Vector3(0, newPosition, 0);
         StaticEventHandler.CallOnBrickDestroy();

@@ -18,11 +18,11 @@ public static class StaticEventHandler
     {
         OnBrickDie?.Invoke();
     }
-    public static Action<int> OnBrickCount;
+    public static Action<int, int> OnBrickCount;
 
-    public static void CallOnBrickCount(int count)
+    public static void CallOnBrickCount(int count, int maxBrick)
     {
-        OnBrickCount?.Invoke(count);
+        OnBrickCount?.Invoke(count, maxBrick);
     }
 
 }

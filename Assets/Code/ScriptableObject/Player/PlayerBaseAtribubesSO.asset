@@ -19,8 +19,8 @@ MonoBehaviour:
   startRatio: 1
   progressionRateForUpgradeCost: 0.25
   progressionRateForIncome: 0.1
-  progressionRateForSpeed: 0.01
-  progressionRateForAttack: 0.01
+  progressionRateForSpeed: 0.1
+  progressionRateForAttack: 0.1
   levelThresholdForUpgradeCost: 10
   levelThresholdForIncome: 10
   levelThresholdForSpeed: 10

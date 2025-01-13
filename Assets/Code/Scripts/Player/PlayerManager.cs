@@ -43,9 +43,10 @@ public class PlayerManager : MonoBehaviour
         StaticEventHandler.OnBrickCount -= StaticEventHandler_OnBrickCount;
     }
 
-    private void StaticEventHandler_OnBrickCount(int count)
+    private void StaticEventHandler_OnBrickCount(int count, int maxBrick)
     {
         brickCount = count;
+
     }
 
     public void TrackChopCount()

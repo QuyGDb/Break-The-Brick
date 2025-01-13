@@ -22,11 +22,10 @@ public class BrickHealth : MonoBehaviour
         currentHealth -= damage;
         percentage = currentHealth / health;
         shatterBrickManager.ActiveBrickSection();
-        if (health <= 0)
+        if (currentHealth <= 0)
         {
-            Destroy(gameObject);
+            Debug.Log("Brick Destroyed");
             StaticEventHandler.CallOnBrickDie();
         }
     }
-
 }
