@@ -25,12 +25,14 @@ public class GameManager : SingletonMonobehaviour<GameManager>
         switch (gameState)
         {
             case GameState.Start:
-                StartPlayMode();
+                StartCoroutine(StartPlayMode());
                 break;
             case GameState.FirstPerson:
+                Debug.Log("First Person");
                 cameraManager.StartFirstPersonMode();
                 break;
             case GameState.ThirdPerson:
+                Debug.Log("Third Person");
                 cameraManager.StartThirdPersonMode();
                 break;
             case GameState.Win:
@@ -44,8 +46,9 @@ public class GameManager : SingletonMonobehaviour<GameManager>
         OnGameStateChange?.Invoke(gameState);
     }
 
-    private void StartPlayMode()
+    private IEnumerator StartPlayMode()
     {
+        yield return null;
         if (Settings.playMode == PlayMode.FirstPerson)
         {
             // Start First Person Mode

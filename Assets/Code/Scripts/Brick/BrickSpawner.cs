@@ -30,7 +30,7 @@ public class BrickSpawner : MonoBehaviour
         }
     }
 
-    void Start()
+    void Awake()
     {
         SpawnBrickInPlatform();
     }

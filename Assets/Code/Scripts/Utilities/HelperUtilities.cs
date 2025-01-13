@@ -1,4 +1,5 @@
-﻿using System.Collections;
+﻿using DG.Tweening;
+using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.InputSystem;
@@ -91,5 +92,20 @@ public static class HelperUtilities
         Vector3 mousePosition = Input.mousePosition;
         mousePosition.z = distanceFromCamera; // Đặt z là khoảng cách từ camera
         return Camera.main.ScreenToWorldPoint(mousePosition);
+    }
+
+
+
+
+    public static void ShakeCamera(Camera camera)
+    {
+        float duration = 0.5f;
+        float strength = 1f;
+        int vibrato = 10;
+        float randomness = 90f;
+
+        camera.transform.DOShakePosition(duration, strength, vibrato, randomness);
+
+
     }
 }

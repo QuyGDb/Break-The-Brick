@@ -45,7 +45,6 @@ public class InGameUI : MonoBehaviour
 
     private void HandleGameState(GameState state)
     {
-        Debug.Log("HandleGameState: " + state);
         if (state == GameState.Win)
         {
             ShowEndgamePanel();

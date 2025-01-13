@@ -2273,6 +2273,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   health: 1
+  currentHealth: 0
   percentage: 0
 --- !u!114 &4874552366995457379
 MonoBehaviour:
@@ -6916,7 +6917,7 @@ MonoBehaviour:
     dmg: 0
     act: 1
     imp: 0
-    con: 1
+    con: 0
     uny: 0
     atb: 0
     l: 0

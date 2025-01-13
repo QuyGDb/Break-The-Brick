@@ -13,11 +13,12 @@ public class BrickHealth : MonoBehaviour
     {
         shatterBrickManager = GetComponent<ShatterBrickManager>();
     }
-    private void OnEnable()
+    private void Start()
     {
         GameManager.Instance.OnGameStateChange += HandleGameState;
+        Debug.Log("OnEnable");
     }
-    private void OnDisable()
+    private void OnDestroy()
     {
         GameManager.Instance.OnGameStateChange -= HandleGameState;
     }
@@ -26,13 +27,15 @@ public class BrickHealth : MonoBehaviour
     {
         if (gameState == GameState.FirstPerson)
         {
+
             health = GameLevel.Instance.firstPersonLevel;
-            currentHealth = GameLevel.Instance.firstPersonLevel;
+            currentHealth = health;
         }
         if (gameState == GameState.ThirdPerson)
         {
+
             health = GameLevel.Instance.thirdPersonLevel;
-            currentHealth = GameLevel.Instance.thirdPersonLevel;
+            currentHealth = health;
         }
     }
     public void TakeDamage(float damage)
