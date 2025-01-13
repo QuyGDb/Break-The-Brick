@@ -582,7 +582,7 @@ PrefabInstance:
     - target: {fileID: 4998283789856839461, guid: b2eed5d3574eff74d9f8ccd4d9f9edad,
         type: 3}
       propertyPath: m_LocalPosition.x
-      value: 0.5294113
+      value: -18.8
       objectReference: {fileID: 0}
     - target: {fileID: 4998283789856839461, guid: b2eed5d3574eff74d9f8ccd4d9f9edad,
         type: 3}
@@ -592,7 +592,7 @@ PrefabInstance:
     - target: {fileID: 4998283789856839461, guid: b2eed5d3574eff74d9f8ccd4d9f9edad,
         type: 3}
       propertyPath: m_LocalPosition.z
-      value: -20.120464
+      value: -15.9
       objectReference: {fileID: 0}
     - target: {fileID: 4998283789856839461, guid: b2eed5d3574eff74d9f8ccd4d9f9edad,
         type: 3}
@@ -2382,8 +2382,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d758f675bf19f8242b36b0f402aced62, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  firstPersonLevel: 1
-  thirdPersonLevel: 1
+  firstPersonLevel: 6
+  thirdPersonLevel: 6
 --- !u!4 &1892000679
 Transform:
   m_ObjectHideFlags: 0
@@ -2986,7 +2986,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: Chop Count
+  m_text: 
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 5f58c05479cb14f588efcdfcbdab347c, type: 2}
   m_sharedMaterial: {fileID: 7423409246693961632, guid: 5f58c05479cb14f588efcdfcbdab347c,

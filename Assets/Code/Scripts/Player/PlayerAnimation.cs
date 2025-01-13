@@ -6,10 +6,14 @@ using UnityEngine;
 public class PlayerAnimation : MonoBehaviour
 {
     private Animator animator;
-
+    private PlayerManager playerManager;
     private void Awake()
     {
         animator = GetComponent<Animator>();
+    }
+    private void Start()
+    {
+        animator.speed = playerManager.speed;
     }
     public void TriggerChopAnim()
     {

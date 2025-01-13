@@ -5,8 +5,8 @@ public class PlayerManager : MonoBehaviour
     [HideInInspector] public PlayerControls playerControls;
     [HideInInspector] public PlayerAtributes playerAtributes;
     [HideInInspector] public PlayerAnimation playerAnimation;
-    [HideInInspector] public float atk;
-    [HideInInspector] public float speed;
+    public float atk;
+    public float speed;
     private int brickCount;
     private int maxChopCount = 10;
     private int chopCount;

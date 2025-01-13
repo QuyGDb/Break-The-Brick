@@ -17,18 +17,12 @@ public class GameLevel : SingletonMonobehaviour<GameLevel>
         {
             firstPersonLevel = PlayerPrefs.GetInt("firstPersonLevel");
         }
-        else
-        {
-            firstPersonLevel = 1;
-        }
+
         if (PlayerPrefs.HasKey("thirdPersonLevel"))
         {
             thirdPersonLevel = PlayerPrefs.GetInt("thirdPersonLevel");
         }
-        else
-        {
-            thirdPersonLevel = 1;
-        }
+
     }
     public void UpdateFirstPersonLevel()
     {
