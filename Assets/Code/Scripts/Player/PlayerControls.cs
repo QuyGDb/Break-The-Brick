@@ -6,13 +6,13 @@ using UnityEngine;
 public class PlayerControls : MonoBehaviour
 {
     private PlayerAnimation playerAnimation;
-    private PlayerAtributes playerAtributes;
+    private PlayerManager playerManager;
     [SerializeField] private float countdownTime = 0.5f;
     private float currentCountdown = 0f;
     private void Awake()
     {
         playerAnimation = GetComponent<PlayerAnimation>();
-        playerAtributes = GetComponent<PlayerAtributes>();
+        playerManager = GetComponent<PlayerManager>();
     }
     void Update()
     {
@@ -28,7 +28,7 @@ public class PlayerControls : MonoBehaviour
                 {
                     playerAnimation.TriggerChopAnim();
                     currentCountdown = countdownTime;
-                    playerAtributes.TrackChopCount();
+                    playerManager.TrackChopCount();
                 }
             }
 #endif
@@ -38,7 +38,8 @@ public class PlayerControls : MonoBehaviour
         {
             playerAnimation.TriggerChopAnim();
             currentCountdown = countdownTime;
-            //  playerAtributes.TrackChopCount();
+            playerManager.TrackChopCount();
+
         }
 #endif
     }

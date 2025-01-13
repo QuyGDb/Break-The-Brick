@@ -738,6 +738,18 @@ GameObject:
     type: 3}
   m_PrefabInstance: {fileID: 960574351}
   m_PrefabAsset: {fileID: 0}
+--- !u!114 &1063173697 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 6496439947668174028, guid: 115aba302d47d054aa4b32ec0fd3e898,
+    type: 3}
+  m_PrefabInstance: {fileID: 1132510691}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 4f98de1febfea244b8ae96c7cecea95b, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1001 &1132510691
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -1424,6 +1436,11 @@ PrefabInstance:
       propertyPath: m_Layer
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 6496439947668174028, guid: 115aba302d47d054aa4b32ec0fd3e898,
+        type: 3}
+      propertyPath: brickSpawner
+      value: 
+      objectReference: {fileID: 6966681981918746929}
     - target: {fileID: 6501427812378507467, guid: 115aba302d47d054aa4b32ec0fd3e898,
         type: 3}
       propertyPath: m_Layer
@@ -2292,7 +2309,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   gameState: 0
-  playerManager: {fileID: 0}
+  playerManager: {fileID: 1063173697}
 --- !u!4 &1665841157
 Transform:
   m_ObjectHideFlags: 0
@@ -2319,6 +2336,141 @@ PrefabInstance:
         type: 3}
       propertyPath: rotationSpeed
       value: 30
+      objectReference: {fileID: 0}
+    - target: {fileID: 5394924680310683779, guid: 33d0f7604fc009b49a23dc7bea147256,
+        type: 3}
+      propertyPath: rotationPlatformCurve.m_Curve.Array.size
+      value: 4
+      objectReference: {fileID: 0}
+    - target: {fileID: 5394924680310683779, guid: 33d0f7604fc009b49a23dc7bea147256,
+        type: 3}
+      propertyPath: rotationPlatformCurve.m_Curve.Array.data[0].time
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 5394924680310683779, guid: 33d0f7604fc009b49a23dc7bea147256,
+        type: 3}
+      propertyPath: rotationPlatformCurve.m_Curve.Array.data[1].time
+      value: 2.7123737
+      objectReference: {fileID: 0}
+    - target: {fileID: 5394924680310683779, guid: 33d0f7604fc009b49a23dc7bea147256,
+        type: 3}
+      propertyPath: rotationPlatformCurve.m_Curve.Array.data[2].time
+      value: 5.403231
+      objectReference: {fileID: 0}
+    - target: {fileID: 5394924680310683779, guid: 33d0f7604fc009b49a23dc7bea147256,
+        type: 3}
+      propertyPath: rotationPlatformCurve.m_Curve.Array.data[3].time
+      value: 10
+      objectReference: {fileID: 0}
+    - target: {fileID: 5394924680310683779, guid: 33d0f7604fc009b49a23dc7bea147256,
+        type: 3}
+      propertyPath: rotationPlatformCurve.m_Curve.Array.data[0].value
+      value: 30
+      objectReference: {fileID: 0}
+    - target: {fileID: 5394924680310683779, guid: 33d0f7604fc009b49a23dc7bea147256,
+        type: 3}
+      propertyPath: rotationPlatformCurve.m_Curve.Array.data[1].value
+      value: 47.255787
+      objectReference: {fileID: 0}
+    - target: {fileID: 5394924680310683779, guid: 33d0f7604fc009b49a23dc7bea147256,
+        type: 3}
+      propertyPath: rotationPlatformCurve.m_Curve.Array.data[2].value
+      value: 74.66419
+      objectReference: {fileID: 0}
+    - target: {fileID: 5394924680310683779, guid: 33d0f7604fc009b49a23dc7bea147256,
+        type: 3}
+      propertyPath: rotationPlatformCurve.m_Curve.Array.data[3].value
+      value: 90
+      objectReference: {fileID: 0}
+    - target: {fileID: 5394924680310683779, guid: 33d0f7604fc009b49a23dc7bea147256,
+        type: 3}
+      propertyPath: rotationPlatformCurve.m_Curve.Array.data[0].inSlope
+      value: 10.077115
+      objectReference: {fileID: 0}
+    - target: {fileID: 5394924680310683779, guid: 33d0f7604fc009b49a23dc7bea147256,
+        type: 3}
+      propertyPath: rotationPlatformCurve.m_Curve.Array.data[1].inSlope
+      value: 5.1742043
+      objectReference: {fileID: 0}
+    - target: {fileID: 5394924680310683779, guid: 33d0f7604fc009b49a23dc7bea147256,
+        type: 3}
+      propertyPath: rotationPlatformCurve.m_Curve.Array.data[2].inSlope
+      value: 10.422857
+      objectReference: {fileID: 0}
+    - target: {fileID: 5394924680310683779, guid: 33d0f7604fc009b49a23dc7bea147256,
+        type: 3}
+      propertyPath: rotationPlatformCurve.m_Curve.Array.data[3].inSlope
+      value: 3.3362148
+      objectReference: {fileID: 0}
+    - target: {fileID: 5394924680310683779, guid: 33d0f7604fc009b49a23dc7bea147256,
+        type: 3}
+      propertyPath: rotationPlatformCurve.m_Curve.Array.data[0].outSlope
+      value: 10.077115
+      objectReference: {fileID: 0}
+    - target: {fileID: 5394924680310683779, guid: 33d0f7604fc009b49a23dc7bea147256,
+        type: 3}
+      propertyPath: rotationPlatformCurve.m_Curve.Array.data[1].inWeight
+      value: 0.33333334
+      objectReference: {fileID: 0}
+    - target: {fileID: 5394924680310683779, guid: 33d0f7604fc009b49a23dc7bea147256,
+        type: 3}
+      propertyPath: rotationPlatformCurve.m_Curve.Array.data[1].outSlope
+      value: 5.1742043
+      objectReference: {fileID: 0}
+    - target: {fileID: 5394924680310683779, guid: 33d0f7604fc009b49a23dc7bea147256,
+        type: 3}
+      propertyPath: rotationPlatformCurve.m_Curve.Array.data[2].inWeight
+      value: 0.33333334
+      objectReference: {fileID: 0}
+    - target: {fileID: 5394924680310683779, guid: 33d0f7604fc009b49a23dc7bea147256,
+        type: 3}
+      propertyPath: rotationPlatformCurve.m_Curve.Array.data[2].outSlope
+      value: 10.422857
+      objectReference: {fileID: 0}
+    - target: {fileID: 5394924680310683779, guid: 33d0f7604fc009b49a23dc7bea147256,
+        type: 3}
+      propertyPath: rotationPlatformCurve.m_Curve.Array.data[3].inWeight
+      value: 0.33333334
+      objectReference: {fileID: 0}
+    - target: {fileID: 5394924680310683779, guid: 33d0f7604fc009b49a23dc7bea147256,
+        type: 3}
+      propertyPath: rotationPlatformCurve.m_Curve.Array.data[3].outSlope
+      value: 3.3362148
+      objectReference: {fileID: 0}
+    - target: {fileID: 5394924680310683779, guid: 33d0f7604fc009b49a23dc7bea147256,
+        type: 3}
+      propertyPath: rotationPlatformCurve.m_Curve.Array.data[0].outWeight
+      value: 0.33333334
+      objectReference: {fileID: 0}
+    - target: {fileID: 5394924680310683779, guid: 33d0f7604fc009b49a23dc7bea147256,
+        type: 3}
+      propertyPath: rotationPlatformCurve.m_Curve.Array.data[1].outWeight
+      value: 0.11348954
+      objectReference: {fileID: 0}
+    - target: {fileID: 5394924680310683779, guid: 33d0f7604fc009b49a23dc7bea147256,
+        type: 3}
+      propertyPath: rotationPlatformCurve.m_Curve.Array.data[2].outWeight
+      value: 0.05799293
+      objectReference: {fileID: 0}
+    - target: {fileID: 5394924680310683779, guid: 33d0f7604fc009b49a23dc7bea147256,
+        type: 3}
+      propertyPath: rotationPlatformCurve.m_Curve.Array.data[0].tangentMode
+      value: 34
+      objectReference: {fileID: 0}
+    - target: {fileID: 5394924680310683779, guid: 33d0f7604fc009b49a23dc7bea147256,
+        type: 3}
+      propertyPath: rotationPlatformCurve.m_Curve.Array.data[1].tangentMode
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5394924680310683779, guid: 33d0f7604fc009b49a23dc7bea147256,
+        type: 3}
+      propertyPath: rotationPlatformCurve.m_Curve.Array.data[2].tangentMode
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5394924680310683779, guid: 33d0f7604fc009b49a23dc7bea147256,
+        type: 3}
+      propertyPath: rotationPlatformCurve.m_Curve.Array.data[3].tangentMode
+      value: 34
       objectReference: {fileID: 0}
     - target: {fileID: 6966681980314629412, guid: 33d0f7604fc009b49a23dc7bea147256,
         type: 3}
@@ -2387,3 +2539,15 @@ PrefabInstance:
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 33d0f7604fc009b49a23dc7bea147256, type: 3}
+--- !u!114 &6966681981918746929 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 6966681980314629412, guid: 33d0f7604fc009b49a23dc7bea147256,
+    type: 3}
+  m_PrefabInstance: {fileID: 6966681981918746928}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: a34a1b536bccd8c4f9a3d18b1fc3ec63, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 

@@ -12,12 +12,16 @@ public class InGameUI : MonoBehaviour
     private void OnEnable()
     {
         GameManager.Instance.OnGameStateChange += HandleGameState;
+        StaticEventHandler.OnBrickCount += UpdateBrickCount;
     }
 
     private void OnDisable()
     {
         GameManager.Instance.OnGameStateChange -= HandleGameState;
+        StaticEventHandler.OnBrickCount -= UpdateBrickCount;
     }
+
+
 
     private void HandleGameState(GameState state)
     {
@@ -30,8 +34,8 @@ public class InGameUI : MonoBehaviour
         }
     }
 
-    private void UpdateBrickCount()
+    private void UpdateBrickCount(int count)
     {
-        brickSlider.DOValue(Settings.brickCount, 1f);
+        brickSlider.DOValue(count, 1f);
     }
 }

@@ -11,4 +11,18 @@ public static class StaticEventHandler
     {
         OnBrickDestroy?.Invoke();
     }
+
+    public static Action OnBrickDie;
+
+    public static void CallOnBrickDie()
+    {
+        OnBrickDie?.Invoke();
+    }
+    public static Action<int> OnBrickCount;
+
+    public static void CallOnBrickCount(int count)
+    {
+        OnBrickCount?.Invoke(count);
+    }
+
 }

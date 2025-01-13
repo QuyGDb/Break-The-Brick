@@ -11,7 +11,7 @@ public static class Settings
     public static PlayMode playMode;
     #endregion
 
-
-    public static int brickCount = 0;
+    public static int firstPersonLevel = 1;
+    public static int thirdPersonLevel = 1;
 
 }

@@ -22,7 +22,7 @@ public class ShatterBrickManager : MonoBehaviour
     {
         if ((layerMask.value & 1 << other.gameObject.layer) > 0)
         {
-            brickHealth.TakeDamage(TestDamage);
+            brickHealth.TakeDamage(GameManager.Instance.playerManager.atk);
 
         }
     }

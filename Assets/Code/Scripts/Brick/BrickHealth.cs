@@ -8,6 +8,7 @@ public class BrickHealth : MonoBehaviour
     private float currentHealth;
     [HideInInspector] public float percentage;
     private ShatterBrickManager shatterBrickManager;
+
     private void Awake()
     {
         shatterBrickManager = GetComponent<ShatterBrickManager>();
@@ -24,16 +25,8 @@ public class BrickHealth : MonoBehaviour
         if (health <= 0)
         {
             Destroy(gameObject);
-            BrickCount();
+            StaticEventHandler.CallOnBrickDie();
         }
     }
-    private void BrickCount()
-    {
-        Settings.brickCount++;
 
-        if (Settings.brickCount == 6)
-        {
-            GameManager.Instance.HandleGameState(GameState.Win);
-        }
-    }
 }

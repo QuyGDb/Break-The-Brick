@@ -24,8 +24,6 @@ public class PlayerAtributes : MonoBehaviour
     private int atkLevel = 1;
     private int incomeLevel = 1;
 
-    [SerializeField] private int maxChopCount = 10;
-    private int currentChopCount;
     [SerializeField] private Button attackButton;
     [SerializeField] private Button speedButton;
     [SerializeField] private Button incomeButton;
@@ -40,14 +38,10 @@ public class PlayerAtributes : MonoBehaviour
     private float attackUpgradeCost;
     private float incomeUpgradeCost;
 
-    public void TrackChopCount()
-    {
-        currentChopCount++;
-    }
+
 
     private void Start()
     {
-        currentChopCount = 0;
         LoadAtributes();
         attackButton.onClick.AddListener(() => AttackUpgrade());
         speedButton.onClick.AddListener(() => SpeedUpgrade());

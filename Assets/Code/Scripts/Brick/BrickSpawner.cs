@@ -1,4 +1,5 @@
-﻿using UnityEngine;
+﻿using System;
+using UnityEngine;
 
 public class BrickSpawner : MonoBehaviour
 {
@@ -6,6 +7,23 @@ public class BrickSpawner : MonoBehaviour
     public int numberOfbricks = 6;
     public float radius = 5f;
     public float yPostionOfBrick = 1f;
+    [HideInInspector] public int brickCount = 0;
+
+    private void OnEnable()
+    {
+        StaticEventHandler.OnBrickDie += BrickCount;
+    }
+
+    private void OnDisable()
+    {
+        StaticEventHandler.OnBrickDie -= BrickCount;
+    }
+
+    private void BrickCount()
+    {
+        brickCount++;
+        StaticEventHandler.CallOnBrickCount(brickCount);
+    }
 
     void Start()
     {

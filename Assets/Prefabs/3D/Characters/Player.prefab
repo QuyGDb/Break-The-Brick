@@ -2922,7 +2922,6 @@ GameObject:
   - component: {fileID: 6556013433840936195}
   - component: {fileID: 6034759754197269774}
   - component: {fileID: 6496439947668174028}
-  - component: {fileID: 6073484571662312832}
   m_Layer: 8
   m_Name: Player
   m_TagString: Untagged
@@ -2991,6 +2990,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 2d73eca308ef8904eb5900c81f259308, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  countdownTime: 0.5
 --- !u!114 &6496439947668174028
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -3003,18 +3003,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 4f98de1febfea244b8ae96c7cecea95b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
---- !u!114 &6073484571662312832
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 2756158082947423321}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 41c5d2df4855e924287ab2aa471c68a6, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
+  playerControls: {fileID: 0}
+  playerAtributes: {fileID: 0}
+  playerAnimation: {fileID: 0}
 --- !u!1 &2777384370905519189
 GameObject:
   m_ObjectHideFlags: 0
