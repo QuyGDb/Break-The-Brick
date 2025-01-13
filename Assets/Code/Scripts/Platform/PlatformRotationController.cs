@@ -22,12 +22,11 @@ public class PlatformRotationController : MonoBehaviour
     {
         if (gameState == GameState.FirstPerson)
         {
-            rotationSpeed = rotationPlatformCurve.Evaluate(Settings.firstPersonLevel);
-            Debug.Log("Rotation Speed: " + rotationSpeed);
+            rotationSpeed = rotationPlatformCurve.Evaluate(GameLevel.Instance.firstPersonLevel);
         }
         if (gameState == GameState.ThirdPerson)
         {
-            rotationSpeed = rotationPlatformCurve.Evaluate(Settings.thirdPersonLevel);
+            rotationSpeed = rotationPlatformCurve.Evaluate(GameLevel.Instance.thirdPersonLevel);
         }
     }
 

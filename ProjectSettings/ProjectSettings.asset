@@ -4,7 +4,7 @@
 PlayerSettings:
   m_ObjectHideFlags: 0
   serializedVersion: 24
-  productGUID: 0da26946a8a24bd4bb7dfedfe296fa96
+  productGUID: 00000000000000000000000000000000
   AndroidProfiler: 0
   AndroidFilterTouchesWhenObscured: 0
   AndroidEnableSustainedPerformanceMode: 0
@@ -159,7 +159,7 @@ PlayerSettings:
   androidMaxAspectRatio: 2.1
   applicationIdentifier:
     Android: com.DefaultCompany.SurvivalIsland
-    Standalone: com.DefaultCompany.Break-The-Brick
+    Standalone: com.DefaultCompany.Survival-Island
   buildNumber:
     Standalone: 0
     VisionOS: 0
@@ -745,24 +745,19 @@ PlayerSettings:
   webGLDecompressionFallback: 0
   webGLPowerPreference: 2
   scriptingDefineSymbols:
-    Android: UNITY_POST_PROCESSING_STACK_V2;MODULE_INPUT_SYSTEM;MODULE_HAPTIC;DOTWEEN
-    EmbeddedLinux: UNITY_POST_PROCESSING_STACK_V2;DOTWEEN
-    GameCoreScarlett: DOTWEEN
-    GameCoreXboxOne: UNITY_POST_PROCESSING_STACK_V2;DOTWEEN
-    LinuxHeadlessSimulation: DOTWEEN
-    Lumin: UNITY_POST_PROCESSING_STACK_V2;DOTWEEN
-    Nintendo Switch: UNITY_POST_PROCESSING_STACK_V2;DOTWEEN
-    PS4: UNITY_POST_PROCESSING_STACK_V2;DOTWEEN
-    PS5: UNITY_POST_PROCESSING_STACK_V2;DOTWEEN
+    Android: UNITY_POST_PROCESSING_STACK_V2;MODULE_INPUT_SYSTEM;MODULE_HAPTIC
+    EmbeddedLinux: UNITY_POST_PROCESSING_STACK_V2
+    GameCoreXboxOne: UNITY_POST_PROCESSING_STACK_V2
+    Nintendo Switch: UNITY_POST_PROCESSING_STACK_V2
+    PS4: UNITY_POST_PROCESSING_STACK_V2
+    PS5: UNITY_POST_PROCESSING_STACK_V2
     QNX: UNITY_POST_PROCESSING_STACK_V2
-    Stadia: UNITY_POST_PROCESSING_STACK_V2;DOTWEEN
-    Standalone: UNITY_POST_PROCESSING_STACK_V2;MODULE_INPUT_SYSTEM;MODULE_HAPTIC;MODULE_CURVE;MODULE_MONETIZATION;DOTWEEN
+    Stadia: UNITY_POST_PROCESSING_STACK_V2
+    Standalone: UNITY_POST_PROCESSING_STACK_V2;MODULE_INPUT_SYSTEM;MODULE_HAPTIC;MODULE_CURVE;MODULE_MONETIZATION
     VisionOS: UNITY_POST_PROCESSING_STACK_V2
-    WebGL: UNITY_POST_PROCESSING_STACK_V2;MODULE_INPUT_SYSTEM;MODULE_HAPTIC;DOTWEEN
-    Windows Store Apps: UNITY_POST_PROCESSING_STACK_V2;DOTWEEN
-    XboxOne: UNITY_POST_PROCESSING_STACK_V2;DOTWEEN
-    iPhone: DOTWEEN
-    tvOS: UNITY_POST_PROCESSING_STACK_V2;DOTWEEN
+    WebGL: UNITY_POST_PROCESSING_STACK_V2;MODULE_INPUT_SYSTEM;MODULE_HAPTIC
+    XboxOne: UNITY_POST_PROCESSING_STACK_V2
+    tvOS: UNITY_POST_PROCESSING_STACK_V2
   additionalCompilerArguments: {}
   platformArchitecture: {}
   scriptingBackend:
@@ -852,12 +847,12 @@ PlayerSettings:
     m_VersionCode: 1
     m_VersionName: 
   apiCompatibilityLevel: 6
-  activeInputHandler: 2
+  activeInputHandler: 1
   windowsGamepadBackendHint: 0
   cloudProjectId: 39132ad1-c4ce-4f4d-a481-60ec83128848
   framebufferDepthMemorylessMode: 0
   qualitySettingsNames: []
-  projectName: Break The Brick 2025-01-09_13-51-46
+  projectName: 
   organizationId: tsuhamit
   cloudEnabled: 0
   legacyClampBlendShapeWeights: 0
