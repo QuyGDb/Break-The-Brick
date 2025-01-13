@@ -22,17 +22,25 @@ public class ShatterBrickManager : MonoBehaviour
     {
         if ((layerMask.value & 1 << other.gameObject.layer) > 0)
         {
-            Debug.Log("OnTriggerEnter");
             brickHealth.TakeDamage(TestDamage);
 
         }
     }
     public void ActiveBrickSection()
     {
-        Debug.Log("ActiveBrickSection");
-        float distanceToMove = brickHealth.percentage * (brickSO.topPosition - brickSO.bottomPosition);
+        float distanceToMove;
+        if (brickHealth.percentage <= 0)
+        {
+            distanceToMove = brickSO.topPosition - brickSO.bottomPosition;
+        }
+        else
+        {
+            distanceToMove = brickHealth.percentage * (brickSO.topPosition - brickSO.bottomPosition);
+        }
+
+        Debug.Log("newPosition: " + (brickSO.topPosition - distanceToMove) + Time.frameCount);
         float newPosition = brickSO.topPosition - distanceToMove;
-        rayfireActivator.transform.localPosition = new Vector3(rayfireActivator.transform.position.x, newPosition, rayfireActivator.transform.position.z);
+        rayfireActivator.transform.localPosition = new Vector3(0, newPosition, 0);
         StaticEventHandler.CallOnBrickDestroy();
     }
 

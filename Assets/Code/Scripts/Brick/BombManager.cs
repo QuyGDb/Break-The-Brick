@@ -6,7 +6,7 @@ using UnityEngine;
 public class BombManager : MonoBehaviour
 {
     RayfireBomb bomb;
-
+    WaitForSeconds wait = new WaitForSeconds(0.1f);
     private void Awake()
     {
         bomb = GetComponent<RayfireBomb>();
@@ -25,6 +25,14 @@ public class BombManager : MonoBehaviour
 
     private void HandleBrickDestroy()
     {
-        bomb.Explode(100);
+        StopAllCoroutines();
+        StartCoroutine(BrickDestroyCoroutine());
+    }
+    private IEnumerator BrickDestroyCoroutine()
+    {
+        yield return wait;
+
+        bomb.Explode(0);
+
     }
 }
