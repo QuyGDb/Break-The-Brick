@@ -11,6 +11,9 @@ public static class Settings
     public static PlayMode playMode;
     #endregion
 
+    #region Audio
+    public const float musicFadeOutTime = 1f;
+    public const float musicFadeInTime = 1f;
 
-
+    #endregion
 }
