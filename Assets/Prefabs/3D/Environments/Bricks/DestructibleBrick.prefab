@@ -2206,7 +2206,7 @@ MonoBehaviour:
   sphereRadius: 5
   boxSize: {x: 2.5, y: 3.5, z: 2.5}
   checkRigid: 1
-  checkRigidRoot: 1
+  checkRigidRoot: 0
   type: 0
   delay: 0
   demolishCluster: 0
@@ -6887,7 +6887,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: eb6e52f37bca2404fac00b69fd8d21f8, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  initialization: 0
+  initialization: 1
   simulationType: 2
   objectType: 1
   demolitionType: 0

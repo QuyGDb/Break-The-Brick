@@ -30,7 +30,7 @@ Transform:
   m_GameObject: {fileID: 2671370726764428344}
   m_LocalRotation: {x: -0.7071068, y: 0, z: 0, w: 0.7071068}
   m_LocalPosition: {x: -0, y: 0, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_LocalScale: {x: 150, y: 150, z: 150}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 0}
@@ -259,7 +259,7 @@ MonoBehaviour:
     suffix: _frags
   showCenter: 0
   centerPosition: {x: 0, y: 0, z: 0}
-  centerDirection: {x: 0, y: 0, z: 0, w: 1.0002254}
+  centerDirection: {x: 0, y: 0, z: 0, w: 1.0002884}
   transForm: {fileID: 3339785438681097858}
   meshFilter: {fileID: 1870848429896558887}
   meshRenderer: {fileID: 4472745088963059181}

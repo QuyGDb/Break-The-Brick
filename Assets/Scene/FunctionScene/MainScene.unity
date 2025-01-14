@@ -591,7 +591,7 @@ PrefabInstance:
     - target: {fileID: 4998283789856839461, guid: b2eed5d3574eff74d9f8ccd4d9f9edad,
         type: 3}
       propertyPath: m_LocalPosition.y
-      value: -14
+      value: -12.5
       objectReference: {fileID: 0}
     - target: {fileID: 4998283789856839461, guid: b2eed5d3574eff74d9f8ccd4d9f9edad,
         type: 3}
@@ -1632,7 +1632,6 @@ MonoBehaviour:
   radius: 3.5
   yPostionOfBrick: 0.85
   brickCount: 0
-  platform: {fileID: 543450653641534099}
   isRotating: 0
 --- !u!4 &1621437461
 Transform:
