@@ -2289,6 +2289,9 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   brickSO: {fileID: 11400000, guid: a454b4aeba0a94e4b9894b06c75eacbe, type: 2}
+  brickDamage: {fileID: 1781590537887644813, guid: 272e6248b09a4dd4fbdb630b827a2a6d,
+    type: 3}
+  radius: 1.41
 --- !u!65 &7182543317008959838
 BoxCollider:
   m_ObjectHideFlags: 0

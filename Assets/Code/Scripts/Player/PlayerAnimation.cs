@@ -7,6 +7,8 @@ public class PlayerAnimation : MonoBehaviour
 {
     private Animator animator;
     private PlayerManager playerManager;
+    [SerializeField] private SoundEffectSO cream;
+
     private void Awake()
     {
         animator = GetComponent<Animator>();
@@ -19,5 +21,6 @@ public class PlayerAnimation : MonoBehaviour
     public void TriggerChopAnim()
     {
         animator.SetTrigger(Settings.isChop);
+        SoundEffectManager.Instance.PlaySoundEffect(cream);
     }
 }

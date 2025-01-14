@@ -1393,6 +1393,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 3f9a965f1365bf44095e3582f29602cf, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  cream: {fileID: 11400000, guid: 60daf55ff8a13874caa9f725b9347837, type: 2}
 --- !u!224 &1579645180 stripped
 RectTransform:
   m_CorrespondingSourceObject: {fileID: 1435402719470693572, guid: fd08b438cb9bef44ca40644133d05ff9,

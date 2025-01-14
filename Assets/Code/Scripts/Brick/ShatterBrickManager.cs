@@ -1,7 +1,11 @@
 
 using RayFire;
 using System.Collections;
+using TMPro;
+using TMPro.EditorUtilities;
+using Unity.VisualScripting;
 using UnityEngine;
+using static UnityEngine.UI.Image;
 
 public class ShatterBrickManager : MonoBehaviour
 {
@@ -9,6 +13,8 @@ public class ShatterBrickManager : MonoBehaviour
     private LayerMask layerMask;
     private RayfireActivator rayfireActivator;
     [SerializeField] private BrickSO brickSO;
+    [SerializeField] private GameObject brickDamage;
+    [SerializeField] private float radius;
     private void Awake()
     {
         brickHealth = GetComponent<BrickHealth>();
@@ -23,11 +29,11 @@ public class ShatterBrickManager : MonoBehaviour
         if ((layerMask.value & 1 << other.gameObject.layer) > 0)
         {
             brickHealth.TakeDamage(GameManager.Instance.playerManager.atk);
+            ShowDamage(other);
             StaticEventHandler.CallOnRotatePlatform(false);
             StopAllCoroutines();
             StartCoroutine(WaitBrickDestroy());
         }
-
     }
     private IEnumerator WaitBrickDestroy()
     {
@@ -55,7 +61,21 @@ public class ShatterBrickManager : MonoBehaviour
         rayfireActivator.transform.localPosition = new Vector3(0, newPosition, 0);
         StaticEventHandler.CallOnBrickDestroy(brickHealth.percentage);
     }
+    private void ShowDamage(Collider collider)
+    {
+        Vector3 randomPosition = new Vector3(
+     transform.position.x + Random.Range(-radius, radius),
+     transform.position.y,
+     transform.position.z + Random.Range(-radius, radius)
+ );
+        GameObject damage = Instantiate(brickDamage, randomPosition, Quaternion.Euler(new Vector3(0, 0, 0)));
 
+        if (GameManager.Instance.gameState == GameState.FirstPerson)
+        {
+            damage.transform.rotation = Quaternion.Euler(new Vector3(60f, 0, 180f));
+        }
+        damage.GetComponent<TextMeshPro>().text = GameManager.Instance.playerManager.atk.ToString("F2"); ;
+    }
 
 
 }
