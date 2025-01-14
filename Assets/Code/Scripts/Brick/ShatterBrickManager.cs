@@ -1,5 +1,6 @@
 
 using RayFire;
+using System.Collections;
 using UnityEngine;
 
 public class ShatterBrickManager : MonoBehaviour
@@ -19,13 +20,21 @@ public class ShatterBrickManager : MonoBehaviour
     }
     private void OnTriggerEnter(Collider other)
     {
-        Debug.Log("OnTriggerEnter");
         if ((layerMask.value & 1 << other.gameObject.layer) > 0)
         {
-            Debug.Log("OnTriggerEnter1");
             brickHealth.TakeDamage(GameManager.Instance.playerManager.atk);
+            StaticEventHandler.CallOnRotatePlatform(false);
+            StopAllCoroutines();
+            StartCoroutine(WaitBrickDestroy());
         }
+
     }
+    private IEnumerator WaitBrickDestroy()
+    {
+        yield return new WaitForSeconds(0.75f);
+        StaticEventHandler.CallOnRotatePlatform(true);
+    }
+
     public void ActiveBrickSection()
     {
         float distanceToMove;

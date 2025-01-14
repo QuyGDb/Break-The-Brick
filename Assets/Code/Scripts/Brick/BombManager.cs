@@ -29,7 +29,7 @@ public class BombManager : MonoBehaviour
     {
         if (percentage <= 0)
         {
-            transform.position = secondPositionOfBomb;
+            transform.localPosition = secondPositionOfBomb;
         }
         StopAllCoroutines();
         StartCoroutine(BrickDestroyCoroutine());

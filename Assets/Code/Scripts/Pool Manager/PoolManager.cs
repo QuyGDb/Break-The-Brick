@@ -3,7 +3,7 @@ using System.Collections.Generic;
 using UnityEngine;
 
 [DisallowMultipleComponent]
-public class PoolManager : SingletonMonobehaviour<PoolManager>
+public class PoolManager : SingletonMonobehaviourPersistent<PoolManager>
 {
     #region Tooltip
     [Tooltip("Populate this array with prefabs that you want to add to the pool, and specify the number of gameobjects to be created for each.")]

@@ -29,4 +29,11 @@ public static class StaticEventHandler
     {
         OnChopCount?.Invoke(count, maxChop);
     }
+
+    public static Action<bool> OnRotatePlatform;
+
+    public static void CallOnRotatePlatform(bool isRotate)
+    {
+        OnRotatePlatform?.Invoke(isRotate);
+    }
 }

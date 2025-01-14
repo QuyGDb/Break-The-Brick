@@ -16,6 +16,7 @@ public class InGameUI : MonoBehaviour
     [SerializeField] private TextMeshProUGUI chopCountText;
     [SerializeField] private List<Image> levelImage;
     [SerializeField] private Button backToMenu;
+    [SerializeField] private SoundEffectSO exitSoundEffect;
     private int numberOfBrick;
     private int brickCountValue;
     private void OnEnable()
@@ -35,6 +36,7 @@ public class InGameUI : MonoBehaviour
     {
         backToMenu.onClick.AddListener(() =>
         {
+            SoundEffectManager.Instance.PlaySoundEffect(exitSoundEffect);
             SceneManager.LoadScene(0);
         });
     }

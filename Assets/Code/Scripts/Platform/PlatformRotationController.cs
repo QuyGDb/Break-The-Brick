@@ -8,14 +8,21 @@ public class PlatformRotationController : MonoBehaviour
 {
     [SerializeField] private float rotationSpeed;
     [SerializeField] private AnimationCurve rotationPlatformCurve;
-
+    private bool isRotating = true;
     private void OnEnable()
     {
         GameManager.Instance.OnGameStateChange += HandleGameState;
+        StaticEventHandler.OnRotatePlatform += StopRotatePlatform;
     }
     private void OnDisable()
     {
         GameManager.Instance.OnGameStateChange -= HandleGameState;
+        StaticEventHandler.OnRotatePlatform -= StopRotatePlatform;
+    }
+
+    private void StopRotatePlatform(bool isRotate)
+    {
+        isRotating = isRotate;
     }
 
     private void HandleGameState(GameState gameState)
@@ -36,6 +43,9 @@ public class PlatformRotationController : MonoBehaviour
         {
             return;
         }
-        transform.Rotate(Vector3.up, rotationSpeed * Time.deltaTime);
+        if (isRotating)
+        {
+            transform.Rotate(Vector3.up, rotationSpeed * Time.deltaTime);
+        }
     }
 }

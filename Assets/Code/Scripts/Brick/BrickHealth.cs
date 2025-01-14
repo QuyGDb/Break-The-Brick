@@ -8,12 +8,12 @@ public class BrickHealth : MonoBehaviour
     [SerializeField] private float currentHealth;
     [HideInInspector] public float percentage;
     private ShatterBrickManager shatterBrickManager;
-    private Collider collider;
+    private Collider brickCollider;
 
     private void Awake()
     {
         shatterBrickManager = GetComponent<ShatterBrickManager>();
-        collider = GetComponent<Collider>();
+        brickCollider = GetComponent<Collider>();
     }
     private void Start()
     {
@@ -47,7 +47,7 @@ public class BrickHealth : MonoBehaviour
         if (currentHealth <= 0)
         {
             StaticEventHandler.CallOnBrickDie();
-            collider.enabled = false;
+            brickCollider.enabled = false;
         }
     }
 }
