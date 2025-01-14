@@ -10,6 +10,7 @@ public class PlayerAnimation : MonoBehaviour
     private void Awake()
     {
         animator = GetComponent<Animator>();
+        playerManager = GetComponent<PlayerManager>();
     }
     private void Start()
     {

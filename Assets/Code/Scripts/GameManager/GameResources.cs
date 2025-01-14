@@ -20,10 +20,13 @@ public class GameResources : MonoBehaviour
             return instance;
         }
     }
-
+    public AudioMixerGroup soundsMasterMixerGroup;
     public AudioMixerGroup musicMasterMixerGroup;
-    public AudioMixerGroup soundMasterMixerGroup;
-    public AudioMixerSnapshot musicOffSnapshot;
     public AudioMixerSnapshot musicLowSnapshot;
     public AudioMixerSnapshot musicOnFullSnapshot;
+    public AudioMixerSnapshot musicOffSnapshot;
+
+    public MusicTrackSO musicTrack1;
+    public MusicTrackSO musicTrack2;
+    public MusicTrackSO musicTrack_Ingame;
 }

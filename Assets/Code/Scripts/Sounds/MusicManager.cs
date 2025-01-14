@@ -18,6 +18,7 @@ public class MusicManager : SingletonMonobehaviourPersistent<MusicManager>
         musicAudioSource = GetComponent<AudioSource>();
 
         // Start with music off
+        Debug.Log("test " + GameResources.Instance.musicOffSnapshot);
         GameResources.Instance.musicOffSnapshot.TransitionTo(0f);
 
     }

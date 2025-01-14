@@ -16,7 +16,6 @@ public class BrickHealth : MonoBehaviour
     private void Start()
     {
         GameManager.Instance.OnGameStateChange += HandleGameState;
-        Debug.Log("OnEnable");
     }
     private void OnDestroy()
     {

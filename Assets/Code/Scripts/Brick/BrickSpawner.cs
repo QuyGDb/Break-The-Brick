@@ -1,4 +1,5 @@
 ﻿using System;
+using Unity.VisualScripting;
 using UnityEngine;
 
 public class BrickSpawner : MonoBehaviour
@@ -8,7 +9,7 @@ public class BrickSpawner : MonoBehaviour
     public float radius = 5f;
     public float yPostionOfBrick = 1f;
     [HideInInspector] public int brickCount = 0;
-
+    public bool isRotating = false;
     private void OnEnable()
     {
         StaticEventHandler.OnBrickDie += BrickCount;
@@ -47,10 +48,8 @@ public class BrickSpawner : MonoBehaviour
         for (int i = 0; i < numberOfbricks; i++)
         {
             float angle = i * Mathf.PI * 2 / numberOfbricks;
-
             float x = Mathf.Cos(angle) * radius;
             float z = Mathf.Sin(angle) * radius;
-
             Vector3 position = new Vector3(x, yPostionOfBrick, z) + transform.position;
             Instantiate(brickToSpawn, position, Quaternion.identity, transform);
         }

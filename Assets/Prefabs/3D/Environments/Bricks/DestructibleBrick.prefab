@@ -2296,7 +2296,7 @@ BoxCollider:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 2056406817351769309}
   m_Material: {fileID: 0}
-  m_IsTrigger: 0
+  m_IsTrigger: 1
   m_Enabled: 1
   serializedVersion: 2
   m_Size: {x: 2, y: 2, z: 2}
@@ -6710,7 +6710,7 @@ GameObject:
   m_Component:
   - component: {fileID: 3411713176257427644}
   - component: {fileID: 2806421619176970552}
-  - component: {fileID: 2057089712915208452}
+  - component: {fileID: 7740091886571542075}
   m_Layer: 6
   m_Name: Crate_root
   m_TagString: Untagged
@@ -6887,7 +6887,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: eb6e52f37bca2404fac00b69fd8d21f8, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  initialization: 1
+  initialization: 0
   simulationType: 2
   objectType: 1
   demolitionType: 0
@@ -6925,7 +6925,7 @@ MonoBehaviour:
     cnt: {fileID: 0}
   limitations:
     col: 1
-    sol: 0.5
+    sol: 0.1
     tag: Untagged
     depth: 1
     time: 0.2
@@ -7035,7 +7035,7 @@ MonoBehaviour:
   fading:
     onDemolition: 1
     onActivation: 0
-    byOffset: 0.7
+    byOffset: 0
     lifeType: 4
     lifeTime: 7
     lifeVariation: 3
@@ -7063,7 +7063,7 @@ MonoBehaviour:
   skr: {fileID: 0}
   rest: {fileID: 0}
   sound: {fileID: 0}
---- !u!114 &2057089712915208452
+--- !u!114 &7740091886571542075
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -7078,28 +7078,25 @@ MonoBehaviour:
   onDemolition: 1
   onActivation: 1
   onImpact: 1
-  opacity: 0.161
-  dustMaterial: {fileID: 2100000, guid: 4e968ed639b0f194fa6e1e19e721b4a7, type: 2}
-  dustMaterials:
-  - {fileID: 2100000, guid: 4e968ed639b0f194fa6e1e19e721b4a7, type: 2}
-  - {fileID: 2100000, guid: 766f926b1c8bc954d88b7428f6d4a280, type: 2}
-  - {fileID: 2100000, guid: 4a40f952e235d5d44b5f644bc9301567, type: 2}
+  opacity: 0.25
+  dustMaterial: {fileID: 2100000, guid: 766f926b1c8bc954d88b7428f6d4a280, type: 2}
+  dustMaterials: []
   emissionMaterial: {fileID: 0}
   emission:
     burstType: 2
-    burstAmount: 5
-    distanceRate: 1
-    duration: 4
-    lifeMin: 1
-    lifeMax: 1.7
-    sizeMin: 1.5
-    sizeMax: 5.37
+    burstAmount: 11
+    distanceRate: 0.2
+    duration: 1
+    lifeMin: 2
+    lifeMax: 5
+    sizeMin: 0.5
+    sizeMax: 2.5
   dynamic:
-    speedMin: 0.18
-    speedMax: 0.4
+    speedMin: 0.5
+    speedMax: 1
     rotation: 0.5
-    gravityMin: 0.03
-    gravityMax: 0.23
+    gravityMin: 0.01
+    gravityMax: 0.6
   noise:
     enabled: 0
     quality: 2
@@ -7118,8 +7115,8 @@ MonoBehaviour:
     minParticles: 3
     maxParticles: 20
     visible: 0
-    percentage: 100
-    sizeThreshold: 0.21
+    percentage: 50
+    sizeThreshold: 0.5
   rendering:
     castShadows: 1
     receiveShadows: 1

@@ -19,8 +19,10 @@ public class ShatterBrickManager : MonoBehaviour
     }
     private void OnTriggerEnter(Collider other)
     {
+        Debug.Log("OnTriggerEnter");
         if ((layerMask.value & 1 << other.gameObject.layer) > 0)
         {
+            Debug.Log("OnTriggerEnter1");
             brickHealth.TakeDamage(GameManager.Instance.playerManager.atk);
         }
     }
