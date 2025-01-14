@@ -5,11 +5,11 @@ using UnityEngine;
 
 public static class StaticEventHandler
 {
-    public static Action OnBrickDestroy;
+    public static Action<float> OnBrickDestroy;
 
-    public static void CallOnBrickDestroy()
+    public static void CallOnBrickDestroy(float percentage)
     {
-        OnBrickDestroy?.Invoke();
+        OnBrickDestroy?.Invoke(percentage);
     }
 
     public static Action OnBrickDie;

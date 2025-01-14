@@ -44,7 +44,7 @@ public class ShatterBrickManager : MonoBehaviour
 
         float newPosition = brickSO.topPosition - distanceToMove;
         rayfireActivator.transform.localPosition = new Vector3(0, newPosition, 0);
-        StaticEventHandler.CallOnBrickDestroy();
+        StaticEventHandler.CallOnBrickDestroy(brickHealth.percentage);
     }
 
 

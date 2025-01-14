@@ -17,7 +17,7 @@ public class CameraManager : MonoBehaviour
         StaticEventHandler.OnBrickDestroy -= StaticEventHandler_OnBrickDestroy;
     }
 
-    private void StaticEventHandler_OnBrickDestroy()
+    private void StaticEventHandler_OnBrickDestroy(float percentage)
     {
         if (GameManager.Instance.gameState == GameState.FirstPerson)
         {

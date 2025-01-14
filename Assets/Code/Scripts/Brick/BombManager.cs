@@ -6,7 +6,9 @@ using UnityEngine;
 public class BombManager : MonoBehaviour
 {
     RayfireBomb bomb;
-    WaitForSeconds wait = new WaitForSeconds(0.1f);
+    WaitForSeconds wait = new WaitForSeconds(0.05f);
+    [SerializeField] private Vector3 fisrtPositionOfBomb;
+    [SerializeField] private Vector3 secondPositionOfBomb;
     private void Awake()
     {
         bomb = GetComponent<RayfireBomb>();
@@ -23,8 +25,12 @@ public class BombManager : MonoBehaviour
         StaticEventHandler.OnBrickDestroy -= HandleBrickDestroy;
     }
 
-    private void HandleBrickDestroy()
+    private void HandleBrickDestroy(float percentage)
     {
+        if (percentage <= 0)
+        {
+            transform.position = secondPositionOfBomb;
+        }
         StopAllCoroutines();
         StartCoroutine(BrickDestroyCoroutine());
     }
