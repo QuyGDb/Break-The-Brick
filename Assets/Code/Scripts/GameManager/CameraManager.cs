@@ -45,11 +45,11 @@ public class CameraManager : MonoBehaviour
         camera.transform.position = transform.position;
         camera.transform.DOShakePosition(duration, strength, vibrato, randomness).OnComplete(() =>
         {
-            if (camera == firstPersonCamera)
+            if (GameManager.Instance.gameState == GameState.FirstPerson)
             {
                 camera.transform.position = firstPersonCameraPosition;
             }
-            else if (camera == thirdPersonCamera)
+            else if (GameManager.Instance.gameState == GameState.ThirdPerson)
             {
                 camera.transform.position = thirdPersonCameraPosition;
             }
