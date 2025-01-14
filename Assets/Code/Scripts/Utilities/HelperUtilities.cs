@@ -103,8 +103,15 @@ public static class HelperUtilities
         float strength = 1f;
         int vibrato = 10;
         float randomness = 90f;
-
-        camera.transform.DOShakePosition(duration, strength, vibrato, randomness);
+        Transform cameraTransform = camera.transform;
+        Transform transform = camera.transform;
+        DOTween.Kill(camera.transform);
+        camera.transform.position = transform.position;
+        camera.transform.DOShakePosition(duration, strength, vibrato, randomness).OnComplete(() =>
+         {
+             camera.transform.position = cameraTransform.position;
+             camera.transform.rotation = cameraTransform.rotation;
+         });
     }
 
     /// <summary>

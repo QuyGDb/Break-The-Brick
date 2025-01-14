@@ -465,13 +465,28 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 4998283789856839461, guid: b2eed5d3574eff74d9f8ccd4d9f9edad,
         type: 3}
+      propertyPath: m_LocalScale.x
+      value: 1.5
+      objectReference: {fileID: 0}
+    - target: {fileID: 4998283789856839461, guid: b2eed5d3574eff74d9f8ccd4d9f9edad,
+        type: 3}
+      propertyPath: m_LocalScale.y
+      value: 1.5
+      objectReference: {fileID: 0}
+    - target: {fileID: 4998283789856839461, guid: b2eed5d3574eff74d9f8ccd4d9f9edad,
+        type: 3}
+      propertyPath: m_LocalScale.z
+      value: 1.5
+      objectReference: {fileID: 0}
+    - target: {fileID: 4998283789856839461, guid: b2eed5d3574eff74d9f8ccd4d9f9edad,
+        type: 3}
       propertyPath: m_LocalPosition.x
       value: -18.8
       objectReference: {fileID: 0}
     - target: {fileID: 4998283789856839461, guid: b2eed5d3574eff74d9f8ccd4d9f9edad,
         type: 3}
       propertyPath: m_LocalPosition.y
-      value: -12.5
+      value: -18.8
       objectReference: {fileID: 0}
     - target: {fileID: 4998283789856839461, guid: b2eed5d3574eff74d9f8ccd4d9f9edad,
         type: 3}
@@ -1295,6 +1310,21 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 8670020714849455556, guid: 7575cf8de7ff0e247b01404539d9db10,
         type: 3}
+      propertyPath: m_LocalScale.x
+      value: 1.5
+      objectReference: {fileID: 0}
+    - target: {fileID: 8670020714849455556, guid: 7575cf8de7ff0e247b01404539d9db10,
+        type: 3}
+      propertyPath: m_LocalScale.y
+      value: 1.5
+      objectReference: {fileID: 0}
+    - target: {fileID: 8670020714849455556, guid: 7575cf8de7ff0e247b01404539d9db10,
+        type: 3}
+      propertyPath: m_LocalScale.z
+      value: 1.5
+      objectReference: {fileID: 0}
+    - target: {fileID: 8670020714849455556, guid: 7575cf8de7ff0e247b01404539d9db10,
+        type: 3}
       propertyPath: m_LocalPosition.x
       value: 0.33
       objectReference: {fileID: 0}
@@ -1368,19 +1398,7 @@ MonoBehaviour:
   playerAnimation: {fileID: 0}
   atk: 0
   speed: 0
---- !u!114 &1482359826
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1482359824}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 2d73eca308ef8904eb5900c81f259308, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  countdownTime: 0.5
+  maxChopCount: 10
 --- !u!114 &1482359827
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1394,6 +1412,20 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   cream: {fileID: 11400000, guid: 60daf55ff8a13874caa9f725b9347837, type: 2}
+--- !u!114 &1482359830
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1482359824}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 2d73eca308ef8904eb5900c81f259308, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  countdownTime: 1.25
+  currentCountdown: 0
 --- !u!224 &1579645180 stripped
 RectTransform:
   m_CorrespondingSourceObject: {fileID: 1435402719470693572, guid: fd08b438cb9bef44ca40644133d05ff9,
@@ -1510,8 +1542,8 @@ MonoBehaviour:
   brickToSpawn: {fileID: 2056406817351769309, guid: 9b235b5079a97034c96d73bc11c85ef0,
     type: 3}
   numberOfbricks: 6
-  radius: 3.5
-  yPostionOfBrick: 0.85
+  radius: 5.25
+  yPostionOfBrick: 1.2
   brickCount: 0
   isRotating: 0
 --- !u!4 &1621437461
@@ -1681,7 +1713,7 @@ Transform:
   m_GameObject: {fileID: 919132149120086057}
   m_LocalRotation: {x: 0, y: -0, z: -0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: -0}
-  m_LocalScale: {x: 0.023, y: 0.023, z: 0.023}
+  m_LocalScale: {x: 0.03, y: 0.03, z: 0.03}
   m_ConstrainProportionsScale: 0
   m_Children:
   - {fileID: 1621437461}

@@ -8,7 +8,7 @@ public class PlayerManager : MonoBehaviour
     public float atk;
     public float speed;
     private int brickCount;
-    private int maxChopCount = 10;
+    [SerializeField] private int maxChopCount = 10;
     private int chopCount;
     private void Awake()
     {
@@ -52,6 +52,7 @@ public class PlayerManager : MonoBehaviour
     public void TrackChopCount()
     {
         chopCount++;
+        Debug.Log("ChopCount: " + chopCount);
         StaticEventHandler.CallOnChopCount(chopCount, maxChopCount);
         if (chopCount == maxChopCount)
         {
