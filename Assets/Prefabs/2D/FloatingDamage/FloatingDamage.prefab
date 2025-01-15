@@ -185,8 +185,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: bdecc64d203bad34d98b60db8a3ad111, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  moveUpDistance: 2
+  moveUpDistance: 3
   scaleUpFactor: 2
   duration: 0.5
-  shakeMagnitude: 0.1
-  shakeDuration: 0.5
+  shakeMagnitude: 1
+  shakeDuration: 0.75

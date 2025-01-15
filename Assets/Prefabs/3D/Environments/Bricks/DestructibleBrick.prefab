@@ -2292,6 +2292,7 @@ MonoBehaviour:
   brickDamage: {fileID: 1781590537887644813, guid: 272e6248b09a4dd4fbdb630b827a2a6d,
     type: 3}
   radius: 1.41
+  offset: 2
 --- !u!65 &7182543317008959838
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -3410,7 +3411,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 2706347365647263367}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 0, y: 1, z: 0}
+  m_LocalPosition: {x: 0, y: 1.12, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -3429,7 +3430,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: dafd0a8e9ee856a49bf432688899df59, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  showGizmo: 0
+  showGizmo: 1
   rangeType: 0
   fadeType: 0
   range: 2.6
@@ -3505,8 +3506,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 97242341733d5a54ba300f96e39c528d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  fisrtPositionOfBomb: {x: 0, y: 1, z: 0}
-  secondPositionOfBomb: {x: 0, y: 0, z: 0}
+  fisrtPositionOfBomb: {x: 0, y: 1.12, z: 0}
+  secondPositionOfBomb: {x: 0, y: 0.59, z: 0}
 --- !u!1 &2736769831108490036
 GameObject:
   m_ObjectHideFlags: 0
@@ -7160,14 +7161,14 @@ MonoBehaviour:
     mlt: 1
     shr: 0
   fading:
-    onDemolition: 1
+    onDemolition: 0
     onActivation: 0
     byOffset: 0
     lifeType: 4
-    lifeTime: 7
+    lifeTime: 1.6
     lifeVariation: 3
-    fadeType: 0
-    fadeTime: 5
+    fadeType: 5
+    fadeTime: 1
     sizeFilter: 0
     shardAmount: 5
   reset:

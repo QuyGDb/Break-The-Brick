@@ -237,78 +237,13 @@ MonoBehaviour:
   m_ShadowLayerMask: 1
   m_LightCookieSize: {x: 1, y: 1}
   m_LightCookieOffset: {x: 0, y: 0}
---- !u!1001 &287208078
+--- !u!1001 &551075711
 PrefabInstance:
   m_ObjectHideFlags: 0
   serializedVersion: 2
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
-    - target: {fileID: 2028285327890020480, guid: 9b235b5079a97034c96d73bc11c85ef0,
-        type: 3}
-      propertyPath: mask
-      value: 64
-      objectReference: {fileID: 0}
-    - target: {fileID: 2028285327890020480, guid: 9b235b5079a97034c96d73bc11c85ef0,
-        type: 3}
-      propertyPath: chaos
-      value: 10
-      objectReference: {fileID: 0}
-    - target: {fileID: 2028285327890020480, guid: 9b235b5079a97034c96d73bc11c85ef0,
-        type: 3}
-      propertyPath: delay
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 2028285327890020480, guid: 9b235b5079a97034c96d73bc11c85ef0,
-        type: 3}
-      propertyPath: range
-      value: 1.8
-      objectReference: {fileID: 0}
-    - target: {fileID: 2028285327890020480, guid: 9b235b5079a97034c96d73bc11c85ef0,
-        type: 3}
-      propertyPath: deletion
-      value: 10
-      objectReference: {fileID: 0}
-    - target: {fileID: 2028285327890020480, guid: 9b235b5079a97034c96d73bc11c85ef0,
-        type: 3}
-      propertyPath: fadeType
-      value: 3
-      objectReference: {fileID: 0}
-    - target: {fileID: 2028285327890020480, guid: 9b235b5079a97034c96d73bc11c85ef0,
-        type: 3}
-      propertyPath: strength
-      value: 2.95
-      objectReference: {fileID: 0}
-    - target: {fileID: 2028285327890020480, guid: 9b235b5079a97034c96d73bc11c85ef0,
-        type: 3}
-      propertyPath: variation
-      value: 43
-      objectReference: {fileID: 0}
-    - target: {fileID: 2028285327890020480, guid: 9b235b5079a97034c96d73bc11c85ef0,
-        type: 3}
-      propertyPath: curve.m_Curve.Array.data[1].time
-      value: 0.28442383
-      objectReference: {fileID: 0}
-    - target: {fileID: 2028285327890020480, guid: 9b235b5079a97034c96d73bc11c85ef0,
-        type: 3}
-      propertyPath: curve.m_Curve.Array.data[1].value
-      value: 0.6060333
-      objectReference: {fileID: 0}
-    - target: {fileID: 2028285327890020480, guid: 9b235b5079a97034c96d73bc11c85ef0,
-        type: 3}
-      propertyPath: curve.m_Curve.Array.data[0].outSlope
-      value: -1
-      objectReference: {fileID: 0}
-    - target: {fileID: 2028285327890020480, guid: 9b235b5079a97034c96d73bc11c85ef0,
-        type: 3}
-      propertyPath: curve.m_Curve.Array.data[2].outSlope
-      value: -1
-      objectReference: {fileID: 0}
-    - target: {fileID: 2028285327890020480, guid: 9b235b5079a97034c96d73bc11c85ef0,
-        type: 3}
-      propertyPath: curve.m_Curve.Array.data[3].outSlope
-      value: 0
-      objectReference: {fileID: 0}
     - target: {fileID: 2056406817351769308, guid: 9b235b5079a97034c96d73bc11c85ef0,
         type: 3}
       propertyPath: m_RootOrder
@@ -322,7 +257,7 @@ PrefabInstance:
     - target: {fileID: 2056406817351769308, guid: 9b235b5079a97034c96d73bc11c85ef0,
         type: 3}
       propertyPath: m_LocalPosition.y
-      value: -2.37
+      value: -1.87
       objectReference: {fileID: 0}
     - target: {fileID: 2056406817351769308, guid: 9b235b5079a97034c96d73bc11c85ef0,
         type: 3}

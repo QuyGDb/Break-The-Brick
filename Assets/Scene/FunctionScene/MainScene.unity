@@ -1593,6 +1593,10 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   firstPersonCamera: {fileID: 39690459}
   thirdPersonCamera: {fileID: 1417304349}
+  thirdPersonCameraPosition: {x: 0, y: 0, z: 0}
+  duration: 0.5
+  strength: 1
+  vibrato: 10
 --- !u!114 &1665841156
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1607,6 +1611,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   gameState: 0
   playerManager: {fileID: 1482359825}
+  ingameMusic: {fileID: 11400000, guid: f63064882940c2b48a4e6058ca12ca9a, type: 2}
 --- !u!4 &1665841157
 Transform:
   m_ObjectHideFlags: 0
@@ -1654,10 +1659,10 @@ CapsuleCollider:
   m_Material: {fileID: 0}
   m_IsTrigger: 1
   m_Enabled: 1
-  m_Radius: 0.75
-  m_Height: 1.26
+  m_Radius: 0.53
+  m_Height: 1.07
   m_Direction: 1
-  m_Center: {x: 0.55, y: 0.06, z: -0.1}
+  m_Center: {x: 0.59, y: 0.17, z: -0.1}
 --- !u!1 &1892000677
 GameObject:
   m_ObjectHideFlags: 0

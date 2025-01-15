@@ -14,9 +14,12 @@ public class MainUIManager : MonoBehaviour
     [SerializeField] private Button settingButton;
     [SerializeField] private Image settingPanel;
     [SerializeField] private SoundEffectSO buttonClick;
+    [SerializeField] private MusicTrackSO musicMenu;
+
 
     private void Start()
     {
+        MusicManager.Instance.PlayMusic(musicMenu);
         firstPersonButton.onClick.AddListener(() =>
         {
             SetPlayMode(PlayMode.FirstPerson);

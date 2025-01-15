@@ -42,7 +42,6 @@ public class CameraManager : MonoBehaviour
     public void ShakeCamera(Camera camera)
     {
 
-        camera.transform.position = transform.position;
         camera.transform.DOShakePosition(duration, strength, vibrato, randomness).OnComplete(() =>
         {
             if (GameManager.Instance.gameState == GameState.FirstPerson)

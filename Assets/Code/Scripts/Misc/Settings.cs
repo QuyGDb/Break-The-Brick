@@ -16,4 +16,6 @@ public static class Settings
     public const float musicFadeInTime = 1f;
 
     #endregion
+
+    public static bool isTrigger;
 }

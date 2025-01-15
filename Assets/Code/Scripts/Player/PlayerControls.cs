@@ -26,6 +26,7 @@ public class PlayerControls : MonoBehaviour
     }
     private void Test()
     {
+        Settings.isTrigger = true;
         currentCountdown = countdownTime;
         playerAnimation.TriggerChopAnim();
         playerManager.TrackChopCount();

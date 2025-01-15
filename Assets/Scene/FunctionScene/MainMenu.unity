@@ -3458,6 +3458,7 @@ MonoBehaviour:
   settingButton: {fileID: 614519648}
   settingPanel: {fileID: 7717638007323383191}
   buttonClick: {fileID: 11400000, guid: 66e15ba7d2ae06b4795ce34d1995fd0f, type: 2}
+  musicMenu: {fileID: 11400000, guid: 4cd589d84e4282445b42fa7957dd5760, type: 2}
 --- !u!95 &1658638947
 Animator:
   serializedVersion: 5

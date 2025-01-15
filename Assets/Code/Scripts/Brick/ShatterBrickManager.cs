@@ -15,6 +15,7 @@ public class ShatterBrickManager : MonoBehaviour
     [SerializeField] private BrickSO brickSO;
     [SerializeField] private GameObject brickDamage;
     [SerializeField] private float radius;
+    [SerializeField] private float offset = 2f;
     private void Awake()
     {
         brickHealth = GetComponent<BrickHealth>();
@@ -26,8 +27,11 @@ public class ShatterBrickManager : MonoBehaviour
     }
     private void OnTriggerEnter(Collider other)
     {
+        if (!Settings.isTrigger)
+            return;
         if ((layerMask.value & 1 << other.gameObject.layer) > 0)
         {
+            Settings.isTrigger = false;
             brickHealth.TakeDamage(GameManager.Instance.playerManager.atk);
             ShowDamage(other);
             StaticEventHandler.CallOnRotatePlatform(false);
@@ -65,7 +69,7 @@ public class ShatterBrickManager : MonoBehaviour
     {
         Vector3 randomPosition = new Vector3(
      transform.position.x + Random.Range(-radius, radius),
-     transform.position.y,
+     transform.position.y + offset,
      transform.position.z + Random.Range(-radius, radius));
         GameObject damage = Instantiate(brickDamage, randomPosition, Quaternion.Euler(new Vector3(0, 0, 0)));
 

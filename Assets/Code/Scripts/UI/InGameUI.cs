@@ -71,7 +71,6 @@ public class InGameUI : MonoBehaviour
     }
     private void UpdateBrickCount(int count, int maxBrick)
     {
-        Debug.Log("UpdateBrickCount: " + count);
         brickCountValue = count;
         numberOfBrick = maxBrick;
         brickSlider.DOValue(count, 1f);

@@ -9,7 +9,7 @@ public class MusicManager : SingletonMonobehaviourPersistent<MusicManager>
     private Coroutine fadeOutMusicCoroutine;
     private Coroutine fadeInMusicCoroutine;
     public float musicVolume = 20;
-    bool isPlayingFirstClip = true;
+    //  bool isPlayingFirstClip = true;
     protected override void Awake()
     {
         base.Awake();
@@ -18,7 +18,6 @@ public class MusicManager : SingletonMonobehaviourPersistent<MusicManager>
         musicAudioSource = GetComponent<AudioSource>();
 
         // Start with music off
-        Debug.Log("test " + GameResources.Instance.musicOffSnapshot);
         GameResources.Instance.musicOffSnapshot.TransitionTo(0f);
 
     }

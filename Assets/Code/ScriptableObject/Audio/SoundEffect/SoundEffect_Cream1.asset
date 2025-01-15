@@ -15,6 +15,6 @@ MonoBehaviour:
   soundEffectName: Cream1
   soundPrefab: {fileID: 8339143311223290447, guid: 962aafd71993a5c42a14f06935abe67a,
     type: 3}
-  soundEffectClip: {fileID: 8300000, guid: b42310148e54ad246a5b49bcefa90872, type: 3}
+  soundEffectClip: {fileID: 8300000, guid: 7d6e8dc353f20074aaab0a67b34be1cc, type: 3}
   soundEffectVolume: 1
   soundEffectPitch: 1
