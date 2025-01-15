@@ -32,8 +32,6 @@ public class BrickDamage : MonoBehaviour
         {
             Destroy(gameObject);
         });
-
-
     }
 
     private void InitializeGameObject()

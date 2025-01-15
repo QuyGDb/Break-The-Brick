@@ -11,6 +11,7 @@ public class InGameUI : MonoBehaviour
 {
     [SerializeField] private Slider brickSlider;
     [SerializeField] private GameObject endGamePanel;
+    [SerializeField] private Transform chopPanel;
     [SerializeField] private TextMeshProUGUI statusEndgame;
     [SerializeField] private TextMeshProUGUI brickCount;
     [SerializeField] private TextMeshProUGUI chopCountText;
@@ -22,16 +23,23 @@ public class InGameUI : MonoBehaviour
     private void OnEnable()
     {
         GameManager.Instance.OnGameStateChange += HandleGameState;
-        StaticEventHandler.OnBrickCount += UpdateBrickCount;
         StaticEventHandler.OnChopCount += UpdateChopCount;
+        StaticEventHandler.OnBrickCount += UpdateBrickCount;
+
     }
 
     private void OnDisable()
     {
         GameManager.Instance.OnGameStateChange -= HandleGameState;
-        StaticEventHandler.OnBrickCount -= UpdateBrickCount;
         StaticEventHandler.OnChopCount -= UpdateChopCount;
+        StaticEventHandler.OnBrickCount -= UpdateBrickCount;
     }
+
+    private void UpdateBrickCount(int arg1, int arg2)
+    {
+        chopCountText.text = $"{arg1}/{arg2}";
+    }
+
     private void Awake()
     {
         backToMenu.onClick.AddListener(() =>
@@ -42,11 +50,13 @@ public class InGameUI : MonoBehaviour
     }
     private void UpdateChopCount(int chopCount, int maxChop)
     {
-        chopCountText.text = $"Chop Count: {chopCount}/{maxChop}";
+        chopCountText.text = $"{chopCount}/{maxChop}";
+        chopPanel.DOShakeScale(duration: 1f, strength: new Vector3(1f, 1f, 0f), vibrato: 8, randomness: 60);
     }
 
     private void HandleGameState(GameState state)
     {
+
         if (state == GameState.Win)
         {
             ShowEndgamePanel();
@@ -66,15 +76,9 @@ public class InGameUI : MonoBehaviour
     {
         brickSlider.DOValue(0, 1f);
         endGamePanel.SetActive(true);
-        brickSlider.gameObject.SetActive(false);
         endGamePanel.transform.DOScale(new Vector3(0.6f, 0.6f, 0.6f), 1f).SetEase(Ease.OutBounce);
     }
-    private void UpdateBrickCount(int count, int maxBrick)
-    {
-        brickCountValue = count;
-        numberOfBrick = maxBrick;
-        brickSlider.DOValue(count, 1f);
-    }
+
     private void ShowStartIcon(GameState gameState)
     {
         if (gameState == GameState.Win)
