@@ -2293,7 +2293,7 @@ MonoBehaviour:
     type: 3}
   radius: 1.41
   offset: 2
-  exploreEffect: {fileID: 5883803105726171722, guid: 50f63234053fefd44a16cc435f8564d2,
+  explosionEffect: {fileID: 5883803105726171722, guid: 50f63234053fefd44a16cc435f8564d2,
     type: 3}
 --- !u!65 &7182543317008959838
 BoxCollider:

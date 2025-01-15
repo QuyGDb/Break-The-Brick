@@ -14,7 +14,7 @@ public class ShatterBrickManager : MonoBehaviour
     [SerializeField] private float radius;
     [SerializeField] private float offset = 2f;
     private BombManager bombManager;
-    [SerializeField] private GameObject exploreEffect;
+    [SerializeField] private GameObject explosionEffect;
     private void Awake()
     {
         brickHealth = GetComponent<BrickHealth>();
@@ -88,7 +88,7 @@ public class ShatterBrickManager : MonoBehaviour
 transform.position.x + Random.Range(-radius, radius),
 transform.position.y + offset,
 transform.position.z + Random.Range(-radius, radius));
-        GameObject effect = Instantiate(exploreEffect, randomPosition, Quaternion.Euler(new Vector3(0, 0, 0)));
+        GameObject effect = Instantiate(explosionEffect, randomPosition, Quaternion.Euler(new Vector3(0, 0, 0)));
         effect.GetComponent<ParticleSystem>().Play();
     }
 }
