@@ -5,7 +5,7 @@ using UnityEngine;
 
 public class BrickDamage : MonoBehaviour
 {
-    public float moveUpDistance = 3f;
+    public float moveUpDistance = 4f;
     public float scaleUpFactor = 2f;
     public float duration = 0.5f;
     public float shakeMagnitude = 0.2f;

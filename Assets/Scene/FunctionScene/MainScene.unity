@@ -1398,7 +1398,7 @@ MonoBehaviour:
   playerAnimation: {fileID: 0}
   atk: 0
   speed: 0
-  maxChopCount: 213
+  maxChopCount: 10
 --- !u!114 &1482359827
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1412,6 +1412,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   cream: {fileID: 11400000, guid: 60daf55ff8a13874caa9f725b9347837, type: 2}
+  speedCurveSO: {fileID: 11400000, guid: a5ab673ebb9b6fe43add474501e02a39, type: 2}
 --- !u!114 &1482359830
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1692,8 +1693,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d758f675bf19f8242b36b0f402aced62, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  firstPersonLevel: 6
-  thirdPersonLevel: 6
+  firstPersonLevel: 1
+  thirdPersonLevel: 1
+  atributeByCurve: {fileID: 11400000, guid: a5ab673ebb9b6fe43add474501e02a39, type: 2}
 --- !u!4 &1892000679
 Transform:
   m_ObjectHideFlags: 0
@@ -2662,6 +2664,30 @@ MonoBehaviour:
       weightedMode: 0
       inWeight: 0.33333334
       outWeight: 0
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
+  rotationPlatformCurveTemp:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 3
+      time: 1
+      value: 30
+      inSlope: 15
+      outSlope: 15
+      tangentMode: 34
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    - serializedVersion: 3
+      time: 3
+      value: 60
+      inSlope: 15
+      outSlope: 15
+      tangentMode: 34
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
     m_PreInfinity: 2
     m_PostInfinity: 2
     m_RotationOrder: 4

@@ -8,6 +8,7 @@ public class PlatformRotationController : MonoBehaviour
 {
     [SerializeField] private float rotationSpeed;
     [SerializeField] private AnimationCurve rotationPlatformCurve;
+    [SerializeField] private AnimationCurve rotationPlatformCurveTemp;
     private bool isRotating = true;
     private void OnEnable()
     {
@@ -29,11 +30,11 @@ public class PlatformRotationController : MonoBehaviour
     {
         if (gameState == GameState.FirstPerson)
         {
-            rotationSpeed = rotationPlatformCurve.Evaluate(GameLevel.Instance.firstPersonLevel);
+            rotationSpeed = rotationPlatformCurveTemp.Evaluate(GameLevel.Instance.firstPersonLevel);
         }
         if (gameState == GameState.ThirdPerson)
         {
-            rotationSpeed = rotationPlatformCurve.Evaluate(GameLevel.Instance.thirdPersonLevel);
+            rotationSpeed = rotationPlatformCurveTemp.Evaluate(GameLevel.Instance.thirdPersonLevel);
         }
     }
 
