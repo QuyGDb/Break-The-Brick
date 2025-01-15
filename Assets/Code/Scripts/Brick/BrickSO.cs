@@ -7,4 +7,5 @@ public class BrickSO : ScriptableObject
 {
     public float topPosition;
     public float bottomPosition;
+    public float bottomOffset;
 }

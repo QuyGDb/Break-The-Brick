@@ -57,7 +57,7 @@ public class ShatterBrickManager : MonoBehaviour
         }
         else
         {
-            distanceToMove = (1 - brickHealth.percentage) * (brickSO.topPosition - brickSO.bottomPosition);
+            distanceToMove = (1 - brickHealth.percentage) * (brickSO.topPosition - brickSO.bottomOffset);
         }
 
         float newPosition = brickSO.topPosition - distanceToMove;

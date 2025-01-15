@@ -14,3 +14,4 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   topPosition: 2.75
   bottomPosition: 0.76
+  bottomOffset: 1.16
