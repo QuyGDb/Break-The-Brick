@@ -14,6 +14,7 @@ public class ShatterBrickManager : MonoBehaviour
     [SerializeField] private float radius;
     [SerializeField] private float offset = 2f;
     private BombManager bombManager;
+    [SerializeField] private GameObject exploreEffect;
     private void Awake()
     {
         brickHealth = GetComponent<BrickHealth>();
@@ -33,6 +34,7 @@ public class ShatterBrickManager : MonoBehaviour
             Settings.isTrigger = false;
             brickHealth.TakeDamage(GameManager.Instance.playerManager.atk);
             ShowDamage(other);
+            ShowEffect(other);
             StaticEventHandler.CallOnRotatePlatform(false);
             StopAllCoroutines();
             StartCoroutine(WaitBrickDestroy());
@@ -80,5 +82,13 @@ public class ShatterBrickManager : MonoBehaviour
         damage.GetComponent<TextMeshPro>().text = GameManager.Instance.playerManager.atk.ToString("F2"); ;
     }
 
-
+    private void ShowEffect(Collider collider)
+    {
+        Vector3 randomPosition = new Vector3(
+transform.position.x + Random.Range(-radius, radius),
+transform.position.y + offset,
+transform.position.z + Random.Range(-radius, radius));
+        GameObject effect = Instantiate(exploreEffect, randomPosition, Quaternion.Euler(new Vector3(0, 0, 0)));
+        effect.GetComponent<ParticleSystem>().Play();
+    }
 }
