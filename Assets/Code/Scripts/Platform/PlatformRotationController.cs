@@ -9,6 +9,7 @@ public class PlatformRotationController : MonoBehaviour
     [SerializeField] private float rotationSpeed;
     [SerializeField] private AnimationCurve rotationPlatformCurve;
     [SerializeField] private AnimationCurve rotationPlatformCurveTemp;
+
     private bool isRotating = true;
     private void OnEnable()
     {

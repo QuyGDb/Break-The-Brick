@@ -47,7 +47,6 @@ public class BrickHealth : MonoBehaviour
         if (currentHealth <= 0)
         {
             StaticEventHandler.CallOnBrickDie();
-
         }
     }
 }

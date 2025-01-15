@@ -9,7 +9,7 @@ public class BrickDamage : MonoBehaviour
     public float scaleUpFactor = 2f;
     public float duration = 0.5f;
     public float shakeMagnitude = 0.2f;
-    public float shakeDuration = 0.75f;
+    public float shakeDuration = 1.2f;
 
     private void OnEnable()
     {

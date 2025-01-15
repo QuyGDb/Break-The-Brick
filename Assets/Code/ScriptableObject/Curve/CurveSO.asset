@@ -36,8 +36,8 @@ MonoBehaviour:
     m_PreInfinity: 2
     m_PostInfinity: 2
     m_RotationOrder: 4
-  firstPersonLevel: 1
-  thirdPersonLevel: 1
+  firstPersonLevel: 2
+  thirdPersonLevel: 2
   speedCurve:
     serializedVersion: 2
     m_Curve:
@@ -62,4 +62,4 @@ MonoBehaviour:
     m_PreInfinity: 2
     m_PostInfinity: 2
     m_RotationOrder: 4
-  speedLevel: 1
+  speedLevel: 2

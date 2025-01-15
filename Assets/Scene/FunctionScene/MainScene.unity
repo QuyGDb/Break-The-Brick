@@ -1398,7 +1398,7 @@ MonoBehaviour:
   playerAnimation: {fileID: 0}
   atk: 0
   speed: 0
-  maxChopCount: 10
+  maxChopCount: 20
 --- !u!114 &1482359827
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1544,7 +1544,7 @@ MonoBehaviour:
     type: 3}
   numberOfbricks: 6
   radius: 5.25
-  yPostionOfBrick: 1.2
+  yPostionOfBrick: 1.52
   brickCount: 0
   isRotating: 0
 --- !u!4 &1621437461
@@ -1598,6 +1598,7 @@ MonoBehaviour:
   duration: 0.5
   strength: 1
   vibrato: 10
+  shakeCameraCurve: {fileID: 11400000, guid: a5ab673ebb9b6fe43add474501e02a39, type: 2}
 --- !u!114 &1665841156
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -2672,18 +2673,18 @@ MonoBehaviour:
     m_Curve:
     - serializedVersion: 3
       time: 1
-      value: 30
-      inSlope: 15
-      outSlope: 15
+      value: 45
+      inSlope: 22.5
+      outSlope: 22.5
       tangentMode: 34
       weightedMode: 0
       inWeight: 0.33333334
       outWeight: 0.33333334
     - serializedVersion: 3
       time: 3
-      value: 60
-      inSlope: 15
-      outSlope: 15
+      value: 90
+      inSlope: 22.5
+      outSlope: 22.5
       tangentMode: 34
       weightedMode: 0
       inWeight: 0.33333334

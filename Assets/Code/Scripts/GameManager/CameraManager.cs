@@ -13,6 +13,7 @@ public class CameraManager : MonoBehaviour
     [SerializeField] private float duration = 0.5f;
     [SerializeField] float strength = 1f;
     [SerializeField] int vibrato = 10;
+    [SerializeField] private AtributeByCurve shakeCameraCurve;
     float randomness = 90f;
     private void OnEnable()
     {
@@ -26,16 +27,19 @@ public class CameraManager : MonoBehaviour
     {
         firstPersonCameraPosition = firstPersonCamera.transform.position;
         thirdPersonCameraPosition = thirdPersonCamera.transform.position;
+
     }
 
     private void StaticEventHandler_OnBrickDestroy(float percentage)
     {
         if (GameManager.Instance.gameState == GameState.FirstPerson)
         {
+            duration = shakeCameraCurve.shakeCameraCurve.Evaluate(shakeCameraCurve.firstPersonLevel);
             ShakeCamera(firstPersonCamera);
         }
         else if (GameManager.Instance.gameState == GameState.ThirdPerson)
         {
+            duration = shakeCameraCurve.shakeCameraCurve.Evaluate(shakeCameraCurve.firstPersonLevel);
             ShakeCamera(thirdPersonCamera);
         }
     }

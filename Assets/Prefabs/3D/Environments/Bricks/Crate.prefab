@@ -174,7 +174,7 @@ MonoBehaviour:
     size: 0.05
     transforms: []
     vector3: []
-    noPoints: 0
+    noPoints: 1
     outputPoints: []
     inBoundPoints: []
     outBoundPoints: []
@@ -259,7 +259,7 @@ MonoBehaviour:
     suffix: _frags
   showCenter: 0
   centerPosition: {x: 0, y: 0, z: 0}
-  centerDirection: {x: 0, y: 0, z: 0, w: 1.0002884}
+  centerDirection: {x: 0, y: 0, z: 0, w: 1.0003296}
   transForm: {fileID: 3339785438681097858}
   meshFilter: {fileID: 1870848429896558887}
   meshRenderer: {fileID: 4472745088963059181}

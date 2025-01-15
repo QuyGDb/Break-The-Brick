@@ -189,4 +189,4 @@ MonoBehaviour:
   scaleUpFactor: 2
   duration: 0.5
   shakeMagnitude: 1
-  shakeDuration: 0.75
+  shakeDuration: 1.2

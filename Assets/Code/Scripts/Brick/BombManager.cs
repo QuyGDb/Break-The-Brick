@@ -34,7 +34,6 @@ public class BombManager : MonoBehaviour
         // n?u không start scene menu, soundmanager không ?c t?o , l?i nên sau yield không ???c g?i
         SoundEffectManager.Instance.PlaySoundEffect(broken);
         yield return wait1;
-        Debug.Log("Brick Destroyed" + percentage);
 
         if (percentage <= 0)
         {
