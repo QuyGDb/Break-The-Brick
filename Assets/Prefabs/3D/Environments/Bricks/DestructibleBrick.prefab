@@ -3433,12 +3433,12 @@ MonoBehaviour:
   showGizmo: 1
   rangeType: 0
   fadeType: 0
-  range: 2.6
+  range: 2.1
   deletion: 0
-  strength: 3.2
-  variation: 50
+  strength: 5.21
+  variation: 59
   chaos: 0
-  forceByMass: 1
+  forceByMass: 0
   affectInactive: 0
   affectKinematic: 0
   heightOffset: 0
@@ -3447,9 +3447,9 @@ MonoBehaviour:
   destroy: 0
   applyDamage: 0
   damageValue: 0
-  play: 1
+  play: 0
   volume: 1
-  clip: {fileID: 8300000, guid: c482df35e5b4fd8418a1f66310b724aa, type: 3}
+  clip: {fileID: 0}
   mask: -1
   tagFilter: Untagged
   curve:
@@ -3508,6 +3508,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   fisrtPositionOfBomb: {x: 0, y: 1.12, z: 0}
   secondPositionOfBomb: {x: 0, y: 0.59, z: 0}
+  broken: {fileID: 11400000, guid: 59b17e82cff423540a4923f188303af3, type: 2}
 --- !u!1 &2736769831108490036
 GameObject:
   m_ObjectHideFlags: 0

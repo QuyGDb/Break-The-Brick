@@ -2,10 +2,7 @@
 using RayFire;
 using System.Collections;
 using TMPro;
-using TMPro.EditorUtilities;
-using Unity.VisualScripting;
 using UnityEngine;
-using static UnityEngine.UI.Image;
 
 public class ShatterBrickManager : MonoBehaviour
 {
@@ -16,10 +13,12 @@ public class ShatterBrickManager : MonoBehaviour
     [SerializeField] private GameObject brickDamage;
     [SerializeField] private float radius;
     [SerializeField] private float offset = 2f;
+    private BombManager bombManager;
     private void Awake()
     {
         brickHealth = GetComponent<BrickHealth>();
         rayfireActivator = GetComponentInChildren<RayfireActivator>();
+        bombManager = GetComponentInChildren<BombManager>();
     }
     private void Start()
     {
@@ -64,6 +63,7 @@ public class ShatterBrickManager : MonoBehaviour
         float newPosition = brickSO.topPosition - distanceToMove;
         rayfireActivator.transform.localPosition = new Vector3(0, newPosition, 0);
         StaticEventHandler.CallOnBrickDestroy(brickHealth.percentage);
+        bombManager.HandleBrickDestroy(brickHealth.percentage);
     }
     private void ShowDamage(Collider collider)
     {

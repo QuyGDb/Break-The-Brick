@@ -7,41 +7,39 @@ public class BombManager : MonoBehaviour
 {
     RayfireBomb bomb;
     WaitForSeconds wait = new WaitForSeconds(0.05f);
-    WaitForSeconds wait1 = new WaitForSeconds(1f);
+    WaitForSeconds wait1 = new WaitForSeconds(2f);
     [SerializeField] private Vector3 fisrtPositionOfBomb;
     [SerializeField] private Vector3 secondPositionOfBomb;
+    [SerializeField] SoundEffectSO broken;
     private void Awake()
     {
         bomb = GetComponent<RayfireBomb>();
     }
 
-    private void OnEnable()
-    {
-        StaticEventHandler.OnBrickDestroy += HandleBrickDestroy;
 
-    }
-
-    private void OnDisable()
+    public void HandleBrickDestroy(float percentage)
     {
-        StaticEventHandler.OnBrickDestroy -= HandleBrickDestroy;
-    }
 
-    private void HandleBrickDestroy(float percentage)
-    {
         if (percentage <= 0)
         {
             transform.localPosition = secondPositionOfBomb;
         }
         StopAllCoroutines();
-        StartCoroutine(BrickDestroyCoroutine());
+        StartCoroutine(BrickDestroyCoroutine(percentage));
     }
-    private IEnumerator BrickDestroyCoroutine()
+    private IEnumerator BrickDestroyCoroutine(float percentage)
     {
         yield return wait;
-
         bomb.Explode(0);
+        // n?u không start scene menu, soundmanager không ?c t?o , l?i nên sau yield không ???c g?i
+        SoundEffectManager.Instance.PlaySoundEffect(broken);
         yield return wait1;
-        gameObject.SetActive(false);
+        Debug.Log("Brick Destroyed" + percentage);
 
+        if (percentage <= 0)
+        {
+            Debug.Log("Brick Destroyed");
+            transform.parent.gameObject.SetActive(false);
+        }
     }
 }

@@ -1398,7 +1398,7 @@ MonoBehaviour:
   playerAnimation: {fileID: 0}
   atk: 0
   speed: 0
-  maxChopCount: 10
+  maxChopCount: 213
 --- !u!114 &1482359827
 MonoBehaviour:
   m_ObjectHideFlags: 0
