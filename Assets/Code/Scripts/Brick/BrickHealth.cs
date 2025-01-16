@@ -7,13 +7,11 @@ public class BrickHealth : MonoBehaviour
     public float health = 1f;
     [SerializeField] private float currentHealth;
     [HideInInspector] public float percentage;
-    private ShatterBrickManager shatterBrickManager;
-    private Collider brickCollider;
+    private BrickDestructionManager shatterBrickManager;
 
     private void Awake()
     {
-        shatterBrickManager = GetComponent<ShatterBrickManager>();
-        brickCollider = GetComponent<Collider>();
+        shatterBrickManager = GetComponent<BrickDestructionManager>();
     }
     private void Start()
     {
@@ -43,7 +41,7 @@ public class BrickHealth : MonoBehaviour
     {
         currentHealth -= damage;
         percentage = currentHealth / health;
-        shatterBrickManager.ActiveBrickSection();
+        shatterBrickManager.ActiveBrickSection(percentage);
         if (currentHealth <= 0)
         {
             StaticEventHandler.CallOnBrickDie();

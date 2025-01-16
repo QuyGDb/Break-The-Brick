@@ -4,7 +4,7 @@ using System.Collections;
 using TMPro;
 using UnityEngine;
 
-public class ShatterBrickManager : MonoBehaviour
+public class BrickDestructionManager : MonoBehaviour
 {
     private BrickHealth brickHealth;
     private LayerMask layerMask;
@@ -15,6 +15,7 @@ public class ShatterBrickManager : MonoBehaviour
     [SerializeField] private float offset = 2f;
     private BombManager bombManager;
     [SerializeField] private GameObject explosionEffect;
+    public BrickType brickType;
     private void Awake()
     {
         brickHealth = GetComponent<BrickHealth>();
@@ -32,12 +33,23 @@ public class ShatterBrickManager : MonoBehaviour
         if ((layerMask.value & 1 << other.gameObject.layer) > 0)
         {
             Settings.isTrigger = false;
-            brickHealth.TakeDamage(GameManager.Instance.playerManager.atk);
+            if (brickType == BrickType.Explosive)
+            {
+                brickHealth.TakeDamage(GameManager.Instance.playerManager.atk);
+            }
+            else
+            {
+                brickHealth.TakeDamage(100000f);
+                GameManager.Instance.HandleGameState(GameState.Lose);
+            }
             ShowDamage(other);
             ShowEffect(other);
             StaticEventHandler.CallOnRotatePlatform(false);
             StopAllCoroutines();
             StartCoroutine(WaitBrickDestroy());
+
+
+
         }
     }
     private IEnumerator WaitBrickDestroy()
@@ -46,7 +58,7 @@ public class ShatterBrickManager : MonoBehaviour
         StaticEventHandler.CallOnRotatePlatform(true);
     }
 
-    public void ActiveBrickSection()
+    public void ActiveBrickSection(float percentage)
     {
         float distanceToMove;
         if (brickHealth.percentage <= 0)

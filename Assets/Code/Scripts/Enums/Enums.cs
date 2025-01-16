@@ -11,5 +11,10 @@ public enum GameState
     ThirdPerson,
     Win,
     Lose
+}
 
+public enum BrickType
+{
+    Normal,
+    Explosive,
 }
