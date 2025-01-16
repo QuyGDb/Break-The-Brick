@@ -16,6 +16,7 @@ public class BrickDestructionManager : MonoBehaviour
     private BombManager bombManager;
     [SerializeField] private GameObject explosionEffect;
     public BrickType brickType;
+
     private void Awake()
     {
         brickHealth = GetComponent<BrickHealth>();
@@ -47,11 +48,9 @@ public class BrickDestructionManager : MonoBehaviour
             StaticEventHandler.CallOnRotatePlatform(false);
             StopAllCoroutines();
             StartCoroutine(WaitBrickDestroy());
-
-
-
         }
     }
+
     private IEnumerator WaitBrickDestroy()
     {
         yield return new WaitForSeconds(0.75f);
@@ -71,7 +70,7 @@ public class BrickDestructionManager : MonoBehaviour
         }
         else
         {
-            distanceToMove = (1 - brickHealth.percentage) * (brickSO.topPosition - brickSO.bottomOffset);
+            distanceToMove = (1 - brickHealth.percentage) * (brickSO.topPosition - brickSO.offsetPosition);
         }
 
         float newPosition = brickSO.topPosition - distanceToMove;
@@ -97,9 +96,9 @@ public class BrickDestructionManager : MonoBehaviour
     private void ShowEffect(Collider collider)
     {
         Vector3 randomPosition = new Vector3(
-transform.position.x + Random.Range(-radius, radius),
-transform.position.y + offset,
-transform.position.z + Random.Range(-radius, radius));
+    transform.position.x + Random.Range(-radius, radius),
+    transform.position.y + offset,
+    transform.position.z + Random.Range(-radius, radius));
         GameObject effect = Instantiate(explosionEffect, randomPosition, Quaternion.Euler(new Vector3(0, 0, 0)));
         effect.GetComponent<ParticleSystem>().Play();
     }

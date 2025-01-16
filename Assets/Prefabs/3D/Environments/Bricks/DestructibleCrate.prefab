@@ -2237,7 +2237,7 @@ GameObject:
   - component: {fileID: 4874552366995457379}
   - component: {fileID: 7182543317008959838}
   m_Layer: 6
-  m_Name: DestructibleBrick
+  m_Name: DestructibleCrate
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0

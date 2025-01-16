@@ -2,7 +2,7 @@ using System.Collections;
 using UnityEngine;
 using UnityEngine.EventSystems;
 
-public class UpdateMoney : MonoBehaviour, IPointerClickHandler
+public class MonneyManager : MonoBehaviour, IPointerClickHandler
 {
     private float clickCooldown = 0.25f;
     private bool canClick = true;

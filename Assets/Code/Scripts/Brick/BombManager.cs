@@ -6,8 +6,8 @@ using UnityEngine;
 public class BombManager : MonoBehaviour
 {
     RayfireBomb bomb;
-    WaitForSeconds wait = new WaitForSeconds(0.05f);
-    WaitForSeconds wait1 = new WaitForSeconds(2f);
+    WaitForSeconds waitForExplode = new WaitForSeconds(0.05f);
+    WaitForSeconds waitForSetActive = new WaitForSeconds(2f);
     [SerializeField] private Vector3 fisrtPositionOfBomb;
     [SerializeField] private Vector3 secondPositionOfBomb;
     [SerializeField] SoundEffectSO broken;
@@ -29,12 +29,10 @@ public class BombManager : MonoBehaviour
     }
     private IEnumerator BrickDestroyCoroutine(float percentage)
     {
-        yield return wait;
+        yield return waitForExplode;
         bomb.Explode(0);
-        // n?u không start scene menu, soundmanager không ?c t?o , l?i nên sau yield không ???c g?i
         SoundEffectManager.Instance.PlaySoundEffect(broken);
-        yield return wait1;
-
+        yield return waitForSetActive;
         if (percentage <= 0)
         {
             Debug.Log("Brick Destroyed");
