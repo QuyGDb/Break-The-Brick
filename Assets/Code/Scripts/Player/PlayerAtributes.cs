@@ -15,14 +15,7 @@ public class PlayerAtributes : MonoBehaviour
         }
     }
     [SerializeField] private PlayerBaseAtribubesSO atribubesSO;
-    private float speed = 5;
-    [HideInInspector] public float atk = 0;
-
-    public static float income = 0;
-    private float money;
-    private int speedLevel = 1;
-    private int atkLevel = 1;
-    private int incomeLevel = 1;
+    public Atributes atributes;
 
     [SerializeField] private Button attackButton;
     [SerializeField] private Button speedButton;
@@ -34,11 +27,6 @@ public class PlayerAtributes : MonoBehaviour
     [SerializeField] private TextMeshProUGUI moneySpeedText;
     [SerializeField] private TextMeshProUGUI moneyIncomeText;
     [SerializeField] private TextMeshProUGUI moneyText;
-    private float speedUpgradeCost;
-    private float attackUpgradeCost;
-    private float incomeUpgradeCost;
-
-
 
     private void Start()
     {
@@ -51,148 +39,39 @@ public class PlayerAtributes : MonoBehaviour
     #region Load Atributes
     private void LoadAtributes()
     {
-        LoadAtributeLevelFromPlayerPrefs();
-        LoadAtributesFromPlayerPrefs();
-        LoadCostToUpgradeAtribute();
-    }
-
-    private void LoadAtributeLevelFromPlayerPrefs()
-    {
-
-        if (PlayerPrefs.HasKey("atkLevel"))
+        atributes = SaveLoadManager.LoadDataFromPlayerPrefs<Atributes>("atributes");
+        if (atributes == null)
         {
-            atkLevel = PlayerPrefs.GetInt("atkLevel");
-        }
-        else
-        {
-            atkLevel = 1;
-        }
-        if (PlayerPrefs.HasKey("speedLevel"))
-        {
-            speedLevel = PlayerPrefs.GetInt("speedLevel");
-        }
-        else
-        {
-            speedLevel = 1;
-        }
-        if (PlayerPrefs.HasKey("incomeLevel"))
-        {
-            incomeLevel = PlayerPrefs.GetInt("incomeLevel");
-        }
-        else
-        {
-            incomeLevel = 1;
+            atributes = new Atributes();
         }
     }
-
-    private void LoadAtributesFromPlayerPrefs()
-    {
-        if (PlayerPrefs.HasKey("atk"))
-        {
-            atk = PlayerPrefs.GetFloat("atk");
-            atkText.text = atk.ToString();
-        }
-        else
-        {
-            atk = atribubesSO.baseAttack;
-            atkText.text = atk.ToString();
-        }
-        if (PlayerPrefs.HasKey("income"))
-        {
-            income = PlayerPrefs.GetFloat("income");
-            incomeText.text = income.ToString();
-        }
-        else
-        {
-            income = atribubesSO.baseIncome;
-            incomeText.text = income.ToString();
-        }
-        if (PlayerPrefs.HasKey("money"))
-        {
-            money = PlayerPrefs.GetFloat("money");
-            moneyText.text = money.ToString();
-        }
-        else
-        {
-            money = 0;
-            moneyText.text = money.ToString();
-        }
-        if (PlayerPrefs.HasKey("speed"))
-        {
-            speed = PlayerPrefs.GetFloat("speed");
-            speedText.text = speed.ToString();
-        }
-        else
-        {
-            speed = atribubesSO.baseSpeed;
-            speedText.text = speed.ToString();
-        }
-    }
-
-    private void LoadCostToUpgradeAtribute()
-    {
-        if (PlayerPrefs.HasKey("attackUpgradeCost"))
-        {
-            attackUpgradeCost = PlayerPrefs.GetFloat("attackUpgradeCost");
-            moneyAtkText.text = attackUpgradeCost.ToString();
-        }
-        else
-        {
-            attackUpgradeCost = atribubesSO.baseMoneyForAtributes;
-            moneyAtkText.text = attackUpgradeCost.ToString();
-        }
-        if (PlayerPrefs.HasKey("speedUpgradeCost"))
-        {
-            speedUpgradeCost = PlayerPrefs.GetFloat("speedUpgradeCost");
-            moneySpeedText.text = speedUpgradeCost.ToString();
-        }
-        else
-        {
-            speedUpgradeCost = atribubesSO.baseMoneyForAtributes;
-            moneySpeedText.text = speedUpgradeCost.ToString();
-        }
-        if (PlayerPrefs.HasKey("incomeUpgradeCost"))
-        {
-            incomeUpgradeCost = PlayerPrefs.GetFloat("incomeUpgradeCost");
-            moneyIncomeText.text = incomeUpgradeCost.ToString();
-        }
-        else
-        {
-            incomeUpgradeCost = atribubesSO.baseMoneyForAtributes;
-            moneyIncomeText.text = incomeUpgradeCost.ToString();
-        }
-    }
-
     #endregion
+
     private bool UpgradeSpeedCost()
     {
-        float ratio = CalculateRatioUpgrade(speedLevel, atribubesSO.progressionRateForUpgradeCost, atribubesSO.levelThresholdForUpgradeCost);
-        bool isSubtract = SubtractMoney(speedUpgradeCost * ratio);
+        float ratio = CalculateRatioUpgrade(atributes.speedLevel, atribubesSO.progressionRateForUpgradeCost, atribubesSO.levelThresholdForUpgradeCost);
+        bool isSubtract = SubtractMoney(atributes.speedUpgradeCost * ratio);
         if (isSubtract)
         {
-            speedUpgradeCost = speedUpgradeCost * ratio;
-            PlayerPrefs.SetFloat("speedUpgradeCost", speedUpgradeCost);
-            PlayerPrefs.Save();
-            moneySpeedText.text = speedUpgradeCost.ToString();
+            atributes.speedUpgradeCost = atributes.speedUpgradeCost * ratio;
+            moneySpeedText.text = atributes.speedUpgradeCost.ToString();
             return true;
         }
         else
         {
             return false;
         }
-
     }
 
     private bool UpgradeAttackCost()
     {
-        float ratio = CalculateRatioUpgrade(speedLevel, atribubesSO.progressionRateForUpgradeCost, atribubesSO.levelThresholdForUpgradeCost);
-        bool isSubtract = SubtractMoney(attackUpgradeCost * ratio);
+        float ratio = CalculateRatioUpgrade(atributes.speedLevel, atribubesSO.progressionRateForUpgradeCost, atribubesSO.levelThresholdForUpgradeCost);
+        bool isSubtract = SubtractMoney(atributes.attackUpgradeCost * ratio);
         if (isSubtract)
         {
-            attackUpgradeCost = attackUpgradeCost * ratio;
-            PlayerPrefs.SetFloat("attackUpgradeCost", attackUpgradeCost);
+            atributes.attackUpgradeCost = atributes.attackUpgradeCost * ratio;
             PlayerPrefs.Save();
-            moneyAtkText.text = attackUpgradeCost.ToString();
+            moneyAtkText.text = atributes.attackUpgradeCost.ToString();
             return true;
         }
         else
@@ -203,14 +82,13 @@ public class PlayerAtributes : MonoBehaviour
 
     private bool UpgradeIncomeCost()
     {
-        float ratio = CalculateRatioUpgrade(speedLevel, atribubesSO.progressionRateForUpgradeCost, atribubesSO.levelThresholdForUpgradeCost);
-        bool isSubtract = SubtractMoney(income * ratio);
+        float ratio = CalculateRatioUpgrade(atributes.speedLevel, atribubesSO.progressionRateForUpgradeCost, atribubesSO.levelThresholdForUpgradeCost);
+        bool isSubtract = SubtractMoney(atributes.income * ratio);
         if (isSubtract)
         {
-            incomeUpgradeCost = incomeUpgradeCost * ratio;
-            PlayerPrefs.SetFloat("incomeUpgradeCost", incomeUpgradeCost);
+            atributes.incomeUpgradeCost = atributes.incomeUpgradeCost * ratio;
             PlayerPrefs.Save();
-            moneyIncomeText.text = incomeUpgradeCost.ToString();
+            moneyIncomeText.text = atributes.incomeUpgradeCost.ToString();
             return true;
         }
         else
@@ -227,7 +105,6 @@ public class PlayerAtributes : MonoBehaviour
         return ratio = 1 + progressionRate;
     }
 
-
     #region Attack
     private void AttackUpgrade()
     {
@@ -235,22 +112,19 @@ public class PlayerAtributes : MonoBehaviour
         {
             AttackAtributesUpdate();
             AttackLevelUpgrade();
+            SaveLoadManager.SaveDataToPlayerPrefs("atributes", atributes);
         }
     }
 
     private void AttackAtributesUpdate()
     {
-        float ratio = CalculateRatioUpgrade(atkLevel, atribubesSO.progressionRateForAttack, atribubesSO.levelThresholdForAttack);
-        atk = atk * ratio;
-        PlayerPrefs.SetFloat("atk", atk);
-        PlayerPrefs.Save();
-        atkText.text = atk.ToString();
+        float ratio = CalculateRatioUpgrade(atributes.atkLevel, atribubesSO.progressionRateForAttack, atribubesSO.levelThresholdForAttack);
+        atributes.atk = atributes.atk * ratio;
+        atkText.text = atributes.atk.ToString();
     }
     private void AttackLevelUpgrade()
     {
-        atkLevel += 1;
-        PlayerPrefs.SetInt("atkLevel", atkLevel);
-        PlayerPrefs.Save();
+        atributes.atkLevel += 1;
     }
     #endregion
 
@@ -261,21 +135,17 @@ public class PlayerAtributes : MonoBehaviour
         {
             SpeedAtributesUpdate();
             SpeedLevelUpgrade();
+            SaveLoadManager.SaveDataToPlayerPrefs("atributes", atributes);
         }
     }
     private void SpeedAtributesUpdate()
     {
-        float ratio = CalculateRatioUpgrade(speedLevel, atribubesSO.progressionRateForSpeed, atribubesSO.levelThresholdForSpeed);
-        speed = speed * ratio;
-        PlayerPrefs.SetFloat("speed", speed);
-        PlayerPrefs.Save();
-        speedText.text = speed.ToString();
+        atributes.speed = atributes.speed * atribubesSO.speedCurve.Evaluate(atributes.speedLevel);
+        speedText.text = atributes.speed.ToString();
     }
     private void SpeedLevelUpgrade()
     {
-        speedLevel += 1;
-        PlayerPrefs.SetInt("speedLevel", speedLevel);
-        PlayerPrefs.Save();
+        atributes.speedLevel += 1;
     }
     #endregion
 
@@ -286,42 +156,33 @@ public class PlayerAtributes : MonoBehaviour
         {
             IncomeAtributesUpgrade();
             IncomeLevelUpgrade();
+            SaveLoadManager.SaveDataToPlayerPrefs("atributes", atributes);
         }
     }
-
     private void IncomeAtributesUpgrade()
     {
 
-        float ratio = CalculateRatioUpgrade(incomeLevel, atribubesSO.progressionRateForIncome, atribubesSO.levelThresholdForIncome);
-        income = income * ratio;
-        PlayerPrefs.SetFloat("income", income);
-        PlayerPrefs.Save();
-        incomeText.text = income.ToString();
+        float ratio = CalculateRatioUpgrade(atributes.incomeLevel, atribubesSO.progressionRateForIncome, atribubesSO.levelThresholdForIncome);
+        atributes.income = atributes.income * ratio;
+        incomeText.text = atributes.income.ToString();
     }
     private void IncomeLevelUpgrade()
     {
-        incomeLevel += 1;
-        PlayerPrefs.SetInt("incomeLevel", incomeLevel);
-        PlayerPrefs.Save();
+        atributes.incomeLevel += 1;
     }
     #endregion
-
     public void AddMoney()
     {
-        money += income;
-        PlayerPrefs.SetFloat("money", money);
-        PlayerPrefs.Save();
-        moneyText.text = money.ToString();
+        atributes.money += atributes.income;
+        moneyText.text = atributes.money.ToString();
     }
 
     private bool SubtractMoney(float amount)
     {
-        if (money - amount < 0)
+        if (atributes.money - amount < 0)
             return false;
-        money -= amount;
-        PlayerPrefs.SetFloat("money", money);
-        PlayerPrefs.Save();
-        moneyText.text = money.ToString();
+        atributes.money -= amount;
+        moneyText.text = atributes.money.ToString();
         return true;
     }
 }

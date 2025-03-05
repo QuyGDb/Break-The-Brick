@@ -19,9 +19,40 @@ MonoBehaviour:
   startRatio: 1
   progressionRateForUpgradeCost: 0.25
   progressionRateForIncome: 0.1
-  progressionRateForSpeed: 0.1
   progressionRateForAttack: 0.1
   levelThresholdForUpgradeCost: 10
   levelThresholdForIncome: 10
-  levelThresholdForSpeed: 10
   levelThresholdForAttack: 10
+  speedCurve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 3
+      time: 1
+      value: 1
+      inSlope: 0.06962737
+      outSlope: 0.06962737
+      tangentMode: 34
+      weightedMode: 0
+      inWeight: 0
+      outWeight: 0.33333334
+    - serializedVersion: 3
+      time: 12.45392
+      value: 1.7975063
+      inSlope: 0.023727536
+      outSlope: 0.023727536
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.13078609
+    - serializedVersion: 3
+      time: 20
+      value: 2
+      inSlope: 0.026834287
+      outSlope: 0.026834287
+      tangentMode: 34
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4

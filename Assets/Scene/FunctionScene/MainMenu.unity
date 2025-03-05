@@ -1455,7 +1455,17 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   atribubesSO: {fileID: 11400000, guid: 9be938b956487ff4695b48ad02fc879f, type: 2}
-  atk: 0
+  atributes:
+    atk: 0
+    speed: 5
+    income: 0
+    money: 0
+    speedLevel: 1
+    atkLevel: 1
+    incomeLevel: 1
+    speedUpgradeCost: 1
+    attackUpgradeCost: 1
+    incomeUpgradeCost: 1
   attackButton: {fileID: 658397184}
   speedButton: {fileID: 759305750}
   incomeButton: {fileID: 307293284}
@@ -1703,22 +1713,22 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Sprite
       value: 
-      objectReference: {fileID: 21300000, guid: e1683a1acccb446889b2eb95ce0cbaae,
+      objectReference: {fileID: 21300000, guid: f09b276699b72466cbfc6d5da9a4cd7a,
         type: 3}
     - target: {fileID: 6992683303245770662, guid: 46fee999806589d46b9b4aefc7653d27,
         type: 3}
       propertyPath: m_Color.b
-      value: 0.35709104
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 6992683303245770662, guid: 46fee999806589d46b9b4aefc7653d27,
         type: 3}
       propertyPath: m_Color.g
-      value: 0.4264151
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 6992683303245770662, guid: 46fee999806589d46b9b4aefc7653d27,
         type: 3}
       propertyPath: m_Color.r
-      value: 0.31779993
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 6992683303245770663, guid: 46fee999806589d46b9b4aefc7653d27,
         type: 3}
@@ -4059,7 +4069,17 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   atribubesSO: {fileID: 11400000, guid: 9be938b956487ff4695b48ad02fc879f, type: 2}
-  atk: 0
+  atributes:
+    atk: 0
+    speed: 5
+    income: 0
+    money: 0
+    speedLevel: 1
+    atkLevel: 1
+    incomeLevel: 1
+    speedUpgradeCost: 1
+    attackUpgradeCost: 1
+    incomeUpgradeCost: 1
   attackButton: {fileID: 658397184}
   speedButton: {fileID: 759305750}
   incomeButton: {fileID: 307293284}

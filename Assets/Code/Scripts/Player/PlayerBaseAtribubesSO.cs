@@ -13,12 +13,10 @@ public class PlayerBaseAtribubesSO : ScriptableObject
     public float startRatio;
     public float progressionRateForUpgradeCost;
     public float progressionRateForIncome;
-    public float progressionRateForSpeed;
     public float progressionRateForAttack;
     public int levelThresholdForUpgradeCost;
     public int levelThresholdForIncome;
-    public int levelThresholdForSpeed;
     public int levelThresholdForAttack;
-
+    public AnimationCurve speedCurve;
 
 }
