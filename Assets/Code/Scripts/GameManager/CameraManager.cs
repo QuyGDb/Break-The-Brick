@@ -13,7 +13,7 @@ public class CameraManager : MonoBehaviour
     [SerializeField] private float duration = 0.5f;
     [SerializeField] float strength = 1f;
     [SerializeField] int vibrato = 10;
-    [SerializeField] private AtributeByCurve shakeCameraCurve;
+    [SerializeField] private AnimationCurve shakeCameraCurve;
     float randomness = 90f;
     private void OnEnable()
     {
@@ -49,12 +49,12 @@ public class CameraManager : MonoBehaviour
     {
         if (GameManager.Instance.gameState == GameState.FirstPerson)
         {
-            duration = shakeCameraCurve.shakeCameraCurve.Evaluate(shakeCameraCurve.firstPersonLevel);
+            strength = shakeCameraCurve.Evaluate(Settings.FirstPersonLevel);
             ShakeCamera(firstPersonCamera);
         }
         else if (GameManager.Instance.gameState == GameState.ThirdPerson)
         {
-            duration = shakeCameraCurve.shakeCameraCurve.Evaluate(shakeCameraCurve.firstPersonLevel);
+            strength = shakeCameraCurve.Evaluate(Settings.ThirdPersonLevel);
             ShakeCamera(thirdPersonCamera);
         }
     }
@@ -83,6 +83,4 @@ public class CameraManager : MonoBehaviour
         firstPersonCamera.enabled = false;
         thirdPersonCamera.enabled = true;
     }
-
-
 }

@@ -7,8 +7,7 @@ using UnityEngine;
 public class PlatformRotationController : MonoBehaviour
 {
     [SerializeField] private float rotationSpeed;
-    [SerializeField] private AnimationCurve rotationPlatformCurve;
-    [SerializeField] private AnimationCurve rotationPlatformCurveTemp;
+    [SerializeField] private AnimationCurve rotationSpeedPlatformCurve;
 
     private bool isRotating = true;
     private void OnEnable()
@@ -31,11 +30,11 @@ public class PlatformRotationController : MonoBehaviour
     {
         if (gameState == GameState.FirstPerson)
         {
-            rotationSpeed = rotationPlatformCurveTemp.Evaluate(GameLevel.Instance.firstPersonLevel);
+            rotationSpeed = rotationSpeedPlatformCurve.Evaluate(Settings.FirstPersonLevel);
         }
         if (gameState == GameState.ThirdPerson)
         {
-            rotationSpeed = rotationPlatformCurveTemp.Evaluate(GameLevel.Instance.thirdPersonLevel);
+            rotationSpeed = rotationSpeedPlatformCurve.Evaluate(Settings.ThirdPersonLevel);
         }
     }
 

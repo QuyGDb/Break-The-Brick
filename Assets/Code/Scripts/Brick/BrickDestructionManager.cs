@@ -49,7 +49,7 @@ public class BrickDestructionManager : MonoBehaviour
             Settings.isTrigger = false;
             if (brickType == BrickType.Explosive)
             {
-                brickHealth.TakeDamage(playerManager.atk);
+                brickHealth.TakeDamage(playerManager.atributes.atk);
             }
             else
             {
@@ -103,7 +103,7 @@ public class BrickDestructionManager : MonoBehaviour
         {
             damage.transform.rotation = Quaternion.Euler(new Vector3(60f, 0, 180f));
         }
-        damage.GetComponent<TextMeshPro>().text = playerManager.atk.ToString("F2"); ;
+        damage.GetComponent<TextMeshPro>().text = HelperUtilities.ToShortString(playerManager.atributes.atk);
     }
 
     private void ShowEffect(Collider collider)

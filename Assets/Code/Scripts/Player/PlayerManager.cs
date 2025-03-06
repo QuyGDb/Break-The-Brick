@@ -5,8 +5,7 @@ public class PlayerManager : MonoBehaviour
     [HideInInspector] public PlayerControls playerControls;
     [HideInInspector] public PlayerAtributes playerAtributes;
     [HideInInspector] public PlayerAnimation playerAnimation;
-    public float atk;
-    public float speed;
+    [HideInInspector] public Atributes atributes;
     private int brickCount;
     [SerializeField] private int maxChopCount = 10;
     private int chopCount;
@@ -15,24 +14,8 @@ public class PlayerManager : MonoBehaviour
         playerControls = GetComponent<PlayerControls>();
         playerAtributes = GetComponent<PlayerAtributes>();
         playerAnimation = GetComponent<PlayerAnimation>();
+        atributes = SaveLoadManager.LoadDataFromPlayerPrefs<Atributes>("atributes");
 
-        if (PlayerPrefs.HasKey("atk"))
-        {
-            atk = PlayerPrefs.GetFloat("atk");
-        }
-        else
-        {
-            atk = 0;
-        }
-
-        if (PlayerPrefs.HasKey("speed"))
-        {
-            speed = PlayerPrefs.GetFloat("speed");
-        }
-        else
-        {
-            speed = 0;
-        }
     }
     private void OnEnable()
     {

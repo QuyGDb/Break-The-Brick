@@ -9,7 +9,6 @@ public class PlayerAnimation : MonoBehaviour
     private Animator animator;
     private PlayerManager playerManager;
     [SerializeField] private SoundEffectSO cream;
-    [SerializeField] private AtributeByCurve speedCurveSO;
     private void Awake()
     {
         animator = GetComponent<Animator>();
@@ -17,14 +16,11 @@ public class PlayerAnimation : MonoBehaviour
     }
     private void Start()
     {
-        //animator.speed = playerManager.speed;
-        animator.speed = speedCurveSO.speedCurve.Evaluate(speedCurveSO.speedLevel);
+        animator.speed = playerManager.atributes.speed;
     }
     public void TriggerChopAnim()
     {
         animator.SetTrigger(Settings.isChop);
         SoundEffectManager.Instance.PlaySoundEffect(cream);
     }
-
-
 }

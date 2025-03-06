@@ -27,13 +27,13 @@ public class BrickHealth : MonoBehaviour
         if (gameState == GameState.FirstPerson)
         {
 
-            health = GameLevel.Instance.firstPersonLevel;
+            health = Settings.FirstPersonLevel;
             currentHealth = health;
         }
         if (gameState == GameState.ThirdPerson)
         {
 
-            health = GameLevel.Instance.thirdPersonLevel;
+            health = Settings.ThirdPersonLevel;
             currentHealth = health;
         }
     }
