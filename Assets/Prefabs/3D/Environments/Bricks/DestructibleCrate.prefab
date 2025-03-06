@@ -2293,8 +2293,7 @@ MonoBehaviour:
     type: 3}
   radius: 1.41
   offset: 2
-  explosionEffect: {fileID: 5883803105726171722, guid: 50f63234053fefd44a16cc435f8564d2,
-    type: 3}
+  brickType: 0
 --- !u!65 &7182543317008959838
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -3435,9 +3434,9 @@ MonoBehaviour:
   showGizmo: 1
   rangeType: 0
   fadeType: 0
-  range: 2.1
+  range: 5.8
   deletion: 0
-  strength: 3.81
+  strength: 2.1
   variation: 59
   chaos: 0
   forceByMass: 0

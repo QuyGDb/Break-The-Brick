@@ -42,6 +42,7 @@ public class PlayerAtributes : MonoBehaviour
         if (atributes == null)
         {
             atributes = new Atributes();
+            SaveLoadManager.SaveDataToPlayerPrefs("atributes", atributes);
         }
     }
     private void ShowAtributesText()

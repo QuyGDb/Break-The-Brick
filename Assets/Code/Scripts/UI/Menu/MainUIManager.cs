@@ -68,7 +68,16 @@ public class MainUIManager : MonoBehaviour
     }
     public void ToggleSettingPanel()
     {
-        levelPanel.SetActive(!levelPanel.gameObject.activeSelf);
+        if (levelPanel.gameObject.activeSelf)
+        {
+            levelPanel.gameObject.SetActive(false);
+            levelPanel.transform.DOScale(new Vector3(0f, 0f, 0f), 1f).SetEase(Ease.OutBounce);
+        }
+        else if (!levelPanel.gameObject.activeSelf)
+        {
+            levelPanel.gameObject.SetActive(true);
+            levelPanel.transform.DOScale(new Vector3(1f, 1f, 1f), 1f).SetEase(Ease.OutBounce);
+        }
     }
 }
 

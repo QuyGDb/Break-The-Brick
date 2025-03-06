@@ -9,13 +9,13 @@ public class PlayerManager : MonoBehaviour
     private int brickCount;
     [SerializeField] private int maxChopCount = 10;
     private int chopCount;
+
     private void Awake()
     {
         playerControls = GetComponent<PlayerControls>();
         playerAtributes = GetComponent<PlayerAtributes>();
         playerAnimation = GetComponent<PlayerAnimation>();
         atributes = SaveLoadManager.LoadDataFromPlayerPrefs<Atributes>("atributes");
-
     }
     private void OnEnable()
     {
@@ -31,7 +31,10 @@ public class PlayerManager : MonoBehaviour
         brickCount = count;
 
     }
-
+    private void Start()
+    {
+        StaticEventHandler.CallOnPlayerManager(this);
+    }
     public void TrackChopCount()
     {
         chopCount++;

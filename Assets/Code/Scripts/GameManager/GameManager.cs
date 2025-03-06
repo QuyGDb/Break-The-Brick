@@ -3,6 +3,7 @@ using UnityEngine;
 
 public class GameManager : SingletonMonobehaviourPersistent<GameManager>
 {
+    public GameState previousGameState;
     public GameState gameState;
     [HideInInspector] public Action<GameState> OnGameStateChange;
     [SerializeField] private MusicTrackSO ingameMusic;
@@ -18,6 +19,7 @@ public class GameManager : SingletonMonobehaviourPersistent<GameManager>
     }
     public void HandleGameState(GameState gameState)
     {
+        previousGameState = this.gameState;
         this.gameState = gameState;
         switch (gameState)
         {

@@ -13,7 +13,7 @@ public class InGameUI : MonoBehaviour
     [SerializeField] private GameObject endGamePanel;
     [SerializeField] private Transform chopPanel;
     [SerializeField] private TextMeshProUGUI statusEndgame;
-    [SerializeField] private TextMeshProUGUI brickCount;
+    [SerializeField] private TextMeshProUGUI brickCountText;
     [SerializeField] private TextMeshProUGUI chopCountText;
     [SerializeField] private List<Image> levelImage;
     [SerializeField] private Button backToMenu;
@@ -25,7 +25,6 @@ public class InGameUI : MonoBehaviour
         GameManager.Instance.OnGameStateChange += HandleGameState;
         StaticEventHandler.OnChopCount += UpdateChopCount;
         StaticEventHandler.OnBrickCount += UpdateBrickCount;
-
     }
 
     private void OnDisable()
@@ -35,9 +34,10 @@ public class InGameUI : MonoBehaviour
         StaticEventHandler.OnBrickCount -= UpdateBrickCount;
     }
 
-    private void UpdateBrickCount(int arg1, int arg2)
+    private void UpdateBrickCount(int brickCount, int maxBrick)
     {
-        chopCountText.text = $"{arg1}/{arg2}";
+        brickCountValue = brickCount;
+        numberOfBrick = maxBrick;
     }
 
     private void Awake()
@@ -61,14 +61,24 @@ public class InGameUI : MonoBehaviour
         {
             ShowEndgamePanel();
             statusEndgame.text = "You Win!";
-            brickCount.text = $"Brick Count: {brickCountValue}/{numberOfBrick}";
+            brickCountText.text = $"Brick Count: {brickCountValue}/{numberOfBrick}";
             ShowStartIcon(state);
+            if (GameManager.Instance.previousGameState == GameState.FirstPerson)
+            {
+                Settings.FirstPersonLevel++;
+                PlayerPrefs.SetInt("FirstPersonLevel", Settings.FirstPersonLevel);
+            }
+            if (GameManager.Instance.previousGameState == GameState.ThirdPerson)
+            {
+                Settings.ThirdPersonLevel++;
+                PlayerPrefs.SetInt("ThirdPersonLevel", Settings.ThirdPersonLevel);
+            }
         }
         if (state == GameState.Lose)
         {
             ShowEndgamePanel();
             statusEndgame.text = "You Lose!";
-            brickCount.text = $"Brick Count: {brickCountValue}/{numberOfBrick}";
+            brickCountText.text = $"Brick Count: {brickCountValue}/{numberOfBrick}";
             ShowStartIcon(state);
         }
     }

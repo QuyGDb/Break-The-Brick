@@ -511,7 +511,7 @@ MonoBehaviour:
   endGamePanel: {fileID: 1236936695744334794}
   chopPanel: {fileID: 2566926758768657796}
   statusEndgame: {fileID: 1236936697490499302}
-  brickCount: {fileID: 1236936697459574446}
+  brickCountText: {fileID: 1236936697459574446}
   chopCountText: {fileID: 2566926757458842160}
   levelImage:
   - {fileID: 1236936696084652617}
@@ -1609,7 +1609,7 @@ MonoBehaviour:
     speedUpgradeCost: 1
     attackUpgradeCost: 1
     incomeUpgradeCost: 1
-  maxChopCount: 20
+  maxChopCount: 10
 --- !u!114 &1482359827
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1686,7 +1686,7 @@ GameObject:
   - component: {fileID: 1612436079}
   - component: {fileID: 1612436080}
   m_Layer: 0
-  m_Name: StartIcon
+  m_Name: StarIcon
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -2171,7 +2171,7 @@ GameObject:
   - component: {fileID: 1236936697459574447}
   - component: {fileID: 1236936697459574446}
   m_Layer: 0
-  m_Name: Text_Info
+  m_Name: BrickCount
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -2405,7 +2405,7 @@ GameObject:
   - component: {fileID: 1236936697490499303}
   - component: {fileID: 1236936697490499302}
   m_Layer: 0
-  m_Name: Text
+  m_Name: Result
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0

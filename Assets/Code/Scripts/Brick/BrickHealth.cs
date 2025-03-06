@@ -4,7 +4,7 @@ using UnityEngine;
 
 public class BrickHealth : MonoBehaviour
 {
-    public float health = 1f;
+    public float health;
     [SerializeField] private float currentHealth;
     [HideInInspector] public float percentage;
     private BrickDestructionManager shatterBrickManager;
@@ -15,28 +15,18 @@ public class BrickHealth : MonoBehaviour
     }
     private void Start()
     {
-        GameManager.Instance.OnGameStateChange += HandleGameState;
-    }
-    private void OnDestroy()
-    {
-        GameManager.Instance.OnGameStateChange -= HandleGameState;
-    }
-
-    private void HandleGameState(GameState gameState)
-    {
-        if (gameState == GameState.FirstPerson)
+        if (GameManager.Instance.gameState == GameState.FirstPerson)
         {
-
             health = Settings.FirstPersonLevel;
             currentHealth = health;
         }
-        if (gameState == GameState.ThirdPerson)
+        else if (GameManager.Instance.gameState == GameState.ThirdPerson)
         {
-
             health = Settings.ThirdPersonLevel;
             currentHealth = health;
         }
     }
+
     public void TakeDamage(float damage)
     {
         currentHealth -= damage;

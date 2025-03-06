@@ -18,26 +18,23 @@ public class CameraManager : MonoBehaviour
     private void OnEnable()
     {
         StaticEventHandler.OnBrickDestroy += StaticEventHandler_OnBrickDestroy;
-        GameManager.Instance.OnGameStateChange += HandleGameState;
     }
     private void OnDisable()
     {
         StaticEventHandler.OnBrickDestroy -= StaticEventHandler_OnBrickDestroy;
-        GameManager.Instance.OnGameStateChange -= HandleGameState;
     }
 
-    private void HandleGameState(GameState state)
+    private void Start()
     {
-        if (state == GameState.FirstPerson)
+        if (GameManager.Instance.gameState == GameState.FirstPerson)
         {
             StartFirstPersonMode();
         }
-        if (state == GameState.ThirdPerson)
+        else if (GameManager.Instance.gameState == GameState.ThirdPerson)
         {
             StartThirdPersonMode();
         }
     }
-
     private void Awake()
     {
         firstPersonCameraPosition = firstPersonCamera.transform.position;

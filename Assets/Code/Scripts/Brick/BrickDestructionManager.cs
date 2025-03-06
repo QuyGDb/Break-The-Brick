@@ -14,12 +14,12 @@ public class BrickDestructionManager : MonoBehaviour
     [SerializeField] private float radius;
     [SerializeField] private float offset = 2f;
     private BombManager bombManager;
-    [SerializeField] private GameObject explosionEffect;
     public BrickType brickType;
     private PlayerManager playerManager;
     private void Awake()
     {
         brickHealth = GetComponent<BrickHealth>();
+
         rayfireActivator = GetComponentInChildren<RayfireActivator>();
         bombManager = GetComponentInChildren<BombManager>();
     }
@@ -49,12 +49,12 @@ public class BrickDestructionManager : MonoBehaviour
             Settings.isTrigger = false;
             if (brickType == BrickType.Explosive)
             {
-                brickHealth.TakeDamage(playerManager.atributes.atk);
+                brickHealth.TakeDamage(100000f);
+                GameManager.Instance.HandleGameState(GameState.Lose);
             }
             else
             {
-                brickHealth.TakeDamage(100000f);
-                GameManager.Instance.HandleGameState(GameState.Lose);
+                brickHealth.TakeDamage(playerManager.atributes.atk);
             }
             ShowDamage(other);
             ShowEffect(other);
@@ -83,7 +83,7 @@ public class BrickDestructionManager : MonoBehaviour
         }
         else
         {
-            distanceToMove = (1 - brickHealth.percentage) * (brickSO.topPosition - brickSO.offsetPosition);
+            distanceToMove = brickHealth.percentage * (brickSO.topPosition - brickSO.offsetPosition);
         }
 
         float newPosition = brickSO.topPosition - distanceToMove;
@@ -112,7 +112,6 @@ public class BrickDestructionManager : MonoBehaviour
     transform.position.x + Random.Range(-radius, radius),
     transform.position.y + offset,
     transform.position.z + Random.Range(-radius, radius));
-        GameObject effect = Instantiate(explosionEffect, randomPosition, Quaternion.Euler(new Vector3(0, 0, 0)));
-        effect.GetComponent<ParticleSystem>().Play();
+
     }
 }

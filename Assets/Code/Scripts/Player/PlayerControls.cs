@@ -35,12 +35,12 @@ public class PlayerControls : MonoBehaviour
         if (isChop) return;
         if (Input.GetMouseButtonDown(0) && currentCountdown <= 0f)
         {
-            Test();
+            DoChop();
         }
         if (currentCountdown > 0f)
             currentCountdown -= Time.deltaTime;
     }
-    private void Test()
+    private void DoChop()
     {
         Settings.isTrigger = true;
         currentCountdown = countdownTime;
