@@ -57,10 +57,15 @@ public class MainUIManager : MonoBehaviour
 
     private void SetPlayMode(PlayMode playMode)
     {
-        // Settings.playMode = playMode;
-        GameManager.Instance.HandleGameState(gameState: playMode == PlayMode.FirstPerson ? GameState.FirstPerson : GameState.ThirdPerson);
+        StopAllCoroutines();
+        StartCoroutine(CallSetPlayerMode(playMode));
     }
 
+    IEnumerator CallSetPlayerMode(PlayMode playMode)
+    {
+        yield return null;
+        GameManager.Instance.HandleGameState(gameState: playMode == PlayMode.FirstPerson ? GameState.FirstPerson : GameState.ThirdPerson);
+    }
     public void ToggleSettingPanel()
     {
         levelPanel.SetActive(!levelPanel.gameObject.activeSelf);

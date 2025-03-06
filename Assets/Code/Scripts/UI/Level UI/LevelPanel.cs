@@ -19,12 +19,12 @@ public class LevelPanel : MonoBehaviour
     private void Awake()
     {
         InitializeButton();
-        // GameManager.Instance.OnGameStateChange += HandleGameState;
+        GameManager.Instance.OnGameStateChange += HandleGameState;
     }
 
     private void OnDestroy()
     {
-        //  GameManager.Instance.OnGameStateChange -= HandleGameState;
+        GameManager.Instance.OnGameStateChange -= HandleGameState;
     }
 
     private void HandleGameState(GameState state)
@@ -35,8 +35,8 @@ public class LevelPanel : MonoBehaviour
                 Settings.FirstPersonLevel = PlayerPrefs.GetInt("FirstPersonLevel");
             else
                 Settings.FirstPersonLevel = 1;
-            ProcessLevelEvent(CalculatelevelPanelCount(Settings.FirstPersonLevel));
             CalculatePanelIndex(Settings.FirstPersonLevel);
+            ProcessLevelEvent(CalculatelevelPanelCount(Settings.FirstPersonLevel));
             CalculateLevelQuantityInLevelButton(currentPanelIndex);
         }
         if (state == GameState.ThirdPerson)
@@ -45,8 +45,8 @@ public class LevelPanel : MonoBehaviour
                 Settings.ThirdPersonLevel = PlayerPrefs.GetInt("ThirdPersonLevel");
             else
                 Settings.ThirdPersonLevel = 1;
-            ProcessLevelEvent(CalculatelevelPanelCount(Settings.ThirdPersonLevel));
             CalculatePanelIndex(Settings.ThirdPersonLevel);
+            ProcessLevelEvent(CalculatelevelPanelCount(Settings.ThirdPersonLevel));
             CalculateLevelQuantityInLevelButton(currentPanelIndex);
         }
     }
@@ -102,8 +102,8 @@ public class LevelPanel : MonoBehaviour
                 levelButtons[i].lockImage.gameObject.SetActive(true);
             }
         }
-
     }
+
     private void NextLevelsOnClick()
     {
         if (currentPanelIndex < levelPanelCount)

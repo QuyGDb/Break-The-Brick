@@ -5,13 +5,11 @@ public class GameManager : SingletonMonobehaviourPersistent<GameManager>
 {
     public GameState gameState;
     [HideInInspector] public Action<GameState> OnGameStateChange;
-    private CameraManager cameraManager;
     [SerializeField] private MusicTrackSO ingameMusic;
 
     protected override void Awake()
     {
         base.Awake();
-        cameraManager = GetComponent<CameraManager>();
     }
 
     private void Start()
@@ -26,11 +24,9 @@ public class GameManager : SingletonMonobehaviourPersistent<GameManager>
             case GameState.Start:
                 break;
             case GameState.FirstPerson:
-                cameraManager.StartFirstPersonMode();
                 MusicManager.Instance.PlayMusic(ingameMusic);
                 break;
             case GameState.ThirdPerson:
-                cameraManager.StartThirdPersonMode();
                 MusicManager.Instance.PlayMusic(ingameMusic);
                 break;
             case GameState.Win:
