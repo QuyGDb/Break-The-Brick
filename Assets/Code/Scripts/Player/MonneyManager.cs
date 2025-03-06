@@ -18,7 +18,6 @@ public class MonneyManager : MonoBehaviour, IPointerClickHandler
     {
         if (canClick)
         {
-            Debug.Log("Clicked");
             playerAtributes.AddMoney();
             StartCoroutine(ClickCooldown());
             Component moneyEffect = PoolManager.Instance.ReuseComponent(moneyIcon, HelperUtilities.GetMouseWorldPosition3D(10), Quaternion.identity);

@@ -16,13 +16,9 @@ MonoBehaviour:
   baseSpeed: 1
   baseIncome: 1
   baseMoneyForAtributes: 1
-  startRatio: 1
-  progressionRateForUpgradeCost: 0.25
-  progressionRateForIncome: 0.1
-  progressionRateForAttack: 0.1
-  levelThresholdForUpgradeCost: 10
-  levelThresholdForIncome: 10
-  levelThresholdForAttack: 10
+  multiplierForUpgradeCost: 1.2
+  multiplierForIncome: 1.1
+  multiplierForAttack: 1.1
   speedCurve:
     serializedVersion: 2
     m_Curve:
