@@ -6,9 +6,6 @@ using UnityEngine;
 [CreateAssetMenu(fileName = "PlayerBaseAtribubesSO", menuName = "ScriptableObjects/PlayerBaseAtribubes", order = 1)]
 public class PlayerBaseAtribubesSO : ScriptableObject
 {
-    public float baseAttack;
-    public float baseSpeed;
-    public float baseIncome;
     public float baseMoneyForAtributes;
     public float multiplierForUpgradeCost;
     public float multiplierForIncome;
