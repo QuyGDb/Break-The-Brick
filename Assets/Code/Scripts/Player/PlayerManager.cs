@@ -52,7 +52,6 @@ public class PlayerManager : MonoBehaviour
     public void TrackChopCount()
     {
         chopCount++;
-        Debug.Log("ChopCount: " + chopCount);
         StaticEventHandler.CallOnChopCount(chopCount, maxChopCount);
         if (chopCount == maxChopCount)
         {

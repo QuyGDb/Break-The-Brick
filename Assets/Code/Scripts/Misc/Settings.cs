@@ -7,9 +7,6 @@ public static class Settings
     public static int isChop = Animator.StringToHash("isChop");
     #endregion
 
-    #region Play Mode
-    public static PlayMode playMode;
-    #endregion
 
     #region Audio
     public const float musicFadeOutTime = 1f;
@@ -18,4 +15,9 @@ public static class Settings
     #endregion
 
     public static bool isTrigger;
+
+    #region Level
+    public static int FirstPersonLevel;
+    public static int ThirdPersonLevel;
+    #endregion
 }

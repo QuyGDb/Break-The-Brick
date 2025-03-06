@@ -36,4 +36,11 @@ public static class StaticEventHandler
     {
         OnRotatePlatform?.Invoke(isRotate);
     }
+
+    public static Action<PlayerManager> OnPlayerManager;
+
+    public static void CallOnPlayerManager(PlayerManager playerManager)
+    {
+        OnPlayerManager?.Invoke(playerManager);
+    }
 }

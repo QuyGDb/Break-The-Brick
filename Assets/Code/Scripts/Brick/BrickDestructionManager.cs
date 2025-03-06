@@ -16,12 +16,25 @@ public class BrickDestructionManager : MonoBehaviour
     private BombManager bombManager;
     [SerializeField] private GameObject explosionEffect;
     public BrickType brickType;
-
+    private PlayerManager playerManager;
     private void Awake()
     {
         brickHealth = GetComponent<BrickHealth>();
         rayfireActivator = GetComponentInChildren<RayfireActivator>();
         bombManager = GetComponentInChildren<BombManager>();
+    }
+    private void OnEnable()
+    {
+        StaticEventHandler.OnPlayerManager += StaticEventHandler_OnPlayerManager;
+    }
+    private void OnDisable()
+    {
+        StaticEventHandler.OnPlayerManager -= StaticEventHandler_OnPlayerManager;
+    }
+
+    private void StaticEventHandler_OnPlayerManager(PlayerManager manager)
+    {
+        playerManager = manager;
     }
     private void Start()
     {
@@ -36,7 +49,7 @@ public class BrickDestructionManager : MonoBehaviour
             Settings.isTrigger = false;
             if (brickType == BrickType.Explosive)
             {
-                brickHealth.TakeDamage(GameManager.Instance.playerManager.atk);
+                brickHealth.TakeDamage(playerManager.atk);
             }
             else
             {
@@ -90,7 +103,7 @@ public class BrickDestructionManager : MonoBehaviour
         {
             damage.transform.rotation = Quaternion.Euler(new Vector3(60f, 0, 180f));
         }
-        damage.GetComponent<TextMeshPro>().text = GameManager.Instance.playerManager.atk.ToString("F2"); ;
+        damage.GetComponent<TextMeshPro>().text = playerManager.atk.ToString("F2"); ;
     }
 
     private void ShowEffect(Collider collider)

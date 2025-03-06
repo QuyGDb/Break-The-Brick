@@ -12,6 +12,7 @@ public class MainUIManager : MonoBehaviour
     [SerializeField] private Button firstPersonButton;
     [SerializeField] private Button thirdPersonButton;
     [SerializeField] private Button settingButton;
+    [SerializeField] private GameObject levelPanel;
     [SerializeField] private Image settingPanel;
     [SerializeField] private Button exitSettingButton;
     [SerializeField] private SoundEffectSO buttonClick;
@@ -29,14 +30,13 @@ public class MainUIManager : MonoBehaviour
         {
             SetPlayMode(PlayMode.FirstPerson);
             SoundEffectManager.Instance.PlaySoundEffect(buttonClick);
-            StartMainScene();
-
+            ToggleSettingPanel();
         });
         thirdPersonButton.onClick.AddListener(() =>
         {
             SoundEffectManager.Instance.PlaySoundEffect(buttonClick);
             SetPlayMode(PlayMode.ThirdPerson);
-            StartMainScene();
+            ToggleSettingPanel();
         });
         settingButton.onClick.AddListener(() =>
         {
@@ -57,12 +57,14 @@ public class MainUIManager : MonoBehaviour
 
     private void SetPlayMode(PlayMode playMode)
     {
-        Settings.playMode = playMode;
+        // Settings.playMode = playMode;
+        GameManager.Instance.HandleGameState(gameState: playMode == PlayMode.FirstPerson ? GameState.FirstPerson : GameState.ThirdPerson);
     }
 
-    public void StartMainScene()
+    public void ToggleSettingPanel()
     {
-        SceneManager.LoadScene("MainScene");
-        SceneManager.UnloadSceneAsync(0);
+        levelPanel.SetActive(!levelPanel.gameObject.activeSelf);
     }
 }
+
+
