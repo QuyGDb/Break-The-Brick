@@ -1,80 +1,119 @@
                                                 GIỚI THIỆU           
 
-Tựa game này dựa trên cơ chế gameplay của Break the Sun (https://play.google.com/store/apps/details?id=com.bigdog.games.breakthesun&hl=vi)
+🕹 Tựa game này dựa trên cơ chế gameplay của Break the Sun
 
-Đồng thời mở rộng cơ chế với hai góc nhìn: First Person và Third Person.
+🔗 Break the Sun trên Google Play: https://play.google.com/store/apps/details?id=com.bigdog.games.breakthesun&hl=vi
 
-Bên cạnh đó, game còn kết hợp yếu tố Idle, cho phép người chơi nâng cấp các thuộc tính nhằm tăng khả năng vượt qua các cấp độ một cách dễ dàng hơn.
+📌 Mở rộng gameplay với:
 
-Mục đích:
+👁 Hai góc nhìn: First Person & Third Person
 
-Chuyển từ phát triển game 2D sang 3D, làm quen với hệ trục OXYZ, hình học 3D, quản lý model, material, animation Humanoid, tối ưu hiệu suất và xử lý vật lý.
+⏳ Kết hợp yếu tố Idle: Nâng cấp thuộc tính giúp vượt qua các cấp độ dễ dàng hơn
 
-Trải nghiệm phát triển game mobile (Idle, Casual, Arcade), tối ưu hiệu suất, UI/UX cho màn hình cảm ứng.
+🎯 Mục đích
 
-Mở rộng kỹ năng thiết kế gameplay đơn giản nhưng cuốn hút, tập trung vào cơ chế Idle và tăng trưởng cho game di động.
+🔹 Chuyển từ phát triển game 2D sang 3D
+
+Làm quen với hệ trục OXYZ, hình học 3D, quản lý model, material, animation Humanoid
+Tối ưu hiệu suất & xử lý vật lý trong môi trường 3D
+
+🔹 Trải nghiệm phát triển game mobile
+
+Làm game thể loại Idle, Casual, Arcade
+Tối ưu hiệu suất, UI/UX cho màn hình cảm ứng
+
+🔹 Mở rộng kỹ năng thiết kế gameplay
+
+Gameplay đơn giản nhưng cuốn hút
+Tập trung vào cơ chế Idle & tăng trưởng trong game di động
 
 
-SOLUTIION SHATTER OBJECT CẢI TIẾN HƠN SO VỚI BREAK THE SUN:
+🔨 SOLUTION SHATTER OBJECT – CẢI TIẾN SO VỚI BREAK THE SUN
+
+⚙ Phỏng đoán cách hoạt động trong Break the Sun:
+
+📌 Các object bị vỡ hoàn toàn khi bị trigger
+
+📌 Các object vỡ một phần thực chất là các object con xếp chồng lên nhau
+
+🚨 Hạn chế:
+
+Khi muốn object vỡ từng phần dựa theo damage, cần ghép các object con có hình dạng giống nhau ở đỉnh và đáy
+
+Điều này hạn chế số hình dạng của object có thể bị đập
 
 
-Phỏng đoán trong Brick The Sun: Các Object bị vỡ hoàn toàn khi được trigger, các Object vỡ 1 phần thật ra là các object con được xếp lên nhau, 
-cách làm này dẫn tới 1 điểm yếu, khi ta muốn object vỡ 1 phần mỗi lần đập (vỡ theo số damage tác động lên Hp của gạch), ta cần ghép các object con có hình dạng giống nhau ở đỉnh và đáy, dẫn đến hạn chế số hình dạng của Object có thể đập được.
+💡 MY SOLUTION: 
 
-MY SOLUTION:
+Giúp đập vỡ từng phần của object mà không cần xếp các object lại với nhau, giúp object có thể nhiều hình dạng các nhau
 
-Yêu cầu: Dùng Rayfire for Unity
+✅ Yêu cầu:
 
-Các bước thực hiện:
+✔ Dùng Rayfire for Unity
 
-Bước 1: Add component Rayfire Shatter, sau đó tinh chỉnh số mảnh sau khi shatter cũng như type của các mảnh,  để tạo 1 gameobject_root, loại gameobject đã được shatter thành nhiều mảnh (gameobject con)
+⚙ Các bước thực hiện:
+
+🔹 Bước 1: Thêm component Rayfire Shatter
+
+Tinh chỉnh số mảnh shatter & loại mảnh
+
+Tạo gameobject_root, chứa các mảnh đã bị shatter
+
+📷 Hình minh họa:
 
 ![Image](https://github.com/user-attachments/assets/cc51e174-4957-46ac-be26-4957bde20206)
 
-Bước 2:- Define 1 Gameobject DestructibleBrick gồm 3 game object con:
+🔹 Bước 2: Define GameObject DestructibleBrick, gồm 3 thành phần:
+
+📷 Hình minh họa:
 
 ![Image](https://github.com/user-attachments/assets/28f4d45b-2c00-43fc-85ea-0b6d348eee06)
 
-- gameobject_root:  
+1️⃣ gameobject_root:
 
- + Component Rayfire Rigid 
+🛠 Component Rayfire Rigid
 
- + Tùy chọn thêm ( rayfire bust + rayfire Debris) để thêm effect bust hay debris
+✨ Tùy chọn Rayfire Bust + Rayfire Debris để thêm hiệu ứng nổ, mảnh vỡ
 
-  * Setting cụ thể của rigid đọc trong prefab của project
+📌 Cài đặt cụ thể xem trong prefab của project
 
-- Activator:
+2️⃣ Activator:
 
-  + Empty gameobject + Rayfire Activator 
+🔹 Empty GameObject + Rayfire Activator
 
-  + Positon ban đầu của Activator nằm trên gamobject_root
+🔹 Vị trí ban đầu nằm trên gameobject_root
 
-- Bomb:
+3️⃣ Bomb:
 
-  + Empty gameobject + Rayfire bomb 
+💥 Empty GameObject + Rayfire Bomb
 
-  + Bán kính của Bomb đủ bao phủ gameobject_root
+📏 Bán kính Bomb đủ bao phủ toàn bộ gameobject_root
 
- *  Ý tưởng:
+💡 Ý TƯỞNG HOẠT ĐỘNG
 
-- Ghi lại position Y của activator khi di chuyển từ trên gameobject_root
+📌 Ghi lại vị trí Y của Activator khi di chuyển trên gameobject_root
 
-+Khi ở trên đầu gameobject_root = topPosition
+🟢 Khi ở trên đầu: topPosition
 
-+Khi activator chạm đáy của gameobject_root = bottomPostion
+🔴 Khi chạm đáy: bottomPosition
 
-+Ví trí chạm + offset = offsetPostion
+📍 Vị trí chạm + offset: offsetPosition
 
-- Số gạch cần phá vỡ sẽ bằng % máu gây ra 
+📌 Tính số gạch cần phá vỡ dựa vào % máu mất đi
 
-+ Activator sẽ di chuyển theo Y position 1 đoạn bằng % máu * (topPostion - offsetPositon).
+Activator di chuyển theo trục Y một đoạn bằng:
 
-+ Sau khi activator di chuyển tới vị trí mới, số mảnh gạch va chạm với activator sẽ được active (chuyển thành dynamic type).
+🏗 % máu * (topPosition - offsetPosition)
 
-- Dùng bomb - cho nổ phần mảnh gạch dynamic type.
+Khi Activator di chuyển tới vị trí mới, các mảnh gạch chạm Activator sẽ được active (dynamic type)
 
-- Lí do không dùng (topPosition - bottomPosition ), vì trường hợp % máu của gạch quá nhỏ, mảnh gạch thì không nhỏ như vậy sẽ dẫn tới tất cả mảnh gạch được phá hủy hết dù HP của gạch vẫn còn.
+Sau đó, Bomb nổ phá hủy các mảnh gạch dynamic type
 
- + Do vậy khi HP của gạch <=0, ta di chuyển gạch tới bottomPosition và cho nổ hết phần mảnh gạch còn lại
+🚨 Lý do không dùng (topPosition - bottomPosition):
 
-Unity Version: 2021.3.43f1
+Nếu % máu quá nhỏ, mà mảnh gạch lớn, sẽ khiến toàn bộ object bị phá hủy dù HP vẫn còn
+
+🛠 Giải pháp: Khi HP gạch = 0, di chuyển Activator xuống bottomPosition và nổ toàn bộ gạch còn lại
+
+📌 Unity Version: 2021.3.43f1
+
