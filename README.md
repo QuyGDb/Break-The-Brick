@@ -71,10 +71,10 @@ Bước 2:- Define 1 Gameobject DestructibleBrick gồm 3 game object con:
 
 + Sau khi activator di chuyển tới vị trí mới, số mảnh gạch va chạm với activator sẽ được active (chuyển thành dynamic type).
 
-Unity Version: 2021.3.43f1
-
 - Dùng bomb - cho nổ phần mảnh gạch dynamic type.
 
 - Lí do không dùng (topPosition - bottomPosition ), vì trường hợp % máu của gạch quá nhỏ, mảnh gạch thì không nhỏ như vậy sẽ dẫn tới tất cả mảnh gạch được phá hủy hết dù HP của gạch vẫn còn.
 
  + Do vậy khi HP của gạch <=0, ta di chuyển gạch tới bottomPosition và cho nổ hết phần mảnh gạch còn lại
+
+Unity Version: 2021.3.43f1
