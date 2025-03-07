@@ -1,4 +1,4 @@
-                                                                         GIỚI THIỆU           
+                                          GIỚI THIỆU           
 
 Tựa game này dựa trên cơ chế gameplay của Break the Sun (https://play.google.com/store/apps/details?id=com.bigdog.games.breakthesun&hl=vi)
 
@@ -75,4 +75,4 @@ Bước 2:- Define 1 Gameobject DestructibleBrick gồm 3 game object con:
 
 - Lí do không dùng (topPosition - bottomPosition ), vì trường hợp % máu của gạch quá nhỏ, mảnh gạch thì không nhỏ như vậy sẽ dẫn tới tất cả mảnh gạch được phá hủy hết dù HP của gạch vẫn còn.
 
- + Do vậy khi HP của gạch <=0, ta di chuyển gạch tới topbottom và cho nổ hết phần mảnh gạch còn lại
+ + Do vậy khi HP của gạch <=0, ta di chuyển gạch tới bottomPosition và cho nổ hết phần mảnh gạch còn lại
