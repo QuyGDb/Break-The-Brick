@@ -158,7 +158,7 @@ PlayerSettings:
   androidSupportedAspectRatio: 1
   androidMaxAspectRatio: 2.1
   applicationIdentifier:
-    Android: com.DefaultCompany.SurvivalIsland
+    Android: com.Trinhquy.BreakTheBrick
     Standalone: com.Trinhquy.Break-The-Brick
   buildNumber:
     Standalone: 0
@@ -853,7 +853,7 @@ PlayerSettings:
     m_VersionCode: 1
     m_VersionName: 
   apiCompatibilityLevel: 6
-  activeInputHandler: 2
+  activeInputHandler: 1
   windowsGamepadBackendHint: 0
   cloudProjectId: 39132ad1-c4ce-4f4d-a481-60ec83128848
   framebufferDepthMemorylessMode: 0

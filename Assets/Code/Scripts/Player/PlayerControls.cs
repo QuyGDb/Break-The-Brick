@@ -1,6 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.InputSystem;
 
 
 public class PlayerControls : MonoBehaviour
@@ -33,7 +34,10 @@ public class PlayerControls : MonoBehaviour
     void Update()
     {
         if (isChop) return;
-        if ((Input.GetMouseButtonDown(0) || (Input.touchCount > 0 && Input.GetTouch(0).phase == TouchPhase.Began)) && currentCountdown <= 0f)
+        bool isMouseClicked = Mouse.current != null && Mouse.current.leftButton.wasPressedThisFrame;
+        bool isTouchStarted = Touchscreen.current != null && Touchscreen.current.primaryTouch.press.wasPressedThisFrame;
+
+        if ((isMouseClicked || isTouchStarted) && currentCountdown <= 0f)
         {
             DoChop();
         }

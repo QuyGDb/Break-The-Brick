@@ -35,14 +35,6 @@ public class BrickSpawner : MonoBehaviour
     {
         SpawnBrickInPlatform();
     }
-    private void Update()
-    {
-        if (Input.GetKeyDown(KeyCode.Space))
-        {
-            SpawnBrickInPlatform();
-        }
-    }
-
     void SpawnBrickInPlatform()
     {
         for (int i = 0; i < numberOfbricks; i++)

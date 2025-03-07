@@ -89,7 +89,7 @@ public static class HelperUtilities
 
     public static Vector3 GetMouseWorldPosition3D(float distanceFromCamera)
     {
-        Vector3 mousePosition = Input.mousePosition;
+        Vector3 mousePosition = Mouse.current.position.ReadValue();
         mousePosition.z = distanceFromCamera; // Đặt z là khoảng cách từ camera
         return Camera.main.ScreenToWorldPoint(mousePosition);
     }

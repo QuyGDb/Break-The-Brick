@@ -6,13 +6,7 @@ using UnityEngine.UI;
 
 public class PlayerAtributes : MonoBehaviour
 {
-    private void Update()
-    {
-        if (Input.GetKeyDown(KeyCode.Space))
-        {
-            PlayerPrefs.DeleteAll();
-        }
-    }
+
     [SerializeField] private PlayerBaseAtribubesSO atribubesSO;
     public Atributes atributes;
     [SerializeField] private Button attackButton;

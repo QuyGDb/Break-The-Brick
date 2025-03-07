@@ -35,7 +35,6 @@ public class BombManager : MonoBehaviour
         yield return waitForSetActive;
         if (percentage <= 0)
         {
-            Debug.Log("Brick Destroyed");
             transform.parent.gameObject.SetActive(false);
         }
     }
