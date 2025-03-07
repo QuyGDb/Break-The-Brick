@@ -1,4 +1,4 @@
-                                          GIỚI THIỆU           
+                                              GIỚI THIỆU           
 
 Tựa game này dựa trên cơ chế gameplay của Break the Sun (https://play.google.com/store/apps/details?id=com.bigdog.games.breakthesun&hl=vi)
 
