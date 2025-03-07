@@ -65,13 +65,19 @@ public class InGameUI : MonoBehaviour
             ShowStartIcon(state);
             if (GameManager.Instance.previousGameState == GameState.FirstPerson)
             {
-                Settings.FirstPersonLevel++;
-                PlayerPrefs.SetInt("FirstPersonLevel", Settings.FirstPersonLevel);
+                if (Settings.FirstPersonLevel <= 10)
+                {
+                    Settings.FirstPersonLevel++;
+                    PlayerPrefs.SetInt("FirstPersonLevel", Settings.FirstPersonLevel);
+                }
             }
             if (GameManager.Instance.previousGameState == GameState.ThirdPerson)
             {
-                Settings.ThirdPersonLevel++;
-                PlayerPrefs.SetInt("ThirdPersonLevel", Settings.ThirdPersonLevel);
+                if (Settings.ThirdPersonLevel <= 10)
+                {
+                    Settings.ThirdPersonLevel++;
+                    PlayerPrefs.SetInt("ThirdPersonLevel", Settings.ThirdPersonLevel);
+                }
             }
         }
         if (state == GameState.Lose)
