@@ -33,7 +33,7 @@ public class PlayerControls : MonoBehaviour
     void Update()
     {
         if (isChop) return;
-        if (Input.GetMouseButtonDown(0) && currentCountdown <= 0f)
+        if ((Input.GetMouseButtonDown(0) || (Input.touchCount > 0 && Input.GetTouch(0).phase == TouchPhase.Began)) && currentCountdown <= 0f)
         {
             DoChop();
         }
@@ -45,7 +45,8 @@ public class PlayerControls : MonoBehaviour
         Settings.isTrigger = true;
         currentCountdown = countdownTime;
         playerAnimation.TriggerChopAnim();
-        playerManager.TrackChopCount();
+        if (playerManager != null)
+            playerManager.TrackChopCount();
     }
 }
 

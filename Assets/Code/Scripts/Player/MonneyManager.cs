@@ -8,12 +8,8 @@ public class MonneyManager : MonoBehaviour, IPointerClickHandler
     private bool canClick = true;
     [SerializeField] private PlayerAtributes playerAtributes;
     [SerializeField] private GameObject moneyIcon;
-    private RectTransform rectTransform;
+    [SerializeField] PlayerAnimation playerAnimation;
 
-    private void Awake()
-    {
-        rectTransform = GetComponent<RectTransform>();
-    }
     public void OnPointerClick(PointerEventData eventData)
     {
         if (canClick)
@@ -22,6 +18,7 @@ public class MonneyManager : MonoBehaviour, IPointerClickHandler
             StartCoroutine(ClickCooldown());
             Component moneyEffect = PoolManager.Instance.ReuseComponent(moneyIcon, HelperUtilities.GetMouseWorldPosition3D(10), Quaternion.identity);
             moneyEffect.gameObject.SetActive(true);
+            playerAnimation.TriggerChopAnim();
         }
     }
 

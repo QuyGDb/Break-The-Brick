@@ -16,7 +16,8 @@ public class PlayerAnimation : MonoBehaviour
     }
     private void Start()
     {
-        animator.speed = playerManager.atributes.speed;
+        if (playerManager != null)
+            animator.speed = playerManager.atributes.speed;
     }
     public void TriggerChopAnim()
     {
