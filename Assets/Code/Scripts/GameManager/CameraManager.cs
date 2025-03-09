@@ -80,4 +80,18 @@ public class CameraManager : MonoBehaviour
         firstPersonCamera.enabled = false;
         thirdPersonCamera.enabled = true;
     }
+
+    #region Validation
+#if UNITY_EDITOR
+    private void OnValidate()
+    {
+        HelperUtilities.ValidateCheckNullValue(this, nameof(firstPersonCamera), firstPersonCamera);
+        HelperUtilities.ValidateCheckNullValue(this, nameof(thirdPersonCamera), thirdPersonCamera);
+        HelperUtilities.ValidateCheckPositiveValue(this, nameof(duration), duration, false);
+        HelperUtilities.ValidateCheckPositiveValue(this, nameof(strength), strength, false);
+        HelperUtilities.ValidateCheckPositiveValue(this, nameof(vibrato), vibrato, false);
+        HelperUtilities.ValidateCheckPositiveValue(this, nameof(randomness), randomness, false);
+    }
+#endif
+    #endregion
 }

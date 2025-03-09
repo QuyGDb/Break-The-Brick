@@ -42,5 +42,12 @@ public class GameManager : SingletonMonobehaviourPersistent<GameManager>
         OnGameStateChange?.Invoke(gameState);
     }
 
-
+    #region Validation
+#if UNITY_EDITOR
+    private void OnValidate()
+    {
+        HelperUtilities.ValidateCheckNullValue(this, nameof(ingameMusic), ingameMusic);
+    }
+#endif
+    #endregion
 }

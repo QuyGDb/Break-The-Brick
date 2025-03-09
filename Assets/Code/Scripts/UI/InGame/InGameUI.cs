@@ -1,6 +1,4 @@
 using DG.Tweening;
-using System;
-using System.Collections;
 using System.Collections.Generic;
 using TMPro;
 using UnityEngine;
@@ -125,4 +123,22 @@ public class InGameUI : MonoBehaviour
             }
         }
     }
+
+    #region Validation
+#if UNITY_EDITOR
+    private void OnValidate()
+    {
+        HelperUtilities.ValidateCheckNullValue(this, nameof(brickSlider), brickSlider);
+        HelperUtilities.ValidateCheckNullValue(this, nameof(endGamePanel), endGamePanel);
+        HelperUtilities.ValidateCheckNullValue(this, nameof(chopPanel), chopPanel);
+        HelperUtilities.ValidateCheckNullValue(this, nameof(statusEndgame), statusEndgame);
+        HelperUtilities.ValidateCheckNullValue(this, nameof(brickCountText), brickCountText);
+        HelperUtilities.ValidateCheckNullValue(this, nameof(chopCountText), chopCountText);
+        HelperUtilities.ValidateCheckEnumerableValues(this, nameof(levelImage), levelImage);
+        HelperUtilities.ValidateCheckNullValue(this, nameof(backToMenu), backToMenu);
+        HelperUtilities.ValidateCheckNullValue(this, nameof(exitSoundEffect), exitSoundEffect);
+    }
+#endif
+    #endregion
+
 }

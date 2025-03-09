@@ -79,6 +79,23 @@ public class MainUIManager : MonoBehaviour
             levelPanel.transform.DOScale(new Vector3(1f, 1f, 1f), 1f).SetEase(Ease.OutBounce);
         }
     }
+
+    #region Validation
+
+#if UNITY_EDITOR
+    private void OnValidate()
+    {
+        HelperUtilities.ValidateCheckNullValue(this, nameof(firstPersonButton), firstPersonButton);
+        HelperUtilities.ValidateCheckNullValue(this, nameof(thirdPersonButton), thirdPersonButton);
+        HelperUtilities.ValidateCheckNullValue(this, nameof(settingButton), settingButton);
+        HelperUtilities.ValidateCheckNullValue(this, nameof(levelPanel), levelPanel);
+        HelperUtilities.ValidateCheckNullValue(this, nameof(settingPanel), settingPanel);
+        HelperUtilities.ValidateCheckNullValue(this, nameof(exitSettingButton), exitSettingButton);
+        HelperUtilities.ValidateCheckNullValue(this, nameof(buttonClick), buttonClick);
+        HelperUtilities.ValidateCheckNullValue(this, nameof(musicMenu), musicMenu);
+    }
+#endif
+    #endregion
 }
 
 

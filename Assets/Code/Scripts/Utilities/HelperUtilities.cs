@@ -89,9 +89,23 @@ public static class HelperUtilities
 
     public static Vector3 GetMouseWorldPosition3D(float distanceFromCamera)
     {
-        Vector3 mousePosition = Mouse.current.position.ReadValue();
-        mousePosition.z = distanceFromCamera; // Đặt z là khoảng cách từ camera
-        return Camera.main.ScreenToWorldPoint(mousePosition);
+        Vector3 pointerPosition;
+
+        if (Touchscreen.current != null && Touchscreen.current.touches.Count > 0) // Kiểm tra có touch trên màn hình không
+        {
+            pointerPosition = Touchscreen.current.touches[0].position.ReadValue(); // Lấy vị trí touch đầu tiên
+        }
+        else if (Mouse.current != null) // Nếu không có touch, kiểm tra chuột
+        {
+            pointerPosition = Mouse.current.position.ReadValue();
+        }
+        else
+        {
+            return Vector3.zero; // Nếu không có input, trả về (0,0,0)
+        }
+
+        pointerPosition.z = distanceFromCamera; // Thiết lập Z để chuyển đổi tọa độ
+        return Camera.main.ScreenToWorldPoint(pointerPosition);
     }
 
     public static string ToShortString(this double num)

@@ -46,4 +46,12 @@ public class BrickSpawner : MonoBehaviour
             Instantiate(brickToSpawn, position, Quaternion.identity, transform);
         }
     }
+    #region Validation
+#if UNITY_EDITOR
+    private void OnValidate()
+    {
+        HelperUtilities.ValidateCheckNullValue(this, nameof(brickToSpawn), brickToSpawn);
+    }
+#endif
+    #endregion
 }

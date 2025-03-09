@@ -174,4 +174,23 @@ public class PlayerAtributes : MonoBehaviour
         moneyText.text = HelperUtilities.ToShortString(atributes.money);
         return true;
     }
+
+    #region Validation
+#if UNITY_EDITOR
+    private void OnValidate()
+    {
+        HelperUtilities.ValidateCheckNullValue(this, nameof(atribubesSO), atribubesSO);
+        HelperUtilities.ValidateCheckNullValue(this, nameof(attackButton), attackButton);
+        HelperUtilities.ValidateCheckNullValue(this, nameof(speedButton), speedButton);
+        HelperUtilities.ValidateCheckNullValue(this, nameof(incomeButton), incomeButton);
+        HelperUtilities.ValidateCheckNullValue(this, nameof(atkText), atkText);
+        HelperUtilities.ValidateCheckNullValue(this, nameof(speedText), speedText);
+        HelperUtilities.ValidateCheckNullValue(this, nameof(incomeText), incomeText);
+        HelperUtilities.ValidateCheckNullValue(this, nameof(moneyAtkText), moneyAtkText);
+        HelperUtilities.ValidateCheckNullValue(this, nameof(moneySpeedText), moneySpeedText);
+        HelperUtilities.ValidateCheckNullValue(this, nameof(moneyIncomeText), moneyIncomeText);
+        HelperUtilities.ValidateCheckNullValue(this, nameof(moneyText), moneyText);
+    }
+#endif
+    #endregion
 }

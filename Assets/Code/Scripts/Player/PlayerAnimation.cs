@@ -24,4 +24,13 @@ public class PlayerAnimation : MonoBehaviour
         animator.SetTrigger(Settings.isChop);
         SoundEffectManager.Instance.PlaySoundEffect(cream);
     }
+
+    #region Validation
+#if UNITY_EDITOR
+    private void OnValidate()
+    {
+        HelperUtilities.ValidateCheckNullValue(this, nameof(cream), cream);
+    }
+#endif
+    #endregion
 }
