@@ -1,119 +1,34 @@
-                                                GIỚI THIỆU           
+Introduction
+This game is inspired by the core gameplay mechanics of Break the Sun (available on Google Play), extended with two camera perspectives — First Person and Third Person — alongside an Idle progression system that lets players upgrade attributes to overcome increasingly difficult levels.
 
-🕹 Tựa game này dựa trên cơ chế gameplay của Break the Sun
+Purpose
+The project serves as a practical stepping stone from 2D to 3D game development. On the technical side, it covers working with the OXYZ coordinate system, 3D geometry, asset management (models, materials, Humanoid animations), physics handling, and performance optimization in a 3D environment. On the design side, it explores Idle, Casual, and Arcade game structures — with a focus on touch-friendly UI/UX and progression mechanics suited for mobile.
 
-🔗 Break the Sun trên Google Play: https://play.google.com/store/apps/details?id=com.bigdog.games.breakthesun&hl=vi
+Shatter System — Improvements Over Break the Sun
+Assumed approach in Break the Sun:
+Objects are either fully destroyed on trigger, or simulate partial destruction by stacking pre-cut child objects on top of one another.
+The limitation: Partial destruction based on damage requires child objects whose top and bottom surfaces align precisely — which significantly restricts the range of shapes that can be used as destructible objects.
+The solution implemented here removes that constraint entirely. Using Rayfire for Unity, objects can be shattered into irregular fragments without any manual stacking, supporting far more varied geometry.
 
-📌 Mở rộng gameplay với:
+Implementation
+Step 1 — Fragment preparation
+Add a Rayfire Shatter component to the target object. Configure the fragment count and type, then bake the results into a gameobject_root containing all generated pieces.
+Step 2 — DestructibleBrick prefab structure
+The prefab consists of three parts:
 
-👁 Hai góc nhìn: First Person & Third Person
-
-⏳ Kết hợp yếu tố Idle: Nâng cấp thuộc tính giúp vượt qua các cấp độ dễ dàng hơn
-
-🎯 Mục đích
-
-🔹 Chuyển từ phát triển game 2D sang 3D
-
-Làm quen với hệ trục OXYZ, hình học 3D, quản lý model, material, animation Humanoid
-Tối ưu hiệu suất & xử lý vật lý trong môi trường 3D
-
-🔹 Trải nghiệm phát triển game mobile
-
-Làm game thể loại Idle, Casual, Arcade
-Tối ưu hiệu suất, UI/UX cho màn hình cảm ứng
-
-🔹 Mở rộng kỹ năng thiết kế gameplay
-
-Gameplay đơn giản nhưng cuốn hút
-Tập trung vào cơ chế Idle & tăng trưởng trong game di động
+gameobject_root — holds all fragments, with a Rayfire Rigid component attached. Optionally paired with Rayfire Bust and Rayfire Debris for visual effects on destruction. Full settings are available in the project prefab.
+Activator — an empty GameObject with a Rayfire Activator, initially positioned above gameobject_root. As it moves downward, any fragments it passes through are switched to dynamic physics type.
+Bomb — an empty GameObject with a Rayfire Bomb, with a radius large enough to encompass the entire gameobject_root. It detonates after the Activator activates the target fragments.
 
 
-🔨 SOLUTION SHATTER OBJECT – CẢI TIẾN SO VỚI BREAK THE SUN
+How It Works
+Two Y-axis reference points are recorded when the Activator traverses gameobject_root: topPosition (the top of the object) and bottomPosition (the base). A third value, offsetPosition, accounts for a small contact buffer.
+When the brick takes damage, the Activator moves downward along the Y-axis by:
 
-⚙ Phỏng đoán cách hoạt động trong Break the Sun:
+HP loss (%) × (topPosition − offsetPosition)
 
-📌 Các object bị vỡ hoàn toàn khi bị trigger
+Fragments within the Activator's new range are set to dynamic, then destroyed by the Bomb detonation.
+Why not use topPosition − bottomPosition as the full range?
+With a small damage percentage and large fragments, this would cause the entire object to be destroyed prematurely. Instead, offsetPosition acts as a safety margin. When HP reaches zero, the Activator is moved directly to bottomPosition and the Bomb clears all remaining fragments.
 
-📌 Các object vỡ một phần thực chất là các object con xếp chồng lên nhau
-
-🚨 Hạn chế:
-
-Khi muốn object vỡ từng phần dựa theo damage, cần ghép các object con có hình dạng giống nhau ở đỉnh và đáy
-
-Điều này hạn chế số hình dạng của object có thể bị đập
-
-
-💡 MY SOLUTION: 
-
-Giúp đập vỡ từng phần của object mà không cần xếp các object lại với nhau, giúp object có thể nhiều hình dạng các nhau
-
-✅ Yêu cầu:
-
-✔ Dùng Rayfire for Unity
-
-⚙ Các bước thực hiện:
-
-🔹 Bước 1: Thêm component Rayfire Shatter
-
-Tinh chỉnh số mảnh shatter & loại mảnh
-
-Tạo gameobject_root, chứa các mảnh đã bị shatter
-
-📷 Hình minh họa:
-
-![Image](https://github.com/user-attachments/assets/cc51e174-4957-46ac-be26-4957bde20206)
-
-🔹 Bước 2: Define GameObject DestructibleBrick, gồm 3 thành phần:
-
-📷 Hình minh họa:
-
-![Image](https://github.com/user-attachments/assets/28f4d45b-2c00-43fc-85ea-0b6d348eee06)
-
-1️⃣ gameobject_root:
-
-🛠 Component Rayfire Rigid
-
-✨ Tùy chọn Rayfire Bust + Rayfire Debris để thêm hiệu ứng nổ, mảnh vỡ
-
-📌 Cài đặt cụ thể xem trong prefab của project
-
-2️⃣ Activator:
-
-🔹 Empty GameObject + Rayfire Activator
-
-🔹 Vị trí ban đầu nằm trên gameobject_root
-
-3️⃣ Bomb:
-
-💥 Empty GameObject + Rayfire Bomb
-
-📏 Bán kính Bomb đủ bao phủ toàn bộ gameobject_root
-
-💡 Ý TƯỞNG HOẠT ĐỘNG
-
-📌 Ghi lại vị trí Y của Activator khi di chuyển trên gameobject_root
-
-🟢 Khi ở trên đầu: topPosition
-
-🔴 Khi chạm đáy: bottomPosition
-
-📍 Vị trí chạm + offset: offsetPosition
-
-📌 Tính số gạch cần phá vỡ dựa vào % máu mất đi
-
-Activator di chuyển theo trục Y một đoạn bằng:
-
-🏗 % máu * (topPosition - offsetPosition)
-
-Khi Activator di chuyển tới vị trí mới, các mảnh gạch chạm Activator sẽ được active (dynamic type)
-
-Sau đó, Bomb nổ phá hủy các mảnh gạch dynamic type
-
-🚨 Lý do không dùng (topPosition - bottomPosition):
-
-Nếu % máu quá nhỏ, mà mảnh gạch lớn, sẽ khiến toàn bộ object bị phá hủy dù HP vẫn còn
-
-🛠 Giải pháp: Khi HP gạch = 0, di chuyển Activator xuống bottomPosition và nổ toàn bộ gạch còn lại
-
-📌 Unity Version: 2021.3.43f1
-
+Unity Version: 2021.3.43f1
